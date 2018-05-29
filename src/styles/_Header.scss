@@ -1,0 +1,27 @@
+header {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 100vw;
+    // background-color: lightblue;
+ 
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .ruff-logo {
+            width: 300px;
+            color: blue;
+        }
+
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;  
+        }
+
+        li {
+            margin: 0px 10px;
+        }
+}
+}
