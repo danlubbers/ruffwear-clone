@@ -8,12 +8,12 @@ const Auth0Strategy = require('passport-auth0');
 const controller = require('./controller.js')
 
 require('dotenv').config()
-
+const {CONNECTION_STRING} = process.env
 const app = express();
 
 app.use( bodyParser.json() );
 
-massive( process.env.CONNECTION_STRING ).then ( db =>
+massive(CONNECTION_STRING).then ( db =>
     { console.log("database connected")
     app.set('db', db);
 })
