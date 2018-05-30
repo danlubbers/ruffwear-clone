@@ -118,21 +118,9 @@ app.get("/logout", function(req, res) {
 
 // •••••••••••••••• ENDPOINTS •••••••••••••••• //
 
-app.get(`/api/getHarnessesProducts`, controller.getHarnessesProducts);
+app.get(`/api/getproducts/:category`, controller.getProducts);
 
-app.get(`/api/getOneHarnessesProduct/:id`, controller.getOneHarnessesProduct);
-
-app.get(`/api/getLeashesProducts`, controller.getLeashesProducts);
-
-app.get(`/api/getOneLeashesProduct/:id`, controller.getOneLeashesProduct);
-
-app.get(`/api/getBootsProducts`, controller.getBootsProducts);
-
-app.get(`/api/getOneBootsProduct/:id`, controller.getOneBootsProduct);
-
-app.get(`/api/getCollarsProducts`, controller.getCollarsProducts);
-
-app.get(`/api/getOneCollarsProduct/:id`, controller.getOneCollarsProduct);
+app.get(`/api/getoneproduct/:id`, controller.getOneProduct);
 
 app.get(`/api/productCart`, controller.cartProducts);
 

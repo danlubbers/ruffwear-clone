@@ -10,20 +10,19 @@ create table products (
     title text,
     description text,
     price decimal,
-    color text,
-    img text,
-    large_img text
-);
-
-create table sizes(
-    size text
+    sizes text[],
+    colors text[][],
+    imgs text[],
+    thumbnail text
 );
 
 create table cart (
     cart_id serial primary key,
-    user_id integer,
-    product_id integer,
-    quantity integer default 1
+    user_id int references users(user_id),
+    product_id int references products(product_id),
+    quantity integer default 1,
+    size text,
+    color text
 );
 
 
