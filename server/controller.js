@@ -3,9 +3,9 @@ const stripe = require("stripe")(process.env.S_STRIPE_KEY);
 module.exports = {
   getProducts: (req, res) => {
     const dbInstance = req.app.get("db");
-    const {catagory} = req.params
+    const {category} = req.params
 
-    dbInstance.get_products([catagory]).then(products => {
+    dbInstance.get_products([category]).then(products => {
       res.status(200).send(products)})
       .catch(err => {
         console.error(err);
