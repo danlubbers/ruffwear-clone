@@ -82,6 +82,7 @@ header {
     }
 
     .harness-image {
+        padding-left: 75px;
         width: 27vw;
     }
 
@@ -114,11 +115,14 @@ header {
                 list-style-type: none;
                 
                 li {
-                    margin: 20px 0px 20px 0px;
+                    margin-bottom: 20px;
                     color: $font-color;
                     font-family: $font-family;
                     font-size: 1.3em;
                     cursor: pointer;
+                }
+                li:hover {
+                    color: rgb(250, 192, 0);
                 }
             }
         }
@@ -129,12 +133,17 @@ header {
                
             ul {
                 list-style-type: none; 
+                
                 li {
                     margin: 20px;
                     color: $font-color;
                     font-family: $font-family;
                     font-size: 1.3em;
                     cursor: pointer;
+                }
+
+                li:hover {
+                    color: rgb(250, 192, 0);
                 }
             }
         }
