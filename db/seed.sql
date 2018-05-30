@@ -26,5 +26,3 @@ create table cart (
 );
 
 
-
-
