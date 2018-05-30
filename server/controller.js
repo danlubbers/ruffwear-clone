@@ -1,92 +1,24 @@
 const stripe = require("stripe")(process.env.S_STRIPE_KEY);
 
 module.exports = {
-  getHarnessesProducts: (req, res) => {
+  getProducts: (req, res) => {
     const dbInstance = req.app.get("db");
-    dbInstance.products
-      .getHarnessesProducts()
-      .then(products => res.status(200).send(products))
+    const {catagory} = req.params
+
+    dbInstance.get_products([catagory]).then(products => {
+      res.status(200).send(products)})
       .catch(err => {
         console.error(err);
         res.status(500).send(err);
       });
   },
 
-  getOneHarnessesProduct: (req, res) => {
+  getOneProduct: (req, res) => {
     const dbInstance = req.app.get("db");
-    dbInstance.products
-      .getOneHarnessesProduct(req.params.id)
-      .then(productID => res.status(200).send(productID))
-      .catch(err => {
-        console.error(err);
-        res.status(500).send(err);
-      });
-  },
+    const {id} = req.params
 
-  getLeashesProducts: (req, res) => {
-    const dbInstance = req.app.get("db");
-    dbInstance.products
-      .getLeashesProducts()
-      .then(products => res.status(200).send(products))
-      .catch(err => {
-        console.error(err);
-        res.status(500).send(err);
-      });
-  },
-
-  getOneLeashesProduct: (req, res) => {
-    const dbInstance = req.app.get("db");
-    dbInstance.products
-      .getOneLeashesProduct(req.params.id)
-      .then(productID => res.status(200).send(productID))
-      .catch(err => {
-        console.error(err);
-        res.status(500).send(err);
-      });
-  },
-
-  getCollarsProducts: (req, res) => {
-    const dbInstance = req.app.get("db");
-    dbInstance.products
-      .getCollarsProducts()
-      .then(products => res.status(200).send(products))
-      .catch(err => {
-        console.error(err);
-        res.status(500).send(err);
-      });
-  },
-
-  getOneCollarsProduct: (req, res) => {
-    console.log("sucka");
-    const dbInstance = req.app.get("db");
-
-    dbInstance.products
-      .getOneCollarsProduct(req.params.id)
-      .then(productID => res.status(200).send(productID))
-      .catch(err => {
-        console.error(err);
-        res.status(500).send(err);
-      });
-  },
-
-  getBootsProducts: (req, res) => {
-    const dbInstance = req.app.get("db");
-    dbInstance.products
-      .getBootsProducts()
-      .then(products => res.status(200).send(products))
-      .catch(err => {
-        console.error(err);
-        res.status(500).send(err);
-      });
-  },
-
-  getOneBootsProduct: (req, res) => {
-    console.log("sucka");
-    const dbInstance = req.app.get("db");
-
-    dbInstance.products
-      .getOneBootsProduct(req.params.id)
-      .then(productID => res.status(200).send(productID))
+    dbInstance.get_one_product([id]).then(product => {
+      res.status(200).send(product)})
       .catch(err => {
         console.error(err);
         res.status(500).send(err);
