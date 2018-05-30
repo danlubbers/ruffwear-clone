@@ -118,7 +118,7 @@ app.get("/logout", function(req, res) {
 
 // •••••••••••••••• ENDPOINTS •••••••••••••••• //
 
-app.get(`/api/getproducts/:catagory`, controller.getProducts);
+app.get(`/api/getproducts/:category`, controller.getProducts);
 
 app.get(`/api/getoneproduct/:id`, controller.getOneProduct);
 
