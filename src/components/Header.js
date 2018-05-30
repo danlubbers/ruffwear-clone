@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import RuffLogo from '../assets/ruffdoggies-logo.png'
+import RuffLogo from '../assets/ruffdoggies-logo.png';
 // React Icon Logos
 import SearchIcon from 'react-icons/lib/fa/search'
 import Paw from 'react-icons/lib/fa/paw'
