@@ -1,31 +1,28 @@
-create table users (    
-    id SERIAL PRIMARY KEY,    
-    username text,    
-    auth_id text,    
-    email text,
-    phone int,
-    address varchar(160)
-)
+create table users (
+    user_id serial primary key,
+    auth_id varchar(45),
+    username varchar(45)
+);
 
-create table products (    
-    id SERIAL PRIMARY KEY,    
-    title TEXT,    
-    price FLOAT,    
-    product_img TEXT,
-    type TEXT,
-    attr_id INTEGER REFERENCES attributes (id)
-)
-
-create table attributes (    
-    id SERIAL PRIMARY KEY,    
-    size text,    
-    color text
-)
+create table products (
+    product_id serial primary key,
+    category text,
+    title text,
+    description text,
+    price decimal,
+    sizes text[],
+    colors text[][],
+    imgs text[],
+    thumbnail text
+);
 
 create table cart (
-    id serial PRIMARY KEY,
-    product_id int REFERENCES products(id),
-    user_id int REFERENCES users(id),
-    quantity int 
-)
+    cart_id serial primary key,
+    user_id int references users(user_id),
+    product_id int references products(product_id),
+    quantity integer default 1,
+    size text,
+    color text
+);
+
 

@@ -1,29 +1,62 @@
 import React, {Component} from 'react';
 import RuffLogo from '../assets/ruffdoggies-logo.png';
 // React Icon Logos
-import SearchIcon from 'react-icons/lib/fa/search';
-import Paw from 'react-icons/lib/fa/paw';
+import SearchIcon from 'react-icons/lib/fa/search'
+import Paw from 'react-icons/lib/fa/paw'
+import Cart from 'react-icons/lib/fa/shopping-cart'
 // Images for Navbar
-import Harness from '../assets/navigation-harnesses-image.jpg';
+import Harness from '../assets/navigation-harnesses-image.jpg'
+// Images for Tails dropdown
+import MyDog from '../assets/navigation-mydogismy.jpg'
+import OurStores from '../assets/navigation-our-stories.jpg'
+import OurAmb from '../assets/navigation-our-ambassadors.jpg'
 
 class Header extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            showMenu: false
+            showShop: false,
+            showTails: false,
+            showAbout: false
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.handleClickShop = this.handleClickShop.bind(this);
+        this.handleClickTails = this.handleClickTails.bind(this);
+        this.handleClickAbout = this.handleClickAbout.bind(this);
     }
 
-    handleClick() {
-        this.setState({showMenu: !this.state.showMenu})
+    handleClickShop() {
+        this.setState({
+            showShop: !this.state.showShop,
+            showTails: false,
+            showAbout: false
+        })
+    }
+
+    handleClickTails() {
+        this.setState({
+            showTails: !this.state.showTails,
+            showShop: false,
+            showAbout: false
+        })
+    }
+
+    handleClickAbout() {
+        this.setState({
+            showAbout: !this.state.showAbout,
+            showShop: false,
+            showTails: false
+        })
     }
 
     render() {
-        let {showMenu} = this.state;
-        let slideCSS = showMenu ? 'slide-menu slide-menu-position' : 'slide-menu';
+        let {showShop, showTails, showAbout} = this.state;
+        let slideCssShop = showShop ? 'slide-menu slide-menu-position' : 'slide-menu';
+        let slideCssTails = showTails ? 'slide-menu slide-menu-position' : 'slide-menu';
+        let slideCssAbout = showAbout ? 'slide-menu slide-menu-position' : 'slide-menu';
 
+        console.log(slideCssShop)
+        console.log(slideCssTails)
         return(
             <header>
                 <nav>
@@ -33,20 +66,21 @@ class Header extends Component {
                     <div>
                         <div className='nav-lists'>
                             <ul className='nav-list-primary'>
-                                <li className='shopBtn' onClick={this.handleClick}>SHOP</li>
-                                <li>TAILS</li>
-                                <li>ABOUT</li>   
+                                <li className='shopBtn' onClick={this.handleClickShop}>SHOP</li>
+                                <li className='tailsBtn' onClick={this.handleClickTails}>TAILS</li>
+                                <li className='aboutBtn' onClick={this.handleClickAbout}>ABOUT</li>   
                             </ul>
                             <ul className='nav-list-controls'>
-                                <li className='search-icon'><SearchIcon/></li>
-                                <li className='paw-icon'><Paw/></li>
+                                <li className='search-icon'><SearchIcon size={25}/></li>
+                                <li className='paw-icon'><Paw  size={25}/></li>
+                                <li className='cart-icon'><Cart  size={25}/></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
 
-
-                <div className={slideCSS}>
+                {/* Shop DropDown Navbar*/}
+                <div className={slideCssShop}>
                     <div className='shop-container'>
                         <div className='container-left'>
                             <img className='harness-image' src={Harness} alt='harness'/>
@@ -72,10 +106,11 @@ class Header extends Component {
                                             <li>Beds</li>
                                             <li>Toys</li>
                                             <li>Gift Cards</li>
-                                    </div>
+                                        </div>
                                     </div>
                                 </ul>
                             </div>
+
                             <div className='collections-container'>
                                 <ul>
                                     <h3>COLLECTIONS</h3>
@@ -87,10 +122,32 @@ class Header extends Component {
                                         <li>Specials</li>
                                     </div>
                                 </ul>
-                            </div>
-                            
+                            </div>     
                         </div>
                     </div>
+                </div>
+
+                {/* Tails DropDown Navbar */}
+                <div className={slideCssTails}>
+                    <div className='tails-container'>
+                        <div className='my-dog-container'>
+                            <button className='myDogBtn'>#MyDogIsMyDog</button>
+                            <img className='my-dog' src={MyDog} alt='my dog' />
+                        </div>
+                        <div className='our-stories-container'>
+                            <button className='ourStoriesBtn'>Our Stories</button>
+                            <img className='our-stories' src={OurStores} alt='our stories' />
+                        </div>
+                        <div className='our-amb-container'>
+                            <button className='ourAmbBtn'>Our Ambassadors</button>
+                            <img className='our-amb' src={OurAmb} alt='our ambassadors' />
+                        </div>
+                    </div>
+                </div>
+
+                {/* About DropDown Navbar */}
+                <div className={slideCssAbout}>
+                    <h1>ABOUT</h1>
                 </div>
             </header>
 
