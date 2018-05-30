@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import topo from '../assets/topo.png';
 import fitguide from '../assets/Fit-Guide.jpg';
 
-class footer extends Component {
+class Footer extends Component {
     constructor(props){
         super(props)
     }
@@ -11,8 +11,9 @@ class footer extends Component {
     render(){
 
         return (
-            <div> 
-            <img src = {topo} />
+            <div className='footer'> 
+            
+            <h1>jjjjjj</h1>
                 </div>
         )
     }
@@ -23,4 +24,4 @@ function mapStateToProps(state){
 
 }
 
-export default connect(mapStateToProps)(footer)
+export default connect(mapStateToProps)(Footer)
