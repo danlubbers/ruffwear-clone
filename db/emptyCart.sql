@@ -1,5 +1,5 @@
-INSERT INTO cart (user_id, product_id, quantity, size, color) 
-VALUES ($1, $2, $3, $4, $5);
+DELETE FROM cart
+WHERE user_id = $1;
 
 select * from cart
 join products on products.product_id = cart.product_id

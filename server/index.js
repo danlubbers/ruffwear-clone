@@ -122,11 +122,11 @@ app.get(`/api/getproducts/:category`, controller.getProducts);
 
 app.get(`/api/getoneproduct/:id`, controller.getOneProduct);
 
-app.get(`/api/productCart`, controller.cartProducts);
+app.get(`/api/getcart`, controller.getCart);
 
-app.put(`/api/cart`, controller.updateQuantity);
+app.put(`/api/changequantity`, controller.updateQuantity);
 
-app.post(`/api/cart`, controller.addCart);
+app.post(`/api/addtocart`, controller.addCart);
 
 app.delete(`/api/deleteProduct/:id`, controller.delete);
 

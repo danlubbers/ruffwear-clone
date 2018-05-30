@@ -25,12 +25,11 @@ module.exports = {
       });
   },
 
-  cartProducts: (req, res) => {
+  getCart: (req, res) => {
     const dbInstance = req.app.get("db");
 
-    dbInstance.cart
-      .getAllCart(req.user.user_id)
-      .then(productID => res.status(200).send(productID))
+    dbInstance.get_cart([req.user.user_id]).then(cart => {
+      res.status(200).send(cart)})
       .catch(err => {
         console.error(err);
         res.status(500).send(err);
@@ -39,21 +38,10 @@ module.exports = {
 
   updateQuantity: (req, res) => {
     const dbInstance = req.app.get("db");
-    let { cartID, newQuantity } = req.body;
-    dbInstance.cart
-      .changeQuantity(cartID, newQuantity)
-      .then(response => {
-        console.log(response);
-        dbInstance.cart
-          .getAllCart(req.user.user_id)
-          .then(cart => {
-            res.status(200).send(cart);
-          })
-          .catch(err => {
-            console.error(err);
-            res.status(500).send(err);
-          });
-      })
+    let { cart_id, newQuantity } = req.body;
+
+    dbInstance.changeQuantity([cart_id, newQuantity]).then(cart => {
+        res.status(200).send(cart)})
       .catch(err => {
         console.error(err);
         res.status(500).send(err);
@@ -62,9 +50,11 @@ module.exports = {
 
   addCart: (req, res) => {
     const dbInstance = req.app.get("db");
-    dbInstance.cart
-      .addToCart(req.user.user_id, req.body.productID)
-      .then(cartID => res.status(200).send(cartID))
+    const {product_id, qty, size, color } = req.body
+    const {user_id} = req.user
+
+    dbInstance.addToCart([user_id, product_id, qty, size, color])
+      .then(cart => res.status(200).send(cart))
       .catch(err => {
         console.error(err);
         res.status(500).send(err);
@@ -73,9 +63,9 @@ module.exports = {
 
   delete: (req, res) => {
     const dbInstance = req.app.get("db");
-    console.log(req.params.id);
-    dbInstance.cart.deleteProduct(req.params.id).then(product => {
-      res.status(200).send(product);
+
+    dbInstance.deleteProduct([req.params.id, req.user.user_id]).then(cart => {
+      res.status(200).send(cart);
     });
   },
 
@@ -87,8 +77,7 @@ module.exports = {
       source: req.body.token.id,
       description: "RuffDoggies"
     });
-    dbInstance.cart
-      .emptyCart(req.user.user_id)
+    dbInstance.emptyCart([req.user.user_id])
       .then(noProducts => {
         res.status(200).send(noProducts); // clear out cart here
       })
