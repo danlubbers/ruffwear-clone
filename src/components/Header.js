@@ -3,8 +3,13 @@ import RuffLogo from '../assets/ruffdoggies-logo.png'
 // React Icon Logos
 import SearchIcon from 'react-icons/lib/fa/search'
 import Paw from 'react-icons/lib/fa/paw'
+import Cart from 'react-icons/lib/fa/shopping-cart'
 // Images for Navbar
 import Harness from '../assets/navigation-harnesses-image.jpg'
+// Images for Tails dropdown
+import MyDog from '../assets/navigation-mydogismy.jpg'
+import OurStores from '../assets/navigation-our-stories.jpg'
+import OurAmb from '../assets/navigation-our-ambassadors.jpg'
 
 class Header extends Component {
     constructor(props) {
@@ -66,8 +71,9 @@ class Header extends Component {
                                 <li className='aboutBtn' onClick={this.handleClickAbout}>ABOUT</li>   
                             </ul>
                             <ul className='nav-list-controls'>
-                                <li className='search-icon'><SearchIcon/></li>
-                                <li className='paw-icon'><Paw/></li>
+                                <li className='search-icon'><SearchIcon size={25}/></li>
+                                <li className='paw-icon'><Paw  size={25}/></li>
+                                <li className='cart-icon'><Cart  size={25}/></li>
                             </ul>
                         </div>
                     </div>
@@ -123,7 +129,20 @@ class Header extends Component {
 
                 {/* Tails DropDown Navbar */}
                 <div className={slideCssTails}>
-                    <h1>TAILS</h1>
+                    <div className='tails-container'>
+                        <div className='my-dog-container'>
+                            <button className='myDogBtn'>#MyDogIsMyDog</button>
+                            <img className='my-dog' src={MyDog} alt='my dog' />
+                        </div>
+                        <div className='our-stories-container'>
+                            <button className='ourStoriesBtn'>Our Stories</button>
+                            <img className='our-stories' src={OurStores} alt='our stories' />
+                        </div>
+                        <div className='our-amb-container'>
+                            <button className='ourAmbBtn'>Our Ambassadors</button>
+                            <img className='our-amb' src={OurAmb} alt='our ambassadors' />
+                        </div>
+                    </div>
                 </div>
 
                 {/* About DropDown Navbar */}

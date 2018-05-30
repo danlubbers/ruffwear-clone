@@ -20,3 +20,5 @@ create table cart (
     user_id integer,
     quantity integer default 1
 );
+
+
