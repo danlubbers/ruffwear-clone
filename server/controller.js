@@ -57,7 +57,6 @@ module.exports = {
   },
 
   getOneCollarsProduct: (req, res) => {
-    console.log("sucka");
     const dbInstance = req.app.get("db");
 
     dbInstance.products
@@ -81,7 +80,6 @@ module.exports = {
   },
 
   getOneBootsProduct: (req, res) => {
-    console.log("sucka");
     const dbInstance = req.app.get("db");
 
     dbInstance.products
@@ -111,7 +109,7 @@ module.exports = {
     dbInstance.cart
       .changeQuantity(cartID, newQuantity)
       .then(response => {
-        console.log(response);
+        // console.log(response);
         dbInstance.cart
           .getAllCart(req.user.user_id)
           .then(cart => {
@@ -141,7 +139,7 @@ module.exports = {
 
   delete: (req, res) => {
     const dbInstance = req.app.get("db");
-    console.log(req.params.id);
+    // console.log(req.params.id);
     dbInstance.cart.deleteProduct(req.params.id).then(product => {
       res.status(200).send(product);
     });
