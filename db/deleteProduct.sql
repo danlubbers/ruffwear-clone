@@ -1,5 +1,5 @@
 delete from cart 
-where product_id = $1;
+where cart_id = $1;
 
 select * from cart
 join products on products.product_id = cart.product_id

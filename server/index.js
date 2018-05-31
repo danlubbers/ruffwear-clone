@@ -23,7 +23,9 @@ const {
   CALLBACK_URL,
   SERVER_PORT,
   S_STRIPE_KEY,
-  REACT_APP_STRIPE_KEY
+  REACT_APP_STRIPE_KEY,
+  SUCCESS_REDIRECT,
+  FAILURE_REDIRECT
 } = process.env;
 
 app.use(express.static(`${__dirname}/../build`));
@@ -93,13 +95,15 @@ passport.deserializeUser((id, done) => {
     });
 });
 
+///////Auth endpoints////////////////////
+
 app.get("/auth", passport.authenticate("auth0"));
 
 app.get(
   "/auth/callback",
   passport.authenticate("auth0", {
-    successRedirect: process.env.SUCCESS_REDIRECT,
-    failureRedirect: process.env.FAILURE_REDIRECT
+    successRedirect: SUCCESS_REDIRECT,
+    failureRedirect: FAILURE_REDIRECT
   })
 );
 
@@ -113,7 +117,7 @@ app.get("/auth/me", function(req, res) {
 
 app.get("/logout", function(req, res) {
   req.logOut();
-  res.redirect(process.env.FAILURE_REDIRECT);
+  res.redirect(FAILURE_REDIRECT);
 });
 
 
@@ -126,11 +130,11 @@ app.get(`/api/getoneproduct/:id`, controller.getOneProduct);
 
 app.get(`/api/getcart`, controller.getCart);
 
-app.put(`/api/changequantity`, controller.updateQuantity);
-
 app.post(`/api/addtocart`, controller.addCart);
 
-app.delete(`/api/deleteProduct/:id`, controller.delete);
+app.put(`/api/changequantity`, controller.updateQuantity);
+
+app.delete(`/api/deleteproduct/:id`, controller.delete);
 
 
 
