@@ -7,12 +7,13 @@
     height: 100vh;
     background-image: url('../assets/featured-ambassador-nico-sol.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .featured-text-container {
     position: absolute;
-    width: 500px;
-    margin: 100px 0px 0px 250px;
+    width: 50vw;
+    margin-left: 100px;
 
     .mile-text {
         font-size: 4em;
@@ -32,6 +33,7 @@
             font-size: 1.4em;
             color: $font-color;
             background-color: $yellow;
+            border: none;
 
         }
         .adventureBtn:hover {
@@ -44,6 +46,7 @@
             font-size: 1.4em;
             color: white;
             background-color: $font-color;
+            border: none;
         }
 
         .shopCollectionBtn:hover {
