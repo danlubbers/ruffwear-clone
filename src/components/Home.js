@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 class Home extends React.Component{
     render(){
@@ -8,7 +8,7 @@ class Home extends React.Component{
             // Header
             <div>
                 <Header/>
-                
+                <Footer/>
             </div>
         )
     }
