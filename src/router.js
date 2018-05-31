@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Home from './components/Home'
+import Home from './components/Home';
 import Harnesses from './components/Harnesses';
 import Leashes from './components/Leashes';
 import Collars from './components/Collars';
