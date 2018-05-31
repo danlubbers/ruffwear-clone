@@ -4,12 +4,14 @@ import RuffLogo from '../assets/ruffdoggies-logo.png'
 import SearchIcon from 'react-icons/lib/fa/search'
 import Paw from 'react-icons/lib/fa/paw'
 import Cart from 'react-icons/lib/fa/shopping-cart'
-// Images for Navbar
+// Images for Shop dropdown
 import Harness from '../assets/navigation-harnesses-image.jpg'
 // Images for Tails dropdown
 import MyDog from '../assets/navigation-mydogismy.jpg'
 import OurStores from '../assets/navigation-our-stories.jpg'
 import OurAmb from '../assets/navigation-our-ambassadors.jpg'
+// Images for About dropdown
+import OurPath from '../assets/navigation-our-path.jpg'
 
 class Header extends Component {
     constructor(props) {
@@ -131,15 +133,21 @@ class Header extends Component {
                 <div className={slideCssTails}>
                     <div className='tails-container'>
                         <div className='my-dog-container'>
-                            <button className='myDogBtn'>#MyDogIsMyDog</button>
+                            <div className='my-dog-text-container'>
+                                <a href='https://www.instagram.com/explore/tags/mydogismy/' target='_blank' rel='noopener noreferrer'><h1 className='my-dog-text'>#MyDogIsMy</h1></a>
+                            </div>
                             <img className='my-dog' src={MyDog} alt='my dog' />
                         </div>
                         <div className='our-stories-container'>
-                            <button className='ourStoriesBtn'>Our Stories</button>
+                            <div className='ourStoriesBtn-container'>
+                                <button className='ourStoriesBtn'>Our Stories</button>
+                            </div>
                             <img className='our-stories' src={OurStores} alt='our stories' />
                         </div>
                         <div className='our-amb-container'>
-                            <button className='ourAmbBtn'>Our Ambassadors</button>
+                            <div className='ourAmbBtn-container'>
+                                <button className='ourAmbBtn'>Our Ambassadors</button>
+                            </div>
                             <img className='our-amb' src={OurAmb} alt='our ambassadors' />
                         </div>
                     </div>
@@ -147,7 +155,22 @@ class Header extends Component {
 
                 {/* About DropDown Navbar */}
                 <div className={slideCssAbout}>
-                    <h1>ABOUT</h1>
+                    <div className='about-container'>
+                        <div className='about-container-left'>
+                            <img className='our-path' src={OurPath} alt='two dogs running'/>
+                        </div>
+                        <div className='about-container-right'>
+                            <div className='about-list'>
+                                <ul>
+                                    <li>Our Pack </li>
+                                    <li>Our Path</li>
+                                    <li>Our Design Philosophy</li>
+                                    <li>Our Practices</li>
+                                    <li>Partners</li> 
+                                </ul>
+                            </div>   
+                        </div>
+                    </div>
                 </div>
             </header>
 
