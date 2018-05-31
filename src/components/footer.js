@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import topo from '../assets/topo.png';
 import fitguide from '../assets/Fit-Guide.jpg';
 import Rightarrow from 'react-icons/lib/fa/angle-right';
 
@@ -23,11 +22,13 @@ class Footer extends Component {
                                 <button className='news-button'> <Rightarrow size={35} /> </button>
                             </div>
                         </div>
-                        <img src={fitguide} className="fitpic" />
+                        <div className='image-container'> 
+                            <img src={fitguide} className="fitpic" alt='fit guide'/>
+                        </div>
                     </div>
                     <div className='background-bot'>
-                        <div className='container'>
-                            <div className='left'>
+                        <div className='background-bottom-container'>
+                            <div className='background-bottom-left'>
                                 <h1> BECOME A DEALER </h1>
                                 <p> Explore a partnership with Ruffwear. </p>
                                 <button> SIGN ME UP </button>
@@ -35,7 +36,7 @@ class Footer extends Component {
                                 <p> Flip through our digital pages for some outdoor canine inspiration. </p>
                                 <button> LEARN MORE </button>
                             </div>
-                            <div className='right'>
+                            <div className='background-bottom-right'>
                                 <div className='right-left'>
                                     <h1> MY ACCOUNT </h1>
                                     <ul>
