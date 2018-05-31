@@ -8,6 +8,7 @@ create table products (
     product_id serial primary key,
     category text,
     title text,
+    subtitle text,
     description text,
     price decimal,
     sizes text[],

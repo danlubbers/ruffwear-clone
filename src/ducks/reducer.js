@@ -4,6 +4,7 @@ const initialState = {
     user: {},
     cart: [],
     products: [],
+    searchProducts:[],
     indiv: {}
 }
 
@@ -14,6 +15,7 @@ const GET_CART = "GET_CART";
 const ADD_TO_CART = "ADD_TO_CART";
 const CHANGE_QUANTITY = "CHANGE_QUANTITY";
 const DELETE_FROM_CART = "DELETE_FROM_CART";
+const SEARCH = "SEARCH";
 
 export default function reducer (state = initialState, action){
     switch (action.type) {
@@ -22,7 +24,9 @@ export default function reducer (state = initialState, action){
         case GET_PRODUCTS + "_FULFILLED":
             return Object.assign({}, state, {products: action.payload});
         case GET_INDIV_PRODUCT + "_FULFILLED":
-            return Object.assign({}, state, {indiv: action.payload});   
+            return Object.assign({}, state, {indiv: action.payload}); 
+        case SEARCH + "_FULFILLED":
+            return Object.assign({}, state, {searchProducts: action.payload});                
         case GET_CART + "_FULFILLED":
             return Object.assign({}, state, {cart: action.payload});
         case ADD_TO_CART + "_FULFILLED":
@@ -63,6 +67,16 @@ export function getIndiv(id){
     return{
         type: GET_INDIV_PRODUCT,
         payload: product
+    }
+}
+
+export function search(str){
+    let products = axios.get(`/api/search?=${str}`).then(res => {
+        return res.data
+    })
+    return{
+        type: SEARCH,
+        payload: products
     }
 }
 
