@@ -2,12 +2,14 @@ header {
     margin: 0 auto;
     padding-top: 30px;
     width: 100vw;
-    // background-color: lightblue;
+    background-color: lightblue;
  
     nav{
+        width: 100vw;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        background-color: lightcoral;
 
         .ruff-logo {
             width: 300px;
