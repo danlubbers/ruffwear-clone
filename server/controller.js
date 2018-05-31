@@ -36,11 +36,24 @@ module.exports = {
       });
   },
 
+  addCart: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const {product_id, qty, size, color } = req.body
+    // const {user_id} = req.user
+
+    dbInstance.addToCart([product_id, qty, size, color])
+      .then(cart => res.status(200).send(cart))
+      .catch(err => {
+        console.error(err);
+        res.status(500).send(err);
+      });
+  },
+
   updateQuantity: (req, res) => {
     const dbInstance = req.app.get("db");
     let { cart_id, newQuantity } = req.body;
 
-    dbInstance.changeQuantity([cart_id, newQuantity]).then(cart => {
+    dbInstance.changeQuantity([ newQuantity, cart_id, req.user.user_id]).then(cart => {
         res.status(200).send(cart)})
       .catch(err => {
         console.error(err);
@@ -48,18 +61,6 @@ module.exports = {
       });
   },
 
-  addCart: (req, res) => {
-    const dbInstance = req.app.get("db");
-    const {product_id, qty, size, color } = req.body
-    const {user_id} = req.user
-
-    dbInstance.addToCart([user_id, product_id, qty, size, color])
-      .then(cart => res.status(200).send(cart))
-      .catch(err => {
-        console.error(err);
-        res.status(500).send(err);
-      });
-  },
 
   delete: (req, res) => {
     const dbInstance = req.app.get("db");
