@@ -3,6 +3,11 @@ import { connect } from 'react-redux'
 import topo from '../assets/topo.png';
 import fitguide from '../assets/Fit-Guide.jpg';
 import Rightarrow from 'react-icons/lib/fa/angle-right';
+import Insta from 'react-icons/lib/fa/instagram';
+import Fb from 'react-icons/lib/fa/facebook';
+import Yt from 'react-icons/lib/fa/youtube-play';
+import Pin from 'react-icons/lib/fa/pinterest-p';
+import Twitter from 'react-icons/lib/fa/twitter';
 
 class Footer extends Component {
     constructor(props) {
@@ -71,7 +76,7 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
-
+             
             </div>
         )
     }
