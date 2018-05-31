@@ -8,7 +8,7 @@ class Home extends React.Component{
             // Header
             <div>
                 <Header/>
-                
+                <Footer/>
             </div>
         )
     }
