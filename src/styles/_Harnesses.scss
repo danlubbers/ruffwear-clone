@@ -1,0 +1,13 @@
+.harnesses {
+    
+    .pic-container{
+        @include center2;
+    background-color: grey;
+    height: 100vh;
+    width:  100vw;
+    .harnesses-pic{
+        height: 50*1.58vh;
+        width: 50vw;
+    }
+}
+}
