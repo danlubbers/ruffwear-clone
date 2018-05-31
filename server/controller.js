@@ -24,6 +24,19 @@ module.exports = {
         res.status(500).send(err);
       });
   },
+  search: (req, res) => {
+    const dbInstance = req.app.get("db");
+    let query = `%${req.query.find}%`
+    let cap = `%${req.query.find.toUpperCase()}%`
+    let low = `%${req.query.find.toLowerCase()}%`
+    
+    dbInstance.search([query, cap, low]).then(products => {
+      res.status(200).send(products)})
+      .catch(err => {
+        console.error(err);
+        res.status(500).send(err);
+      });
+  },
 
   getCart: (req, res) => {
     const dbInstance = req.app.get("db");
