@@ -3,8 +3,24 @@
 
 // Variables
 $font-family: 'Roboto', sans-serif;
-$font-color: rgb(10, 12, 110);
+$font-color: rgb(20, 8, 88);
+$yellow: rgb(233, 177, 23);
 
-// Header
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin center2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// import component SASS files
 @import './../styles/Header';
 @import './../styles/Footer';
+@import './../styles/Home';
+@import './../styles/Harnesses';
