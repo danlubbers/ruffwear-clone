@@ -128,6 +128,8 @@ app.get(`/api/getproducts/:category`, controller.getProducts);
 
 app.get(`/api/getoneproduct/:id`, controller.getOneProduct);
 
+app.get(`/api/search`, controller.search);
+
 app.get(`/api/getcart`, controller.getCart);
 
 app.post(`/api/addtocart`, controller.addCart);
