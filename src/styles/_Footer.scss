@@ -1,31 +1,30 @@
 .footer {
-    height: 65vw;
+    height: 130vh;
     width: 100vw;
    
     .background{
-        height: 93%;
+        height: 120vh;
         width: 100vw;
         background-image: url('../assets/topo.png');
         background-repeat: repeat;
-    
     }
 
     .background-top{
         display: flex;
         justify-content: center;
         align-content: center;
-        height: 50%;
-        width: 100%;
+        height: 60vh;
+        width: 100vw;
 
         .fitpic{
             
-            height: 500px;
-            width: 750px;
+            // height: 500px;
+            width: 40vw;
         }
         
         .newslettercontainer{
-            height: 100%;
-            width: 25%;
+            height: 55vh;
+            
             margin-right: 10px;
 
             .news-h1{
@@ -78,13 +77,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50%;
-        width: 100%;
+        height: 60vh;
+        width: 100vw;
 
     .container{
         display: flex;
-        height: 90%;
-        width: 66%;
+        width: 66vw;
      
         p{
             font-size: 18px;
@@ -97,6 +95,10 @@
             background-color: transparent;
             border: 0.2rem solid #f2a900;
             color: #f2a900;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity: 1;
         }
     }
     .left{
