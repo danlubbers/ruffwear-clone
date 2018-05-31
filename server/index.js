@@ -42,7 +42,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 // •••••••••••••••• AUTHENTICATION •••••••••••••••• //
+
 passport.use(
   new Auth0Strategy(
     {
@@ -133,6 +135,7 @@ app.delete(`/api/deleteProduct/:id`, controller.delete);
 
 
 // •••••••••••••••• STRIPE •••••••••••••••• //
+
 app.post(`/api/payment`, controller.stripe);
 
 
@@ -164,9 +167,12 @@ app.post("/api/sendEmail", (req, res) => {
 });
 
 
+// •••••••••••••••• CONNECTION_STRING && SERVER_PORT•••••••••••••••• //
+
 massive(CONNECTION_STRING).then(db => {
   app.set("db", db);
   app.listen(SERVER_PORT, () => {
     console.log(`istening on PORT: ${SERVER_PORT}`);
   });
 });
+

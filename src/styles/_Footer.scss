@@ -1,0 +1,156 @@
+.footer {
+    height: 65vw;
+    width: 100vw;
+   
+    .background{
+        height: 93%;
+        width: 100vw;
+        background-image: url('../assets/topo.png');
+        background-repeat: repeat;
+    
+    }
+
+    .background-top{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 50%;
+        width: 100%;
+
+        .fitpic{
+            
+            height: 500px;
+            width: 750px;
+        }
+        
+        .newslettercontainer{
+            height: 100%;
+            width: 25%;
+            margin-right: 10px;
+
+            .news-h1{
+                font-size: 48px;
+                font-family: $font-family;
+                color: white;
+                margin-top: 100px;
+            }
+            
+            .news-p{
+                font-size: 1.2rem;
+                font-family: $font-family;
+                color: rgba(255,255,255,0.8);
+                line-height: 30px;
+            }}
+            
+            .input-container{
+                height: 50%;
+                width: 100%;
+
+            .news-input{
+                background: rgba(255,255,255,0.8);
+                border: 1px solid #00263e;
+                font-family: $font-family;
+                font-size: 25px;
+                padding: 15.5px 30px;
+                vertical-align: middle;
+                border: 0;
+                border-radius: 0;               
+           
+            }
+
+            .news-button{
+                cursor: pointer;
+                border:none;
+                background-color: #f2a900;
+                vertical-align: middle;
+                border: 0;
+                height: 60.5px;
+                width: 70px;
+            }
+            .news-button:hover{
+                background-color: #c18700;
+                transition: .4s;
+            }
+        }
+    }
+
+    .background-bot{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 100%;
+
+    .container{
+        display: flex;
+        height: 90%;
+        width: 66%;
+     
+        p{
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            font-family: $font-family;
+            word-spacing: 3px;
+        }
+        button{
+            padding: 15px 20px;
+            background-color: transparent;
+            border: 0.2rem solid #f2a900;
+            color: #f2a900;
+        }
+    }
+    .left{
+        border-right-color: rgba(255,255,255,0.8);
+        border-right-style: solid;
+        border-width: .5px;
+        height: 82%;
+        width: 25%;
+        margin-right: 10px;
+
+        h1{
+   
+            font-size: 22px;
+            color: white;
+            font-family: $font-family;
+        }
+    }
+
+    .right{
+        display: flex;
+        justify-content: center;
+        height: 82%;
+        width: 75%;
+        font-family: $font-family;
+
+        
+
+        h1{
+            margin-left: 40px;
+            font-size: 22px;
+            color: white;
+            font-family: $font-family;
+        }
+
+        li {
+            font-size: 16px;
+            list-style-type: none;
+            color: rgba(255,255,255,0.8);
+            margin: 18px 0px 0px 0px;
+           letter-spacing: 1px;
+        }
+
+        .right-left{
+            height: 100%;
+            width: 33%;
+        }
+        .right-middle{
+            height: 100%;
+            width: 33%;
+        }
+        .right-right{
+            height: 100%;
+            width: 33%;
+        }
+    }
+    } 
+}
