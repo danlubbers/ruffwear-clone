@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import router from './router'
 import './styles/App.css'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 class App extends Component {
   render() {
@@ -12,7 +13,9 @@ class App extends Component {
         </div>
 
           {router}
-
+        <div className='footer'>
+           <Footer/>
+        </div>
       </div>
     );
   }
