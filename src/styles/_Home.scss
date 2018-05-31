@@ -1,0 +1,54 @@
+.home-container{
+    width: 100vw;
+
+
+.featured-photo {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./../assets/featured-ambassador-nico-sol.jpg');
+    background-repeat: no-repeat;
+}
+
+.featured-text-container {
+    position: absolute;
+    width: 500px;
+    margin: 100px 0px 0px 250px;
+
+    .mile-text {
+        font-size: 4em;
+        text-align: center;
+        font-family: $font-family;
+        color: $font-color;
+        letter-spacing: 2px;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+
+        .adventureBtn {
+            width: 200px;
+            height: 60px;
+            font-size: 1.4em;
+            color: $font-color;
+            background-color: $yellow;
+
+        }
+        .adventureBtn:hover {
+            background-color: rgb(212, 168, 20);
+        }
+    
+        .shopCollectionBtn {
+            width: 200px;
+            height: 60px;
+            font-size: 1.4em;
+            color: white;
+            background-color: $font-color;
+        }
+
+        .shopCollectionBtn:hover {
+            background-color: rgb(16, 7, 66);
+        }
+    }
+}
+}

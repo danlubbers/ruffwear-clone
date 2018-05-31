@@ -3,8 +3,12 @@
 
 // Variables
 $font-family: 'Roboto', sans-serif;
-$font-color: rgb(10, 12, 110);
+$font-color: rgb(20, 8, 88);
+$yellow: rgb(233, 177, 23);
 
-// Header
+
+// import component SASS files
 @import './../styles/Header';
 @import './../styles/Footer';
+@import './../styles/Home';
+
