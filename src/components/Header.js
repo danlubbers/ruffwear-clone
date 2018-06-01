@@ -23,9 +23,14 @@ class Header extends Component {
             showTails: false,
             showAbout: false
         }
+        this.handleClickHome = this.handleClickHome.bind(this);
         this.handleClickShop = this.handleClickShop.bind(this);
         this.handleClickTails = this.handleClickTails.bind(this);
         this.handleClickAbout = this.handleClickAbout.bind(this);
+    }
+
+    handleClickHome() {
+        this.setState({showShop: false, showTails: false, showAbout: false})
     }
 
     handleClickShop() {
@@ -64,7 +69,7 @@ class Header extends Component {
             <header>
                 <nav>
                     <div>
-                        <Link to='/'>  <img className='ruff-logo' src={RuffLogo} alt='ruff logo' /> </Link>
+                        <Link to='/' onClick={this.handleClickHome}>  <img className='ruff-logo' src={RuffLogo} alt='ruff logo' /> </Link>
                     </div>
                     <div>
                         <div className='nav-lists'>
@@ -75,8 +80,9 @@ class Header extends Component {
                             </ul>
                             <ul className='nav-list-controls'>
                                 <li className='search-icon'><SearchIcon size={25} /></li>
-                                <li className='paw-icon'><Paw size={25} /></li>
+                                <Link to='/contact'><li className='paw-icon'><Paw size={25} /></li></Link>
                                 <Link to='/cart'>  <li className='cart-icon'><Cart size={25} /></li> </Link>
+                                <Link to='/login'><li className='login'>Login</li></Link>
                             </ul>
                         </div>
                     </div>
@@ -95,12 +101,12 @@ class Header extends Component {
                                     <h3>GEAR</h3>
                                     <div className='gear-container'>
                                         <div className='gear-split-left'>
-                                            <Link to='/harnesses'>  <li>Harnesses</li> </Link>
-                                            <Link to='/leashes'> <li>Leashes</li> </Link>
-                                            <Link to='/collars'> <li>Collars</li> </Link>
+                                            <Link to='/harnesses'  onClick={this.handleClickShop}><li>Harnesses</li> </Link>
+                                            <Link to='/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
+                                            <Link to='/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
                                             <li>Apparel</li>
                                             <li>Life Jackets</li>
-                                            <Link to='/boots'> <li>Boots</li> </Link>
+                                            <Link to='/boots' onClick={this.handleClickShop}> <li>Boots</li> </Link>
                                         </div>
                                         <div className='gear-split-right'>
                                             <li>Packs</li>
