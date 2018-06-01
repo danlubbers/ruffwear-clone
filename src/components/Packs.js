@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Collars extends React.Component{
+class Packs extends React.Component{
     render(){
         return(
             <div>
-                Collars
+                Packs
             </div>
         )
     }
 }
 
-export default Collars
+export default Packs
