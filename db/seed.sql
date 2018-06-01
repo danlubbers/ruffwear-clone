@@ -23,7 +23,7 @@ create table cart (
     product_id int references products(product_id),
     quantity integer default 1,
     size text,
-    color text
+    color_img_index int,
 );
 
 
