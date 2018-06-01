@@ -63,8 +63,8 @@ class Header extends Component {
         let slideCssTails = showTails ? 'slide-menu slide-menu-position' : 'slide-menu';
         let slideCssAbout = showAbout ? 'slide-menu slide-menu-position' : 'slide-menu';
 
-        console.log(slideCssShop)
-        console.log(slideCssTails)
+        // console.log(slideCssShop)
+        // console.log(slideCssTails)
         return (
             <header>
                 <nav>

@@ -38,7 +38,7 @@ class Harnesses extends React.Component {
                </div>
 
             </div>
-            {harnessProducts}
+            {harnessProducts}            
             </div>
         )
     }
@@ -51,4 +51,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {getProducts})(Harnesses)
-
