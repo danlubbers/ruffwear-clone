@@ -18,7 +18,7 @@ module.exports = {
     const {id} = req.params
 
     dbInstance.get_one_product([id]).then(product => {
-      res.status(200).send(product)})
+      res.status(200).send(product[0])})
       .catch(err => {
         console.error(err);
         res.status(500).send(err);
