@@ -2,14 +2,14 @@ header {
     margin: 0 auto;
     padding-top: 30px;
     width: 100vw;
-    background-color: lightblue;
+    // background-color: lightblue;
  
     nav{
         width: 100vw;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: lightcoral;
+        // background-color: lightcoral;
 
         .ruff-logo {
             width: 300px;
@@ -160,7 +160,6 @@ header {
     .tails-container {
         position: relative;
         margin-top: 150px;
-        padding: 0px 150px;
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -178,7 +177,7 @@ header {
             }
             .my-dog-text {
                 margin: 140px 0px 0px 75px;
-                position: fixed;
+                position: absolute;
                 color: white;
                 font-family: $font-family;
                 font-size: 1.3em;
@@ -214,7 +213,7 @@ header {
             .ourStoriesBtn {
                 margin-top: 150px;
                 padding: 15px;
-                position: fixed;
+                position: absolute;
                 border: solid 1px white;
                 background-color: transparent;
                 color: white;
@@ -252,7 +251,7 @@ header {
             .ourAmbBtn {
                 margin-top: 150px;
                 padding: 15px;
-                position: fixed;
+                position: absolute;
                 border: none;
                 background-color: transparent;
                 color: white;
