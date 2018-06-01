@@ -7,4 +7,4 @@ OR category LIKE $2
 OR category LIKE $3
 OR description LIKE $1
 OR description LIKE $2
-OR description LIKE $3
+OR description LIKE $3;
