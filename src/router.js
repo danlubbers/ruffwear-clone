@@ -7,15 +7,17 @@ import Collars from './components/Collars';
 import Cart from './components/Cart';
 import Boots from './components/Boots';
 import Product from './components/Product'
+import Collections from './components/Collections';
 
     export default(
         <Switch>
             <Route exact path="/" component={Home} />   
+            <Route path="/collections/:product" component={Collections}/>
             <Route path="/harnesses" component={Harnesses}/>
             <Route path="/leashes" component={Leashes}/>   
             <Route path="/collars" component={Collars}/>   
             <Route path="/boots" component={Boots}/>   
-            <Route path="/Product" component={Product}/>   
+            <Route path="/Product/:id" component={Product}/>   
             <Route path="/cart" component={Cart}/>         
         </Switch>
     )

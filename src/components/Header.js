@@ -63,8 +63,8 @@ class Header extends Component {
         let slideCssTails = showTails ? 'slide-menu slide-menu-position' : 'slide-menu';
         let slideCssAbout = showAbout ? 'slide-menu slide-menu-position' : 'slide-menu';
 
-        console.log(slideCssShop)
-        console.log(slideCssTails)
+        // console.log(slideCssShop)
+        // console.log(slideCssTails)
         return (
             <header>
                 <nav>
@@ -101,12 +101,12 @@ class Header extends Component {
                                     <h3>GEAR</h3>
                                     <div className='gear-container'>
                                         <div className='gear-split-left'>
-                                            <Link to='/harnesses'  onClick={this.handleClickShop}><li>Harnesses</li> </Link>
-                                            <Link to='/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
-                                            <Link to='/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
+                                            <Link to='/collections/harnesses'  onClick={this.handleClickShop}><li>Harnesses</li> </Link>
+                                            <Link to='/collections/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
+                                            <Link to='/collections/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
                                             <li>Apparel</li>
                                             <li>Life Jackets</li>
-                                            <Link to='/boots' onClick={this.handleClickShop}> <li>Boots</li> </Link>
+                                            <Link to='/collections/boots' onClick={this.handleClickShop}> <li>Boots</li> </Link>
                                         </div>
                                         <div className='gear-split-right'>
                                             <li>Packs</li>
