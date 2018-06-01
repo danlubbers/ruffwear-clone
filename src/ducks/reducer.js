@@ -5,7 +5,40 @@ const initialState = {
     cart: [],
     products: [],
     searchProducts:[],
-    indiv: {}
+    indiv: {
+        product_id: 29,
+        category: "harnesses",
+        title: "HI & LIGHT™ HARNESS ",
+        subtitle: "lightweight, low-profile",
+        description: "The Ruffwear Hi & Light™ Harness is a lightweight, low-profile adventure harness. This minimalist harness has four points of adjustment for a sleek, comfortable fit down to size XXXS. It features an aluminum V-ring leash attachment point on the back, a debris-resistant liner, reflective trim for low-light visibility, and a light loop for attaching The Beacon™. Scaled to fit even the smallest canine companions, the Hi & Light Harness is a great option for any dog that enjoys exploring in a harness.",
+        price: "39.95",
+        sizes: [
+            "XXXSmall",
+            "XXSmall",
+            "XSmall",
+            "Small",
+            "Medium",
+            "Large/XLarge"
+        ],
+        colors: [
+            [
+                "BLUE ATOLL",
+                "#0DB0D1"
+            ],
+            [
+                "TWILIGHT GRAY",
+                "#444549"
+            ],
+            [
+                "SOCKEYE RED",
+                "#DD3326"
+            ]
+        ],
+        imgs: [
+            "http://res.cloudinary.com/danlubbers/image/upload/v1527702035/ruffdoggies/harnesses/hero-colors/3082-HiLightHarness-SockeyeRed-Left-WEB_640x.jpg"
+        ],
+        thumbnail: "http://res.cloudinary.com/danlubbers/image/upload/v1527626820/ruffdoggies/harnesses/3082-HiLightHarness-SockeyeRed-Right-WEB_372x279.jpg"
+    }
 }
 
 const GET_USER_INFO = "GET_USER_INFO";
@@ -23,7 +56,9 @@ export default function reducer (state = initialState, action){
             return Object.assign({}, state, {user: action.payload})
         case GET_PRODUCTS + "_FULFILLED":
             return Object.assign({}, state, {products: action.payload});
-        case GET_INDIV_PRODUCT + "_FULFILLED":
+        case GET_INDIV_PRODUCT:
+        console.log(action.payload);
+        
             return Object.assign({}, state, {indiv: action.payload}); 
         case SEARCH + "_FULFILLED":
             return Object.assign({}, state, {searchProducts: action.payload});                
@@ -60,10 +95,9 @@ export function getProducts(category){
     }
 }
 
-export function getIndiv(id){
-    let product = axios.get(`/api/getoneproduct/${id}`).then(res => {
-        return res.data
-    })
+export function getIndiv(product){
+    console.log(product);
+    
     return{
         type: GET_INDIV_PRODUCT,
         payload: product
