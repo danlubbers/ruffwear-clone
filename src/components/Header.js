@@ -76,7 +76,7 @@ class Header extends Component {
                             <ul className='nav-list-controls'>
                                 <li className='search-icon'><SearchIcon size={25} /></li>
                                 <li className='paw-icon'><Paw size={25} /></li>
-                                <Link to='cart'>  <li className='cart-icon'><Cart size={25} /></li> </Link>
+                                <Link to='/cart'>  <li className='cart-icon'><Cart size={25} /></li> </Link>
                             </ul>
                         </div>
                     </div>

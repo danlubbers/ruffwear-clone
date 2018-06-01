@@ -1,4 +1,4 @@
-INSERT INTO cart (user_id, product_id, quantity, size, color) 
+INSERT INTO cart (user_id, product_id, quantity, size, color_img_index) 
 VALUES ($1, $2, $3, $4, $5);
 
 select * from cart
