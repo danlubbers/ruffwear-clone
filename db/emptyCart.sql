@@ -1,7 +1,7 @@
 DELETE FROM cart
 WHERE user_id = $1;
 
-select * from cart
-join products on products.product_id = cart.product_id
+select cart_id, p.product_id, quantity, size, color_img_index, title, price, colors, imgs, thumbnail from cart c
+join products p on p.product_id = c.product_id
 where user_id = $1
 order by cart_id;

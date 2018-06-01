@@ -5,9 +5,18 @@ import {changeQuantity, deleteFromCart} from '../ducks/reducer'
 
 class CartRow extends React.Component{
     render(){
+        let {cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex} = this.props
+        // console.log(cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex);
+        console.log(imgs); 
+        
         return(
             <div>
-                cartrow
+                Working on cart rows
+                <p>
+                {title}
+                {price}
+                </p>
+                {/* <img src={imgs[0]} alt=""/> */}
             </div>
         )
     }

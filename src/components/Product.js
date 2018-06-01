@@ -35,9 +35,7 @@ class Product extends React.Component{
     addToBasket(){
         this.props.addToCart(this.props.indiv.product_id, this.state.quantity, this.state.size, this.state.colorIndex)
     }
-    render(){
-        console.log(this.state.size);
-        
+    render(){        
         let {category, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
 
         let sizeOptions= sizes.map(size => { //this creates the options for the select size dropdown

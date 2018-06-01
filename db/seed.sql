@@ -21,9 +21,9 @@ create table cart (
     cart_id serial primary key,
     user_id int references users(user_id),
     product_id int references products(product_id),
-    quantity integer default 1,
+    quantity integer default 0,
     size text,
-    color_img_index int,
+    color_img_index int
 );
 
 
