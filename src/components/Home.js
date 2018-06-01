@@ -25,7 +25,7 @@ class Home extends React.Component{
                 <div className='featured-text-container'>
                     <h1 className='mile-text'>BE IN THE MILE</h1>
                     <div className='button-container'>
-                        <button className='adventureBtn'>Start Adventure</button>
+                        <button className='adventureBtn'><a href='start'>Start Adventure</a></button>
                         <button className='shopCollectionBtn'>Shop Collection</button>
                     </div>
                 </div>
@@ -33,7 +33,8 @@ class Home extends React.Component{
            
             <div className='pace-container-1'>
                 <div className='pace-text-container-1'>
-                   <h1>IT'S NOT ABOUT PACE</h1>
+                <a id='start'>
+                   <h1>IT'S NOT ABOUT PACE</h1></a>
                    <p>time, or average heart rate. It's not about miles covered or vertical gain. It's not about speed workouts, hill repeats, or races. It's not about personal records. It's not about sponsorships.</p>
                 </div>
                 <div className='pace-image-container-1'>
