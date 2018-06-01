@@ -15,7 +15,7 @@ import Product from './components/Product'
             <Route path="/leashes" component={Leashes}/>   
             <Route path="/collars" component={Collars}/>   
             <Route path="/boots" component={Boots}/>   
-            <Route path="/Product" component={Product}/>   
+            <Route path="/Product/:id" component={Product}/>   
             <Route path="/cart" component={Cart}/>         
         </Switch>
     )

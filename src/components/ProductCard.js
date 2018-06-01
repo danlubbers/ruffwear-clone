@@ -5,12 +5,12 @@ import {connect} from 'react-redux';
 
 class ProductCard extends React.Component{
     clickOnProduct(){
-        this.props.getIndiv(this.props.prod)
+        this.props.getIndiv(this.props.id)
     }
     render(){
         return (
             <div>
-                <Link to='/Product'>
+                <Link to={`/Product/${this.props.id}`}>
                     <button onClick={() => this.clickOnProduct()}>
                         <img src={this.props.thumbnail} alt=""/>
                     </button>

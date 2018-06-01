@@ -3,10 +3,16 @@ import {connect} from 'react-redux';
 import {getCart, changeQuantity, deleteFromCart} from '../ducks/reducer'
 
 class Cart extends React.Component{
+    componentDidMount(){
+        this.props.getCart()
+    }
     render(){
+        console.log(this.props.cart);
+        
         var subtotal = this.props.cart.reduce((prev, next) => {
             return prev + (next.price * next.quantity)
         })
+
         return(
             <div>
                 Cart
@@ -16,7 +22,9 @@ class Cart extends React.Component{
 }
 
 function mapStateToProps(state){
-    cart: state.cart
+    return{
+        cart: state.cart
+    }
 }
 
 export default connect(mapStateToProps, {getCart, changeQuantity, deleteFromCart})(Cart)
