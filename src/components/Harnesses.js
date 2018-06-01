@@ -4,7 +4,7 @@ import Headerimg from '../assets/Header-Image-Harnesses.jpg';
 import {getProducts} from '../ducks/reducer';
 import ProductCard from './ProductCard'
 
-class Harnesses extends React.Component{
+class Harnesses extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -13,7 +13,7 @@ class Harnesses extends React.Component{
     }
 
     render(){
-        // console.log(this.props.products);
+        console.log(this.props.products);
         
         let harnessProducts = this.props.products.map((prod, i) => {
            const {product_id, title, subtitle, price, colors, thumbnail} = prod
@@ -32,8 +32,10 @@ class Harnesses extends React.Component{
             <div className='harnesses'>
             <div className='pic-container'>
                 <img className='harnesses-pic' src={Headerimg} alt='Harness Header img'/>
-                <h1> HARNESSES </h1>
-               <h3> SHOP </h3>
+                <div className='spotlight-text'>
+               <h3 className='shop'> SHOP </h3>
+                <h1 className='description'> HARNESSES </h1>
+               </div>
 
             </div>
             {harnessProducts}            

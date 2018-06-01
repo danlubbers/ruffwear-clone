@@ -2,12 +2,43 @@
     
     .pic-container{
         @include center2;
-    background-color: grey;
-    height: 100vh;
+    background-color: white;
+    height: 90vh;
     width:  100vw;
+    z-index: -1;
     .harnesses-pic{
-        height: 50*1.58vh;
+        position: absolute;
+        margin-left: 110px;
         width: 50vw;
+        z-index: 0;
     }
 }
+
+    .spotlight-text{
+        background-color: white;
+        height: 19vh;
+        width: 24vw;
+        margin: 0px 33.5vw 225px 0px;
+        z-index: 1;
+        padding-right: 10px;
+        
+        .shop {
+            margin-top: 40px;
+            width:100%;
+            color: $font-color;
+            font-weight: 100;
+            letter-spacing: 1.25px;
+            z-index: 0;
+        }
+        
+        .description {
+            margin-top: -10px;
+            width: 100%;
+            color: $font-color;
+            font-weight: bold;
+            font-size: 3.5vw;
+            letter-spacing: 1.25px;
+            z-index: 0;
+        }
+    }
 }
