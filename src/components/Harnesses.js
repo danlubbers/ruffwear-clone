@@ -3,22 +3,24 @@ import { connect } from 'react-redux';
 import Headerimg from '../assets/Header-Image-Harnesses.jpg';
 
 
-class Harnesses extends React.Component{
+class Harnesses extends React.Component {
     constructor(props) {
         super(props)
     }
 
 
-    render(){
+    render() {
 
-        return(
+        return (
+
             <div className='harnesses'>
-            <div className='pic-container'>
-                <img className='harnesses-pic' src={Headerimg} alt='Harness Header img'/>
-                <h1> HARNESSES </h1>
-               <h3> SHOP </h3>
-
-            </div>
+                <div className='pic-container'>
+                    <div className='spotlight-text'>
+                        <h3 className='shop'> SHOP </h3>
+                        <h1 className='description'> HARNESSES </h1>
+                    </div>
+                    <img className='harnesses-pic' src={Headerimg} alt='Harness Header img' />
+                </div>
             </div>
         )
     }
