@@ -20,6 +20,7 @@ class Home extends React.Component{
     render(){
         return(
         <div className='home-container'>
+            <div className='outer-parallax'>
             <div className='featured-photo'>
                 {/* <img src={HeroImage} alt='man running with dog'/> */}
                 <div className='featured-text-container'>
@@ -29,6 +30,7 @@ class Home extends React.Component{
                         <button className='shopCollectionBtn'>Shop Collection</button>
                     </div>
                 </div>
+            </div>
             </div>
            
             <div className='pace-container-1'>
