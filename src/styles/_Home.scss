@@ -1,0 +1,208 @@
+.home-container{
+    width: 100vw;
+
+
+    .featured-photo {
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../assets/featured-ambassador-nico-sol.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .featured-text-container {
+        position: absolute;
+        width: 50vw;
+        margin-left: 100px;
+
+        .mile-text {
+            font-size: 4em;
+            text-align: center;
+            font-family: $font-family;
+            color: $font-color;
+            letter-spacing: 2px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+
+            .adventureBtn {
+                width: 200px;
+                height: 60px;
+                font-size: 1.4em;
+                color: $font-color;
+                background-color: $yellow;
+                border: none;
+                outline: none;
+
+            }
+            .adventureBtn:hover {
+                background-color: rgb(212, 168, 20);
+                transition: .3s;
+            }
+        
+            .shopCollectionBtn {
+                width: 200px;
+                height: 60px;
+                font-size: 1.4em;
+                color: white;
+                background-color: $font-color;
+                border: none;
+                outline: none;
+            }
+
+            .shopCollectionBtn:hover {
+                background-color: rgb(16, 7, 66);
+                transition: .3s;
+            }
+        }
+    }
+
+    .pace-container-1 {
+        width: 94vw;
+        margin: 150px 10px 150px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background-color: yellow;
+
+        .pace-text-container-1 {
+            // width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                width: 80%;
+                font-family: $font-family; 
+                letter-spacing: 1.5px; 
+                line-height: 30px; 
+            }
+        }
+    }
+
+    .pace-container-2 {
+        width: 96vw;
+        margin: 150px 10px 100px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background-color: yellow;
+
+        .pace-text-container-2 {
+            // width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h1 {
+            margin-left: 50px;
+        }
+
+        h2 {
+            margin-left: 50px;
+            font-size: 1.2em;
+        }
+        
+         p {
+            width: 80%;
+            margin-left: 50px;
+            font-family: $font-family; 
+            letter-spacing: 1.5px; 
+            line-height: 30px; 
+        }
+    }
+
+    .blue-text-container {
+        width: 100vw;
+        height: 376px;
+        display: flex;
+        background-color: #002236;
+
+        .blue-text {
+            margin-left: 150px;
+            width: 80%;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            margin: 0px 25px;
+            font-family: $font-family;
+            color: white;
+            letter-spacing: 1.5px; 
+            line-height: 30px; 
+
+        }
+    }
+
+    .latest-stories-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .stories-images {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stories-connections-container {
+            margin-right: 10px;
+            // background-color: red;
+           
+
+            .stories-images-container {
+                overflow: hidden;
+            }
+            .stories-connections:hover {
+                transform: scale(1.05);
+                transition: .25s ease-in-out;
+            }
+        }
+
+        .stories-images-container {
+            overflow: hidden;
+        }
+
+        .stories-basecamp:hover {
+            transform: scale(1.05);
+            transition: .25s ease-in-out;
+        }
+
+        .stories-images-container {
+            overflow: hidden;
+        }
+
+        .stories-shelter:hover {
+            transform: scale(1.05);
+            transition: .25s ease-in-out;
+        }        
+
+        .stories-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                margin: 10px 0px;
+            }
+
+            h5 {
+                margin: 5px 0px 20px 0px;
+                font-size: 1em;
+                color: rgb(75, 75, 75);
+                letter-spacing: 1.5px;
+            }
+        }
+
+        .stories-basecamp-container {
+            margin-right: 10px;
+        }
+    }
+}

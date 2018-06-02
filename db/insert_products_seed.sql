@@ -533,6 +533,7 @@ Medium: 27-32 IN (69-81 CM)
 Large/XLarge: 32-42 IN (81-107 CM)',
 24.95,
 ARRAY['XSmall','Small','Medium','Large/XLarge'],
+ARRAY[array['GRAPHITE GRAY','#B2B1B6']],
 ARRAY[array'http://res.cloudinary.com/drd6isa3m/image/upload/v1527875547/RuffDoggies/3085-CoreCooler-GraphiteGray-TopView_640x.jpg'],
 'http://res.cloudinary.com/drd6isa3m/image/upload/v1527875547/RuffDoggies/3085-CoreCooler-GraphiteGray-TopView_372x279.jpg');
 

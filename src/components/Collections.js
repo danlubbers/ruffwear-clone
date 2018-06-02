@@ -4,16 +4,20 @@ import Headerimg from '../assets/Header-Image-Harnesses.jpg';
 import {getProducts} from '../ducks/reducer';
 import ProductCard from './ProductCard'
 
-class Harnesses extends React.Component {
+
+class Collections extends React.Component {
     constructor(props) {
         super(props)
     }
     componentDidMount(){
         this.props.getProducts('harnesses')
+        console.log(this.props, "what the heck is in props?")
+        console.log(this.props.match.params.product, "ayyy wats dat collection?")
     }
 
     render(){
         console.log(this.props.products);
+        var category =  this.props.match.params.product.toUpperCase()
         
         let harnessProducts = this.props.products.map((prod, i) => {
            const {product_id, title, subtitle, price, colors, thumbnail} = prod
@@ -34,11 +38,11 @@ class Harnesses extends React.Component {
                 <img className='harnesses-pic' src={Headerimg} alt='Harness Header img'/>
                 <div className='spotlight-text'>
                <h3 className='shop'> SHOP </h3>
-                <h1 className='description'> HARNESSES </h1>
+                <h1 className='description'> {category} </h1>
                </div>
 
             </div>
-            {harnessProducts}            
+            {harnessProducts}
             </div>
         )
     }
@@ -50,4 +54,5 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {getProducts})(Harnesses)
+export default connect(mapStateToProps, {getProducts})(Collections)
+
