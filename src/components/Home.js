@@ -67,15 +67,15 @@ class Home extends React.Component{
                    <p>time, or average heart rate. It's not about miles covered or vertical gain. It's not about speed workouts, hill repeats, or races. It's not about personal records. It's not about sponsorships.</p>
                 </div>
                 <div className='pace-image-container-1'>
-                   <img data-aos='fade-up' data-aos-easing='ease-in-sine' src={Nico2} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico2} alt='running with a dog' />
                 </div>
             </div>
 
-            <div data-aos='fade-up' className='pace-container-2'>
+            <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-container-2'>
                 <div className='pace-image-container-2'>
-                   <img data-aos='fade-up' src={Nico3} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico3} alt='running with a dog' />
                 </div>
-                <div data-aos='fade-up' className='pace-text-container-2'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-2'>
                    <h1>IT'S ABOUT JOY.</h1>
                    <p>And suffering. It’s the grit to keep going. It’s gratitude for morning alpenglow. For the full moon, the quiet forest, the first snow. For shared experiences. For best friends.</p>
                 </div>
@@ -83,27 +83,27 @@ class Home extends React.Component{
 
             <div className='blue-text-container'>
                 <div className='blue-text'>
-                    <p  data-aos='fade-up'>Hi! I’m Sol. I was born on the Navajo reservation and then abandoned with my seven litter-mates in a cardboard box along the side of the road. I was picked up and taken to the Coconino Humane Society, where my human Nico and I found each other. I was just 5 weeks old. Nico and I went everywhere together, and we still do. One time, we were at a </p>
+                    <p  data-aos='fade-up' data-aos-anchor-placement="top-center">Hi! I’m Sol. I was born on the Navajo reservation and then abandoned with my seven litter-mates in a cardboard box along the side of the road. I was picked up and taken to the Coconino Humane Society, where my human Nico and I found each other. I was just 5 weeks old. Nico and I went everywhere together, and we still do. One time, we were at a </p>
 
-                    <p  data-aos='fade-up'>sidewalk café and a couple ranchers said I’d be a good working dog. They offered Nico a lot of money for me, but he told them there was no way he’d give me up, not for any amount of money in the world. I wouldn’t give Nico up for anything either.</p>
+                    <p  data-aos='fade-up' data-aos-anchor-placement="top-center">sidewalk café and a couple ranchers said I’d be a good working dog. They offered Nico a lot of money for me, but he told them there was no way he’d give me up, not for any amount of money in the world. I wouldn’t give Nico up for anything either.</p>
                 </div>
             </div>
 
             <div className='pace-container-1'>
-                <div  data-aos='fade-up' className='pace-text-container-1'>
+                <div  data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-1'>
                    <h1>IT'S TACKY DIRT</h1>
                    <p>between your toes. Gritty red sandstone under your paws. Quaking aspens laying down a carpet of yellow. The silent stillness of falling snow.</p>
                 </div>
                 <div className='pace-image-container-1'>
-                   <img data-aos='fade-up' src={Nico4} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico4} alt='running with a dog' />
                 </div>
             </div>
 
              <div className='pace-container-2'>
                 <div className='pace-image-container-2'>
-                   <img data-aos='fade-up' src={Nico5} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico5} alt='running with a dog' />
                 </div>
-                <div data-aos='fade-up' className='pace-text-container-2'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-2'>
                    <h2>Your lungs know what to do</h2>
                    <p>They draw on the sharp, desert winds. They gulp air, grasping for oxygen in the high alpine. They burn with effort. They don't flinch at the cold bite of winter.</p>
                 </div>
@@ -111,66 +111,66 @@ class Home extends React.Component{
 
              <div className='blue-text-container'>
                 <div className='blue-text'>
-                    <p data-aos='fade-up'>Nico became my home. He's a professional mountain runner who spends every single day outside. I was carved from the red Navajo sandstone, where the wind howls and wild horses roam. Running is in our souls. When I was a puppy, Nico was careful not to run me too hard. I knew I could flop down in a bed of pine needles to let him know I was tired and he </p>
+                    <p data-aos='fade-up' data-aos-anchor-placement="top-center">Nico became my home. He's a professional mountain runner who spends every single day outside. I was carved from the red Navajo sandstone, where the wind howls and wild horses roam. Running is in our souls. When I was a puppy, Nico was careful not to run me too hard. I knew I could flop down in a bed of pine needles to let him know I was tired and he </p>
 
-                    <p data-aos='fade-up'>would listen, turning us back for a drink and some rest. By the time I was two, I was joining Nico on most of his training runs and sometimes joining him at the end of his races, running through the finish by his side. Running is our shared celebration of freedom, of our bond, of our passion for the land. It’s how we have learned to live and run in the moment.</p>
+                    <p data-aos='fade-up' data-aos-anchor-placement="top-center">would listen, turning us back for a drink and some rest. By the time I was two, I was joining Nico on most of his training runs and sometimes joining him at the end of his races, running through the finish by his side. Running is our shared celebration of freedom, of our bond, of our passion for the land. It’s how we have learned to live and run in the moment.</p>
                 </div>
             </div>
 
             <div className='pace-container-1'>
-                <div data-aos='fade-up' className='pace-text-container-1'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-1'>
                    <h1>LOOK UP</h1>
                    <p>Ferns glisten with dew. Tall grasses sparkle in golden sunlight. Wildflowers sway. A snowflake lands on your nose. The trail beckons.</p>
                 </div>
                 <div className='pace-image-container-1'>
-                   <img data-aos='fade-up' src={Nico6} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico6} alt='running with a dog' />
                 </div>
             </div>
 
             <div className='pace-container-2'>
                 <div className='pace-image-container-2'>
-                   <img data-aos='fade-up' src={Nico7} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico7} alt='running with a dog' />
                 </div>
-                <div data-aos='fade-up' className='pace-text-container-2'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-2'>
                    <h2>Your heart knows how to beat</h2>
                    <p>You don't need to keep track of it. It matches the rhythm of your footsteps as you round switchbacks. It leaps with you over downed trees. It flutters as you emerge above treeline and lifts a little higher as you take in the view.</p>
                 </div>
             </div>
 
              <div className='pace-container-1'>
-                <div data-aos='fade-up' className='pace-text-container-1'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-1'>
                    <p>The forest tastes of trees, plants, and stone. They're ground together into a fine dust that collects in the corners of your mouth. The tumbling waters of fresh snowmelt quench, cool, and refresh. Autumn tastes of decaying leaves and pinecones. Spring tastes like wildflowers.</p>
                 </div>
                 <div className='pace-image-container-1'>
-                   <img data-aos='fade-up' src={Nico8} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico8} alt='running with a dog' />
                 </div>
             </div>
 
             <div className='pace-container-2'>
                 <div className='pace-image-container-2'>
-                   <img data-aos='fade-up' src={Nico9} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico9} alt='running with a dog' />
                 </div>
-                <div data-aos='fade-up' className='pace-text-container-2'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-2'>
                    <h2>Your muscles remember what to do</h2>
                    <p>They don’t need to be told how to power you up a hill. They instinctively propel you over rocks and roots. They work together to provide stability on slick mud and hard packed snow. And your feet know where to go. One in front of the other.</p>
                 </div>
             </div>
 
               <div className='pace-container-1'>
-                <div data-aos='fade-up' className='pace-text-container-1'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-1'>
                    <h1>Listen</h1>
                    <p>The birds have songs for you. The insects will tell you their stories. The chipmunks will show you their cache, and the owls will ask you your name.</p>
                 </div>
                 <div className='pace-image-container-1'>
-                   <img data-aos='fade-up' src={Nico10} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico10} alt='running with a dog' />
                 </div>
             </div>
 
             <div className='pace-container-2'>
                 <div className='pace-image-container-2'>
-                   <img data-aos='fade-up' src={Nico11} alt='running with a dog' />
+                   <img data-aos='fade-up' data-aos-anchor-placement="top-center" src={Nico11} alt='running with a dog' />
                 </div>
-                <div data-aos='fade-up' className='pace-text-container-2'>
+                <div data-aos='fade-up' data-aos-anchor-placement="top-center" className='pace-text-container-2'>
                     <h2>Allow your mind to wander</h2>
                    <p>Allow it to dwell, spin, rinse and release. Be with the moment. It’s adventure. Breathe deeply. It’s love. Follow your nose.</p>
                 </div>
@@ -183,7 +183,7 @@ class Home extends React.Component{
                         <div className='stories-images-container'>
                         <img data-aos='fade-up' data-aos-delay='100' data-aos-anchor-placement="top-center" className='stories-connections' src={StoriesConnections} alt='stories connection' />
                         </div>
-                        <div data-aos='fade-up' data-aos-delay='100' data-aos-anchor-placement="top-center" className='stories-text'>
+                        <div data-aos='fade-up' data-aos-delay='100' className='stories-text'>
                             <h3>CONNECTIONS BUILT TO LAST</h3>
                             <h5>Adventures</h5>
                         </div>
@@ -192,7 +192,7 @@ class Home extends React.Component{
                         <div className='stories-images-container'>
                         <img data-aos='fade-up' data-aos-delay='300' data-aos-anchor-placement="top-center"  className='stories-basecamp' src={StoriesBasecamp} alt='stories basecamp' />
                         </div>
-                        <div data-aos='fade-up' data-aos-delay='300' data-aos-anchor-placement="top-center"  className='stories-text'>
+                        <div data-aos='fade-up' data-aos-delay='300'  className='stories-text'>
                             <h3>A PLACE THAT FEELS LIKE HOME</h3>
                             <h5>Adventures</h5>
                         </div>
@@ -201,7 +201,7 @@ class Home extends React.Component{
                         <div className='stories-images-container'>
                         <img data-aos='fade-up' data-aos-delay='500' data-aos-anchor-placement="top-center"  className='stories-shelter' src={StoriesShelter} alt='stories shelter' />
                         </div>
-                        <div data-aos='fade-up' data-aos-delay='500' data-aos-anchor-placement="top-center" className='stories-text'>
+                        <div data-aos='fade-up' data-aos-delay='500' className='stories-text'>
                             <h3>CONNECTIONS BUILT TO LAST</h3>
                             <h5>Adventures</h5>
                         </div>
