@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.0",
+    "aos": "^2.3.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "build-css": "^0.2.0",

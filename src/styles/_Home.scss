@@ -1,14 +1,22 @@
 .home-container{
     width: 100vw;
 
+    .outer-parallax {
+        width: 100vw;
+        
+    }
 
     .featured-photo {
         width: 100vw;
         height: 100vh;
+        margin-top: 18px;
         background-image: url('../assets/featured-ambassador-nico-sol.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
+        transform: translateZ(-2px) scale(1.05);
     }
+
 
     .featured-text-container {
         position: absolute;
