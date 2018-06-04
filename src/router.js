@@ -7,6 +7,7 @@ import Cart from './components/Cart';
 import Boots from './components/Boots';
 import Product from './components/Product'
 import Collections from './components/Collections';
+import Contact from  './components/Contact';
 
     export default(
         <Switch>
@@ -16,6 +17,7 @@ import Collections from './components/Collections';
             <Route path="/leashes" component={Leashes}/>   
             <Route path="/boots" component={Boots}/>   
             <Route path="/Product/:id" component={Product}/>   
+            <Route path="/contact" component={Contact}/>         
             <Route path="/cart" component={Cart}/>         
         </Switch>
     )
