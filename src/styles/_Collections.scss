@@ -70,9 +70,37 @@
 
     }
 
-    // .option-button:active{
+    .filter-color-list{
+  
 
-    // }
+    button{
+        border-top: 2px;
+        position: relative;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        color: $font-color;
+        cursor: pointer;
+        display: block;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        margin: 0;
+        padding: 20px;
+        text-align: left;
+        text-transform: uppercase;
+        width: 100%;
+        font-family: $font-family;
+    }
+
+    button:hover{
+        color: $yellow
+    }
+
+    li {
+        color:red;
+    }
+
+   }
 }
     .product-container{
         @include center;
@@ -84,4 +112,5 @@
         flex-wrap: wrap;
     }
 }
+
 }

@@ -11,10 +11,7 @@ import Collections from './components/Collections';
     export default(
         <Switch>
             <Route exact path="/" component={Home} />   
-            <Route path="/collections/:product" component={Collections}/>
-            <Route path="/harnesses" component={Harnesses}/>
-            <Route path="/leashes" component={Leashes}/>   
-            <Route path="/boots" component={Boots}/>   
+            <Route path="/collections/:product" component={Collections}/>  
             <Route path="/Product/:id" component={Product}/>   
             <Route path="/cart" component={Cart}/>         
         </Switch>
