@@ -1,32 +1,38 @@
 import React from 'react';
-import {getIndiv} from '../ducks/reducer';
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
+import { getIndiv } from '../ducks/reducer';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-class ProductCard extends React.Component{
-    clickOnProduct(){
+class ProductCard extends React.Component {
+    clickOnProduct() {
         this.props.getIndiv(this.props.id)
     }
-    render(){
+    render() {
         return (
-            <div>
+            <div className='Product-Card'>
                 <Link to={`/Product/${this.props.id}`}>
-                    <button onClick={() => this.clickOnProduct()}>
-                        <img src={this.props.thumbnail} alt=""/>
+                    <button className='thumbnail-background' onClick={() => this.clickOnProduct()}>
+                        <img className='thumbnail' src={this.props.thumbnail} alt="" />
                     </button>
                 </Link>
-                <h3>{this.props.title}</h3>
-                <h4>{this.props.subtitle}</h4>
-                <p>{this.props.price}</p>
+                <div className='title'>
+                    <h3>{this.props.title}</h3> </div>
+                <div className='subtitle'>
+                    <h4>{this.props.subtitle}</h4>
+                </div>
+                <div className='price'>
+                    <p>${this.props.price}</p>
+                </div>
+
             </div>
         )
     }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     return {
         products: state.propduct
     }
 }
 
-export default connect(mapStateToProps, {getIndiv})(ProductCard)
+export default connect(mapStateToProps, { getIndiv })(ProductCard)
