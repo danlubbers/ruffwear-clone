@@ -51,11 +51,11 @@ class Contact extends Component {
   handleInputChangeName(value) {
     this.setState({ name: value });
   }
-  handleInputChangeSubject(value) {
-    this.setState({ subject: value });
-  }
   handleInputChangeEmail(value) {
     this.setState({ email: value });
+  }
+  handleInputChangeSubject(value) {
+    this.setState({ subject: value });
   }
   handleInputChangeMessage(value) {
     this.setState({ message: value });
@@ -63,10 +63,9 @@ class Contact extends Component {
   render() {
     console.log("state--->", this.state);
     return (
-      <div>
+      <div className="contact-container">
         <h1 className="header">Contact Form</h1>
-        <div className="container">
-          <span className="all">
+          <span className="contact-form">
             <input
               className="name"
               placeholder="Name:"
@@ -74,12 +73,12 @@ class Contact extends Component {
             />
             <input
               className="email"
-              placeholder="Subject:"
+              placeholder="Email:"
               onChange={e => this.handleInputChangeEmail(e.target.value)}
             />
             <input
               className="subject"
-              placeholder="Email:"
+              placeholder="Subject:"
               onChange={e => this.handleInputChangeSubject(e.target.value)}
             />
             <textarea
@@ -90,10 +89,9 @@ class Contact extends Component {
               onChange={e => this.handleInputChangeMessage(e.target.value)}
             />
             <button className="send" onClick={this.handleClick}>
-              <h2 className="button-text">Submit</h2>
+              <h2 className="submitBtn">Submit</h2>
             </button>
           </span>
-        </div>
       </div>
     );
   }
