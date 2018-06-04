@@ -6,6 +6,7 @@ $font-family: 'Roboto', sans-serif;
 $font-color: #00263e;
 $yellow: rgb(233, 177, 23);
 
+// Variables for centering, declare: @include center
 @mixin center{
     display: flex;
     justify-content: center;
@@ -23,6 +24,8 @@ $yellow: rgb(233, 177, 23);
 @import './../styles/Header';
 @import './../styles/Footer';
 @import './../styles/Home';
+@import './../styles/Harnesses';
+@import './../styles/Contact';
 @import './../styles/Collections';
 @import './../styles/ProductCard';
 @import './../styles/Product';

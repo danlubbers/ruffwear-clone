@@ -1,0 +1,94 @@
+.contact-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  // background-color: red;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    border: 1px solid black;
+    padding: 20px;
+    width: 700px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.863);
+    margin-left: initial;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: solid;
+    color: #f09f00;
+  }
+
+  .name {
+    margin: 5px;
+    width: 75%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    outline: none;
+  }
+  .email {
+    margin: 5px;
+    width: 75%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    outline: none;
+  }
+  .subject {
+    margin: 5px;
+    width: 75%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    outline: none;
+  }
+  .message {
+    height: 25vh;
+    width: 75%;
+    margin: 5px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: $font-family;
+    border-radius: 10px;
+    outline: none;
+  }
+  .send {
+    padding: 10px 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    background-color:rgba(255, 255, 255, 0.5);
+    outline: none;    
+  }
+  .send:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f09f00;
+  }
+  .submitBtn {
+    margin: 7px;
+    font-family: $font-family;
+    font-size: 18px;
+    outline: none;    
+  }
+}
