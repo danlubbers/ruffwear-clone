@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import {addToCart, getIndiv} from '../ducks/reducer';
 import {Link} from 'react-router-dom';
 
+import Cart from 'react-icons/lib/fa/shopping-cart'
+
 class Product extends React.Component{
     constructor(){
         super()
@@ -46,37 +48,44 @@ class Product extends React.Component{
             return <option value={size}>{size}</option>
         })
 
-        let colorCirlces = colors.map((color, i) => {
+        let colorCircles = colors.map((color, i) => {
             //I used inline styling just to visualize the concept at firt. anyone can change this
-            return (<div style={{background: color[1], height: "20px", width: "20px", borderRadius: "50%"}} onClick={() => this.changeColorIndex(i)}>
+            return (<div style={{background: color[1], height: "20px", width: "20px", borderRadius: "50%", marginRight: '10px'}} onClick={() => this.changeColorIndex(i)}>
             </div>)
         })
         return(
-            <div className="product" >
-                <div className="content" >
-                   <img src={imgs[this.state.colorIndex]} alt={title}/> 
-                   <h3>{description}</h3>
+            <div className="product-container" >
+                <div className="product-content" >
+                   <img className='product-image' src={imgs[this.state.colorIndex]} alt={title}/> 
+                   <h3 className='product-description'>{description}</h3>
                 </div>
-                <aside className="control_panel" >
-                    <div>
+                <aside className="control-panel" >
+                    <div className='product-title-subtitle'>
                         <h1>{title}</h1>
                         <p>{subtitle}</p>
                         <h2>${price}</h2>
                     </div>
-                   <p>
-                      COLOR:  {colors[this.state.colorIndex][0]} {/*This Displays the firt color's name, until you click a circle*/}
-                   </p>
-                   <div className="color_circles" >
-                    {colorCirlces}
+                   <div className='color-container'>
+                      <label>COLOR:</label>  <div className='color-text'>{colors[this.state.colorIndex][0]}</div> {/*This Displays the firt color's name, until you click a circle*/}
                    </div>
-                   <p>SIZE: refer to size selector</p>
-                   <select name="sizes" id="" onChange={(e) => this.handleSize(e.target.value)}>  {/*this is the select size dropdown*/}
-                    <option value="">Select Size</option>
-                    {sizeOptions}
-                   </select>
-                   <label>QUANTITY:</label>
-                    <input type="number" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
-                    <button onClick={() => this.addToBasket()}>ADD TO BASKET</button>
+                   <div className="color-circles" >
+                    {colorCircles}
+                   </div>
+                   <div className='size-quantity-basket'>
+                     <div className='size-text'>
+                        <label>SIZE:</label>
+                        <h5>Refer to Size Selector</h5>
+                    </div>
+                    <div className='custom-select'>
+                        <select onChange={(e) => this.handleSize(e.target.value)}>  {/*this is the select size dropdown*/}
+                            <option value="">SELECT SIZE</option>
+                            {sizeOptions}
+                        </select>
+                    </div>
+                    <label>QUANTITY:</label>
+                        <input type="number" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
+                        <button className='basketBtn' onClick={() => this.addToBasket()}><Cart size={20}/> ADD TO BASKET</button>
+                    </div>
                 </aside>
             </div>
         )

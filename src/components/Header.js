@@ -6,6 +6,18 @@ import Paw from 'react-icons/lib/fa/paw'
 import Cart from 'react-icons/lib/fa/shopping-cart'
 // Images for Shop dropdown
 import Harness from '../assets/navigation-harnesses-image.jpg'
+import Leashes from '../assets/navigation-leashes.jpg'
+import Apparel from '../assets/navigation-apparel.jpg'
+import LifeJackets from '../assets/navigation-life-jackets.jpg'
+import Collars from '../assets/navigation-collars.jpg'
+import Boots from '../assets/navigation-boots.jpg'
+import Packs from '../assets/navigation-packs.jpg'
+import Bowls from '../assets/navigation-bowls.jpg'
+import Safety from '../assets/navigation-safety.jpg'
+import Beds from '../assets/navigation-beds.jpg'
+import Toys from '../assets/navigation-toys.jpg'
+import GC from '../assets/navigation-gift-cards.jpg'
+
 // Images for Tails dropdown
 import MyDog from '../assets/navigation-mydogismy.jpg'
 import OurStores from '../assets/navigation-our-stories.jpg'
@@ -30,17 +42,17 @@ class Header extends Component {
             selected: 'harnesses',
             images: {
                 harnesses: Harness,
-                leashes: 'dummy-data',
-                apparel: 'dummy-data',
-                lifeJackets: 'dummy-data',
-                collars: 'dummy-data',
-                boots: 'dummy-data',
-                packs: 'dummy-data', 
-                bowls: 'dummy-data',
-                safety: 'dummy-data',
-                beds: 'dummy-data',
-                toys: 'dummy-data',
-                giftcards: 'dummy-data'
+                leashes: Leashes,
+                apparel: Apparel,
+                lifeJackets: LifeJackets,
+                collars: Collars,
+                boots: Boots,
+                packs: Packs, 
+                bowls: Bowls,
+                safety: Safety,
+                beds: Beds,
+                toys: Toys,
+                giftcards: GC
             }
         }
         this.handleClickHome = this.handleClickHome.bind(this);
