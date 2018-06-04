@@ -52,7 +52,7 @@ class Home extends React.Component{
             <div className='outer-parallax'>
                 <div className='featured-photo'>
                     <div className='featured-text-container'>
-                        <h1  data-aos='fade-up' className='mile-text'>BE IN THE MILE</h1>
+                        <h1 data-aos='fade-up' className='mile-text'>BE IN THE MILE</h1>
                         <div className='button-container'>
                             <button  data-aos='fade-up' data-aos-delay='200'className='adventureBtn' onClick={this.startAdventure}><a href='start'>Start Adventure</a></button>
                             <button  data-aos='fade-up' data-aos-delay='300'className='shopCollectionBtn'>Shop Collection</button>
