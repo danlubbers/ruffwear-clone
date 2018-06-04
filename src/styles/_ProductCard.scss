@@ -1,23 +1,48 @@
 .Product-Card {
     width: 25vw;
+ 
 
     .thumbnail-background{
+        display: flex;
+        justify-content: center;
         border: 0;
         background-color: transparent;
+        position: relative;
+        cursor: pointer;
     }
 
-    .thumbnail-background:hover{
-        border: 1;
-        background-color: #d0d3d4;
+    // .thumbnail-background:hover{
+    //     border: 1;
+    //     background-color: #d0d3d4;
+    // }
+
+    .color-container{
+        margin: 63% 0% 5% 0%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+    }
+
+    .color{
+        margin: 5px;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        opacity: 0;
+    }
+
+    .thumbnail-background:hover .color{
+        transition: 0.2s;
+        opacity: 1;
     }
 
     .thumbnail {
-        width: 25vw;
+        width: 23vw;
     }
 
     .title{
         @include center;
-        margin-bottom: -20px;
+        margin: 15px 0px -20px 0px;
     }
 
     .subtitle{
@@ -29,8 +54,10 @@
     .price{
         @include center;
         color: $font-color;
-        margin: -20px 0px 20px 0px;
+        margin: -30px 0px 20px 0px;
     }
+
+    
 
 
 }
