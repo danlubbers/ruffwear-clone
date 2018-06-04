@@ -27,21 +27,21 @@ class Header extends Component {
             showShop: false,
             showTails: false,
             showAbout: false,
-            // selected: '',
-            // images: [
-            //     harnesses = 'dummy-data',
-            //     leashes = 'dummy-data',
-            //     apparel = 'dummy-data',
-            //     lifeJackets = 'dummy-data',
-            //     collars = 'dummy-data',
-            //     boots = 'dummy-data',
-            //     packs = 'dummy-data', 
-            //     bowls = 'dummy-data',
-            //     safety = 'dummy-data',
-            //     beds = 'dummy-data',
-            //     toys = 'dummy-data',
-            //     giftcards = 'dummy-data'
-            // ]
+            selected: 'harnesses',
+            images: {
+                harnesses: Harness,
+                leashes: 'dummy-data',
+                apparel: 'dummy-data',
+                lifeJackets: 'dummy-data',
+                collars: 'dummy-data',
+                boots: 'dummy-data',
+                packs: 'dummy-data', 
+                bowls: 'dummy-data',
+                safety: 'dummy-data',
+                beds: 'dummy-data',
+                toys: 'dummy-data',
+                giftcards: 'dummy-data'
+            }
         }
         this.handleClickHome = this.handleClickHome.bind(this);
         this.handleClickShop = this.handleClickShop.bind(this);
@@ -80,6 +80,13 @@ class Header extends Component {
     componentDidMount(){
         this.props.getUser()
     }
+
+    handleMouseOver(event) {
+        console.log(event.target)
+        console.log(event.target.id)
+        this.setState({selected: event.target.id});
+    }
+
     render() {
         let { showShop, showTails, showAbout } = this.state;
         let slideCssShop = showShop ? 'slide-menu slide-menu-position' : 'slide-menu';
@@ -88,7 +95,7 @@ class Header extends Component {
         let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}>
         <button className="login">LogOut</button></a> : <a href={process.env.REACT_APP_LOGIN}><button className="login">Login</button></a>
 
-        // let currentImage = this.state.images[this.state.selected];
+        let currentImage = this.state.images[this.state.selected];
 
         // console.log(slideCssShop)
         // console.log(slideCssTails)
@@ -120,7 +127,7 @@ class Header extends Component {
                 <div className={slideCssShop}>
                     <div className='shop-container'>
                         <div className='container-left'>
-                            <img className='harness-image' src={Harness} alt='harness' />
+                            <img className='harness-image' src={currentImage} alt='harness' />
                         </div>
 
                         <div className='container-right'>
@@ -129,9 +136,8 @@ class Header extends Component {
                                     <h3>GEAR</h3>
                                     <div className='gear-container'>
                                         <div className='gear-split-left'>
-                                            <Link to='/collections/harnesses'  onClick={this.handleClickShop} 
-                                            // onMouseOver={currentImage}
-                                            ><li>Harnesses</li> </Link>
+                                            <Link to='/collections/harnesses' onClick={this.handleClickShop} 
+                                            ><li onMouseOver={e=>this.handleMouseOver(e)} id='harnesses'>Harnesses</li> </Link>
                                             <Link to='/collections/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
                                             <Link to='/collections/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
                                             <li>Apparel</li>

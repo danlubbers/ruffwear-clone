@@ -32,8 +32,12 @@ class Product extends React.Component{
             size: e
         })
     }
-    addToBasket(){
-        this.props.addToCart(this.props.indiv.product_id, this.state.quantity, this.state.size, this.state.colorIndex)
+    addToBasket(){        
+        if(this.state.size){
+            this.props.addToCart(this.props.indiv.product_id, +this.state.quantity, this.state.size, this.state.colorIndex)
+            this.props.history.push('/cart')
+        }
+        else{alert("Please select a size")}
     }
     render(){        
         let {category, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
@@ -48,30 +52,32 @@ class Product extends React.Component{
             </div>)
         })
         return(
-            <div>
-                <div>
-                   <img src={imgs[0]} alt={title}/> 
+            <div className="product" >
+                <div className="content" >
+                   <img src={imgs[this.state.colorIndex]} alt={title}/> 
                    <h3>{description}</h3>
                 </div>
-                <div>
-                   <h1>{title}</h1>
-                   <h2>{subtitle}</h2>
-                   <p>${price}</p>
-                   
-                   {colors[this.state.colorIndex][0]} {/*This Displays the firt color's name, until you click a circle*/}
-
-                   {colorCirlces}
+                <aside className="control_panel" >
+                    <div>
+                        <h1>{title}</h1>
+                        <p>{subtitle}</p>
+                        <h2>${price}</h2>
+                    </div>
+                   <p>
+                      COLOR:  {colors[this.state.colorIndex][0]} {/*This Displays the firt color's name, until you click a circle*/}
+                   </p>
+                   <div className="color_circles" >
+                    {colorCirlces}
+                   </div>
+                   <p>SIZE: refer to size selector</p>
                    <select name="sizes" id="" onChange={(e) => this.handleSize(e.target.value)}>  {/*this is the select size dropdown*/}
                     <option value="">Select Size</option>
                     {sizeOptions}
                    </select>
-                   <label>QUANTITY:
-                       <input type="number" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
-                   </label>
-                   <Link to='/cart'>
-                        <button onClick={() => this.addToBasket()}>ADD TO BASKET</button>
-                   </Link>
-                </div>
+                   <label>QUANTITY:</label>
+                    <input type="number" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
+                    <button onClick={() => this.addToBasket()}>ADD TO BASKET</button>
+                </aside>
             </div>
         )
     }
