@@ -28,7 +28,7 @@ class CartRow extends React.Component{
    render(){
        let {cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex} = this.props
        // console.log(cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex);
-       console.log(colors);
+       console.log(this.state.qty);
       
        return(
            <div className="cart_row" >
@@ -58,7 +58,7 @@ class CartRow extends React.Component{
                </div>
                <div>
                <span>
-                   ${price * qty}
+                   ${(price * this.state.qty).toFixed(2)}
                </span>
                </div>
            </div>

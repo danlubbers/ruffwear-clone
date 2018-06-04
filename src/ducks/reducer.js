@@ -2,13 +2,13 @@ import axios from "axios";
 
 const initialState = {
    user: {},
-   cart: [{price:0, quantity:0, imgs:['a'], colors:[['',''],['',''],['','']], color_img_index: 0}],
+   cart: [{price:0, quantity:0, imgs:[''], colors:[['',''],['',''],['','']], color_img_index: 0}],
    products: [],
    searchProducts:[],
    indiv: {
-       imgs:['a', 'b', 'c'],
-       colors:[['a', '1'],['b','2'],['c','3']],
-       sizes:['small','medium','large']
+       imgs:['', '', ''],
+       colors:[['', ''],['',''],['','']],
+       sizes:['S','','']
    }
 }
 
@@ -38,6 +38,8 @@ export default function reducer (state = initialState, action){
        case CHANGE_QUANTITY + "_FULFILELD":
            return Object.assign({}, state, {cart: action.payload}); 
        case DELETE_FROM_CART + "_FULFILLED":
+       console.log(action.payload);
+       
            return Object.assign({}, state, {cart: action.payload});               
        default:
            return state;

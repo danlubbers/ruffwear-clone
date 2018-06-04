@@ -1,11 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {getCart, changeQuantity, deleteFromCart} from '../ducks/reducer';
-import CartRow from './CartRow'
+import CartRow from './CartRow';
+import {Link} from 'react-router-dom';
 
 class Cart extends React.Component{
    componentDidMount(){
        this.props.getCart()
+       window.scrollTo(0,0)
    }
    render(){
        let itemNumber = this.props.cart.reduce((prev, next) => {
@@ -45,9 +47,11 @@ class Cart extends React.Component{
                <div className="Order_summary" >
                    <h1>ORDER SUMMARY</h1>
                    <p>SUBTOTAL</p>
-                   <p>{subtotal}</p>
+                   <p>${subtotal.toFixed(2)}</p>
                    <button>CHECK OUT</button>
-                   <button>CONTINUE SHOPPING</button>
+                   <Link to='/'>
+                        <button>CONTINUE SHOPPING</button>
+                   </Link>
                </div>
            </div>
        )
