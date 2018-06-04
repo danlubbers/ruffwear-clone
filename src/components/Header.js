@@ -14,6 +14,11 @@ import OurAmb from '../assets/navigation-our-ambassadors.jpg'
 import OurPath from '../assets/navigation-our-path.jpg'
 import { Link } from 'react-router-dom';
 
+import axios from 'axios';
+import {getUser} from '../ducks/reducer';
+import {connect} from 'react-redux';
+
+
 class Header extends Component {
     constructor(props) {
         super(props)
@@ -71,12 +76,17 @@ class Header extends Component {
             showTails: false
         })
     }
-
+    
+    componentDidMount(){
+        this.props.getUser()
+    }
     render() {
         let { showShop, showTails, showAbout } = this.state;
         let slideCssShop = showShop ? 'slide-menu slide-menu-position' : 'slide-menu';
         let slideCssTails = showTails ? 'slide-menu slide-menu-position' : 'slide-menu';
         let slideCssAbout = showAbout ? 'slide-menu slide-menu-position' : 'slide-menu';
+        let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}>
+        <button className="login">LogOut</button></a> : <a href={process.env.REACT_APP_LOGIN}><button className="login">Login</button></a>
 
         // let currentImage = this.state.images[this.state.selected];
 
@@ -99,7 +109,8 @@ class Header extends Component {
                                 <li className='search-icon'><SearchIcon size={25} /></li>
                                 <Link to='/contact'><li className='paw-icon'><Paw size={25} /></li></Link>
                                 <Link to='/cart'>  <li className='cart-icon'><Cart size={25} /></li> </Link>
-                                <Link to='/login'><li className='login'>Login</li></Link>
+                                {/* <Link to='/login'><li className='login'>Login</li></Link> */}
+                                {logInDisplay}
                             </ul>
                         </div>
                     </div>
@@ -207,4 +218,10 @@ class Header extends Component {
 
 }
 
-export default Header;
+function mapStateToProps(state) {
+    return {
+        user: state.user
+    }
+ }
+ 
+ export default connect(mapStateToProps, {getUser}) (Header);

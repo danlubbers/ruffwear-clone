@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const initialState = {
-    user: {},
+    user: null,
     cart: [{price:0, quantity:0}],
     products: [],
     searchProducts:[],
