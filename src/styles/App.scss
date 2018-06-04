@@ -23,13 +23,15 @@ $yellow: rgb(233, 177, 23);
 @import './../styles/Header';
 @import './../styles/Footer';
 @import './../styles/Home';
-@import './../styles/Harnesses';
+@import './../styles/Collections';
+@import './../styles/ProductCard';
 
 
 
 
-
-// Global apply to get rid of all annoying blue underlines for hyperlinks
-a {
-    text-decoration: none;
-}
+// Global apply to get rid of all annoying blue underlines and purple link text for hyperlinks
+a { text-decoration: none; color: $font-color;}
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }

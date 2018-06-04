@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 const initialState = {
    user: {},
@@ -121,11 +121,11 @@ export function changeQuantity(id, qty){
 }
 
 export function deleteFromCart(id){
-   let cart = axios.delete(`/api/deleteproduct/${id}`).then(res => {
-       return res.data
-   })
-   return {
-       type: DELETE_FROM_CART,
-       payload: cart
-   }
+    let cart = axios.delete(`/api/deleteproduct/${id}`).then(res => {
+        return res.data
+    })
+    return {
+        type: DELETE_FROM_CART,
+        payload: cart
+    }
 }

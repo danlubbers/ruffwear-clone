@@ -1,0 +1,87 @@
+.Collections {
+    
+    .pic-container{
+        @include center2;
+    background-color: white;
+    height: 90vh;
+    width:  100vw;
+    z-index: -1;
+    .harnesses-pic{
+        position: absolute;
+        margin-left: 110px;
+        width: 50vw;
+        z-index: 0;
+    }
+}
+
+    .spotlight-text{
+        background-color: white;
+        height: 19vh;
+        margin: 0px 33.5vw 225px 0px;
+        z-index: 1;
+        padding-right: 10px;
+        
+        .shop {
+            margin-top: 40px;
+            color: $font-color;
+            font-weight: 100;
+            letter-spacing: 1.25px;
+            z-index: 0;
+        }
+        
+        .description {
+            margin-top: -10px;
+            padding-right: 20px;
+            color: $font-color;
+            font-weight: bold;
+            font-size: 3.5vw;
+            letter-spacing: 1.25px;
+            z-index: 0;
+        }
+    }
+    .filter-container{
+        @include center2;
+        width: 100vw;
+    
+    .filter-by-text{
+        color: #6a6d6e
+    }
+
+    .option-container{
+        @include center2;
+        border: 3px solid #d0d3d4;
+        width: 20vw;
+        height: 7vh;
+    }
+    .option-select{
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: #00263e;
+    cursor: pointer;
+    display: block;
+    font-family: $font-family;
+    font-size: 1.5vw;
+    font-weight: 700;
+    letter-spacing: .1vw;
+    padding: 1vw;
+    text-align: left;
+    width: 100%;
+
+    }
+
+    // .option-button:active{
+
+    // }
+}
+    .product-container{
+        @include center;
+        margin: 10vh;
+    .product-container-container{
+        display: flex;
+        justify-content: center;
+        width: 75vw;
+        flex-wrap: wrap;
+    }
+}
+}

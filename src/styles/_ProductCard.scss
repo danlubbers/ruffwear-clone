@@ -1,0 +1,36 @@
+.Product-Card {
+    width: 25vw;
+
+    .thumbnail-background{
+        border: 0;
+        background-color: transparent;
+    }
+
+    .thumbnail-background:hover{
+        border: 1;
+        background-color: #d0d3d4;
+    }
+
+    .thumbnail {
+        width: 25vw;
+    }
+
+    .title{
+        @include center;
+        margin-bottom: -20px;
+    }
+
+    .subtitle{
+        @include center;
+        color: #6a6d6e;
+        margin-bottom: -20px;
+    }
+
+    .price{
+        @include center;
+        color: $font-color;
+        margin: -20px 0px 20px 0px;
+    }
+
+
+}
