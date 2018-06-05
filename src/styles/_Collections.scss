@@ -2,17 +2,22 @@
     
     .pic-container{
         @include center2;
-    background-color: white;
-    height: 90vh;
-    width:  100vw;
-    z-index: -1;
-    .harnesses-pic{
-        position: absolute;
-        margin-left: 110px;
-        width: 50vw;
-        z-index: 0;
+        background-color: white;
+        height: 90vh;
+        width:  100vw;
+        z-index: -1;
+        
+        .header-pic{
+            position: absolute;
+            margin-left: 110px;
+            width: 50vw;
+            z-index: 0;
+        }
+        
     }
-}
+            .carousel-pic{
+                width: 25vw;
+            }
 
     .spotlight-text{
         background-color: white;
@@ -39,69 +44,12 @@
             z-index: 0;
         }
     }
-    .filter-container{
-        @include center2;
-        width: 100vw;
-    
-    .filter-by-text{
-        color: #6a6d6e
-    }
 
-    .option-container{
-        @include center2;
-        border: 3px solid #d0d3d4;
-        width: 20vw;
-        height: 7vh;
-    }
-    .option-select{
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-    color: #00263e;
-    cursor: pointer;
-    display: block;
-    font-family: $font-family;
-    font-size: 1.5vw;
-    font-weight: 700;
-    letter-spacing: .1vw;
-    padding: 1vw;
-    text-align: left;
-    width: 100%;
 
-    }
 
-    .filter-color-list{
-  
 
-    button{
-        border-top: 2px;
-        position: relative;
-        background: transparent;
-        border: 0;
-        box-shadow: none;
-        color: $font-color;
-        cursor: pointer;
-        display: block;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        margin: 0;
-        padding: 20px;
-        text-align: left;
-        text-transform: uppercase;
-        width: 100%;
-        font-family: $font-family;
-    }
+   
 
-    button:hover{
-        color: $yellow
-    }
-
-    li {
-        color:red;
-    }
-
-   }
-}
     .product-container{
         @include center;
         margin: 10vh;
@@ -112,5 +60,6 @@
         flex-wrap: wrap;
     }
 }
+
 
 }
