@@ -93,12 +93,14 @@ module.exports = {
 
   stripe: (req, res) => {
     const dbInstance = req.app.get("db");
+    console.log(req.body)
     const charge = stripe.charges.create({
       amount: req.body.amount,
       currency: "usd",
       source: req.body.token.id,
       description: "RuffDoggies"
     });
+    console.log(req.user)
     dbInstance.emptyCart([req.user.user_id])
       .then(noProducts => {
         res.status(200).send(noProducts); // clear out cart here
