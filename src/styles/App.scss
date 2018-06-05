@@ -1,5 +1,7 @@
 // Import Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 // Variables
 $font-family: 'Roboto', sans-serif;
@@ -28,6 +30,8 @@ $yellow: rgb(233, 177, 23);
 @import './../styles/Collections';
 @import './../styles/ProductCard';
 @import './../styles/Product';
+@import './../styles/Cart';
+@import './../styles/CartRow';
 
 
 

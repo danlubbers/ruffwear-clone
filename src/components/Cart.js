@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {getCart, changeQuantity, deleteFromCart} from '../ducks/reducer';
 import CartRow from './CartRow';
 import {Link} from 'react-router-dom';
+import Checkout from './Checkout';
 
 class Cart extends React.Component{
    componentDidMount(){
@@ -33,25 +34,29 @@ class Cart extends React.Component{
        },0)
 
        return(
-           <div>
-               <div>
+           <div className="cart-container">
+               <div className="basket-header" >
                    <h1>YOUR BASKET</h1>
                    <h2>{itemNumber} items</h2>
                </div>
-               <div>
-                   <p>ITEM</p>
-                   <p>QUANTITY</p>
-                   <p>SUBTOTAL</p>
-               </div>
-               {cartRows}
-               <div className="Order_summary" >
-                   <h1>ORDER SUMMARY</h1>
-                   <p>SUBTOTAL</p>
-                   <p>${subtotal.toFixed(2)}</p>
-
-                   <Link to='/'>
-                        <button>CONTINUE SHOPPING</button>
-                   </Link>
+               <div className="lower-section" >
+                    <div className="item-quantity-subtotal" >
+                        <div className="columns" >
+                            <p className="column" id="item">ITEM</p>
+                            <p className="column" id="subtotal">SUBTOTAL</p>
+                            <p className="column" id="qty">QUANTITY</p>
+                        </div>
+                        {cartRows}
+                    </div>
+                    <div className="order_summary" >
+                        <h1>ORDER SUMMARY</h1>
+                        <label>SUBTOTAL</label>
+                        <p>${subtotal.toFixed(2)}</p>
+                        <button className="checkout-btn" ><Checkout amount={getCart}/></button>
+                        <Link to='/'>
+                                <button className="continue-btn" >CONTINUE SHOPPING</button>
+                        </Link>
+                    </div>
                </div>
            </div>
        )
