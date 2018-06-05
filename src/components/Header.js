@@ -165,7 +165,7 @@ class Header extends Component {
                 <div className={slideCssShop}>
                     <div className='shop-container'>
                         <div className='container-left'>
-                            <img className='harness-image' src={currentImageShop} alt='harness' />
+                            <img className='current-shop-image' src={currentImageShop} alt='different image displayed on hover' />
                         </div>
 
                         <div className='container-right'>
