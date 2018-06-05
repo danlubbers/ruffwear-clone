@@ -20,8 +20,12 @@ class CartRow extends React.Component{
        this.props.deleteFromCart(this.props.cart_id)
    }
    handleQty(e){
+       let newQuantity = +e;
+       if(!newQuantity || newQuantity < 1){
+           newQuantity = 1
+       }
        this.setState({
-           qty: +e
+           qty: newQuantity
        })
        this.props.changeQuantity(this.props.cart_id, +e)
    }
@@ -49,7 +53,7 @@ class CartRow extends React.Component{
                        :
                        null
                    }
-                   <p onClick={() => this.removeFromCart()} >
+                   <p style={{cursor: "pointer"}} onClick={() => this.removeFromCart()} >
                        REMOVE
                    </p>
                </div>

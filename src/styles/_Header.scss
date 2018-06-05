@@ -20,6 +20,13 @@ header {
             display: flex;
             justify-content: space-around;
             align-items: center;
+
+            .nav-list-controls {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                // background-color: red;
+            }
             
             ul{
                 display: flex;
@@ -40,6 +47,12 @@ header {
                 // text-underline-position: under;
                 text-decoration-color: rgb(250, 192, 0); 
                 
+            }
+
+            .login {
+                font-family: $font-family;
+                font-size: 1.2em;
+            // background-color: yellow;
             }
 
         }
@@ -85,9 +98,9 @@ header {
         // background-color: lightcoral;
     }
 
-    .harness-image {
+    .current-shop-image {
         padding-left: 75px;
-        width: 27vw;
+        width: 27vw;  
     }
 
     .container-right {
@@ -108,6 +121,11 @@ header {
                     width: 175px;
                     // background: grey;
                 }
+
+                // #leashes {
+                //     // transition: 1s;
+                //     // background-color: red;
+                // }
 
                 .gear-split-right {
                     width: 175px;
