@@ -7,14 +7,14 @@
     }
 
     .featured-photo {
-        width: 100vw;
+        width: 95.25vw;
         height: 100vh;
         margin-top: 18px;
         background-image: url('../assets/featured-ambassador-nico-sol.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        transform: translateZ(-2px) scale(1.05);
+        transform: translateZ(-2px) scale(1.1);
     }
 
 
@@ -189,7 +189,11 @@
         .stories-shelter:hover {
             transform: scale(1.05);
             transition: .25s ease-in-out;
-        }        
+        }    
+        
+        h1 {
+            font-family: $font-family;
+        }
 
         .stories-text {
             display: flex;
@@ -197,14 +201,18 @@
             justify-content: center;
             align-items: center;
 
+           
+
             h3 {
                 margin: 10px 0px;
+                font-family: $font-family;
             }
 
             h5 {
                 margin: 5px 0px 20px 0px;
+                font-family: $font-family;
                 font-size: 1em;
-                color: rgb(75, 75, 75);
+                color: rgb(125, 125, 125);
                 letter-spacing: 1.5px;
             }
         }
