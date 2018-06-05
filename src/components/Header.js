@@ -17,6 +17,10 @@ import Safety from '../assets/navigation-safety.jpg'
 import Beds from '../assets/navigation-beds.jpg'
 import Toys from '../assets/navigation-toys.jpg'
 import GC from '../assets/navigation-gift-cards.jpg'
+import NewGear from '../assets/navigation-new-gear.jpg'
+import HumanGear from '../assets/navigation-human-gear.jpg'
+import TravelGear from '../assets/navigation-travel-gear.jpg'
+import Specials from '../assets/navigation-specials.jpg'
 
 // Images for Tails dropdown
 import MyDog from '../assets/navigation-mydogismy.jpg'
@@ -24,6 +28,11 @@ import OurStores from '../assets/navigation-our-stories.jpg'
 import OurAmb from '../assets/navigation-our-ambassadors.jpg'
 // Images for About dropdown
 import OurPath from '../assets/navigation-our-path.jpg'
+import OurPack from '../assets/navigation-our-pack.jpg'
+import OurDesign from '../assets/navigation-design-philosophy.jpg'
+import OurPractices from '../assets/navigation-our-practices.jpg'
+import Partners from '../assets/navigation-partners.jpg'
+
 import { Link } from 'react-router-dom';
 
 import axios from 'axios';
@@ -39,7 +48,7 @@ class Header extends Component {
             showShop: false,
             showTails: false,
             showAbout: false,
-            selected: 'harnesses',
+            selectedShop: 'harnesses',
             images: {
                 harnesses: Harness,
                 leashes: Leashes,
@@ -52,7 +61,19 @@ class Header extends Component {
                 safety: Safety,
                 beds: Beds,
                 toys: Toys,
-                giftcards: GC
+                giftCards: GC,
+                newGear: NewGear,
+                humanGear: HumanGear,
+                travelGear: TravelGear,
+                specials: Specials
+            },
+            selectedAbout: 'ourPath',
+            aboutImages: {
+                ourPath: OurPath,
+                ourPack: OurPack,
+                ourDesign: OurDesign,
+                ourPractices: OurPractices,
+                partners: Partners
             }
         }
         this.handleClickHome = this.handleClickHome.bind(this);
@@ -93,10 +114,14 @@ class Header extends Component {
         this.props.getUser()
     }
 
-    handleMouseOver(event) {
-        console.log(event.target)
-        console.log(event.target.id)
-        this.setState({selected: event.target.id});
+    handleMouseOverShop(event) {
+        // console.log(event.target)
+        // console.log(event.target.id)
+        this.setState({selectedShop: event.target.id});
+    }
+
+    handleMouseOverAbout(event) {
+        this.setState({selectedAbout: event.target.id});
     }
 
     render() {
@@ -105,9 +130,10 @@ class Header extends Component {
         let slideCssTails = showTails ? 'slide-menu slide-menu-position' : 'slide-menu';
         let slideCssAbout = showAbout ? 'slide-menu slide-menu-position' : 'slide-menu';
         let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}>
-        <button className="login">LogOut</button></a> : <a href={process.env.REACT_APP_LOGIN}><button className="login">Login</button></a>
+        <h1 className="login">LogOut</h1></a> : <a href={process.env.REACT_APP_LOGIN}><h1 className="login">Login</h1></a>
 
-        let currentImage = this.state.images[this.state.selected];
+        let currentImageShop = this.state.images[this.state.selectedShop];
+        let currentImageAbout = this.state.aboutImages[this.state.selectedAbout];
 
         // console.log(slideCssShop)
         // console.log(slideCssTails)
@@ -139,7 +165,7 @@ class Header extends Component {
                 <div className={slideCssShop}>
                     <div className='shop-container'>
                         <div className='container-left'>
-                            <img className='harness-image' src={currentImage} alt='harness' />
+                            <img className='harness-image' src={currentImageShop} alt='harness' />
                         </div>
 
                         <div className='container-right'>
@@ -149,20 +175,20 @@ class Header extends Component {
                                     <div className='gear-container'>
                                         <div className='gear-split-left'>
                                             <Link to='/collections/harnesses' onClick={this.handleClickShop} 
-                                            ><li onMouseOver={e=>this.handleMouseOver(e)} id='harnesses'>Harnesses</li> </Link>
-                                            <Link to='/collections/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
-                                            <Link to='/collections/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
-                                            <li>Apparel</li>
-                                            <li>Life Jackets</li>
-                                            <Link to='/collections/boots' onClick={this.handleClickShop}> <li>Boots</li> </Link>
+                                            ><li onMouseOver={e=>this.handleMouseOverShop(e)} id='harnesses'>Harnesses</li> </Link>
+                                            <Link to='/collections/leashes' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='leashes'>Leashes</li> </Link>
+                                            <Link to='/collections/collars' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='collars'>Collars</li> </Link>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='apparel'>Apparel</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='lifeJackets'>Life Jackets</li>
+                                            <Link to='/collections/boots' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='boots'>Boots</li> </Link>
                                         </div>
                                         <div className='gear-split-right'>
-                                            <li>Packs</li>
-                                            <li>Bowls</li>
-                                            <li>Safety</li>
-                                            <li>Beds</li>
-                                            <li>Toys</li>
-                                            <li>Gift Cards</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='packs'>Packs</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='bowls'>Bowls</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='safety'>Safety</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='beds'>Beds</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='toys'>Toys</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='giftCards'>Gift Cards</li>
                                         </div>
                                     </div>
                                 </ul>
@@ -172,11 +198,11 @@ class Header extends Component {
                                 <ul>
                                     <h3>COLLECTIONS</h3>
                                     <div className='collections-list'>
-                                        <li>New Gear</li>
-                                        <li>Cooling Gear</li>
-                                        <li>Human Gear</li>
-                                        <li>Travel Gear</li>
-                                        <li>Specials</li>
+                                        <li onMouseOver={e=>this.handleMouseOverShop(e)} id='newGear'>New Gear</li>
+                                        <li onMouseOver={e=>this.handleMouseOverShop(e)} id='harnesses'>Cooling Gear</li>
+                                        <li onMouseOver={e=>this.handleMouseOverShop(e)} id='humanGear'>Human Gear</li>
+                                        <li onMouseOver={e=>this.handleMouseOverShop(e)} id='travelGear'>Travel Gear</li>
+                                        <li onMouseOver={e=>this.handleMouseOverShop(e)} id='specials'>Specials</li>
                                     </div>
                                 </ul>
                             </div>
@@ -212,16 +238,16 @@ class Header extends Component {
                 <div className={slideCssAbout}>
                     <div className='about-container'>
                         <div className='about-container-left'>
-                            <img className='our-path' src={OurPath} alt='two dogs running' />
+                            <img className='our-path' src={currentImageAbout} alt='two dogs running' />
                         </div>
                         <div className='about-container-right'>
                             <div className='about-list'>
                                 <ul>
-                                    <li>Our Pack </li>
-                                    <li>Our Path</li>
-                                    <li>Our Design Philosophy</li>
-                                    <li>Our Practices</li>
-                                    <li>Partners</li>
+                                    <li onMouseOver={e=>this.handleMouseOverAbout(e)} id='ourPath'>Our Path</li>
+                                    <li onMouseOver={e=>this.handleMouseOverAbout(e)} id='ourPack'>Our Pack</li>
+                                    <li onMouseOver={e=>this.handleMouseOverAbout(e)} id='ourDesign'>Our Design Philosophy</li>
+                                    <li onMouseOver={e=>this.handleMouseOverAbout(e)} id='ourPractices'>Our Practices</li>
+                                    <li onMouseOver={e=>this.handleMouseOverAbout(e)} id='partners'>Partners</li>
                                 </ul>
                             </div>
                         </div>
