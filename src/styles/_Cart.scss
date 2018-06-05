@@ -1,0 +1,82 @@
+.cart-container{
+    // background: blueviolet;
+    .basket-header{
+        box-sizing: border-box;
+        background: #00263E;
+        margin-top: 15px;
+        margin-left: 50px;
+        height: 180px;
+        color: white;
+        padding: 50px 100px;
+        h1{
+            margin: 0;
+        }
+        h2{
+            margin:0;
+        }
+    }
+    .lower-section{
+        // background: red;
+        width: 100%;
+        display:flex;
+        margin-top: 50px;
+        .item-quantity-subtotal{
+            // background: yellow;
+            width: 70%;
+            .columns{
+                border-bottom: 4px solid #00263E;   
+                margin: 20px;
+                margin-left: 50px;         
+                .column{
+                    // background: green;
+                    display: inline-block;
+                    margin: 10px;
+                    color: #00263E;   
+                    font-weight: 400;         
+                }
+                #subtotal{
+                    float: right;
+                }
+                #qty{
+                    float: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .order_summary{
+            // background: purple;
+            width: 30%;
+            color: #00263E;
+            text-align: center;
+            align-items: center;
+            h1{
+                font-size: 43px;
+            }
+            label{
+                margin-right: 150px;
+            }
+            p{
+                display: inline-block;
+            }
+            button{
+                box-sizing: border-box;
+                display: block;
+                width: 300px;
+                margin: 20px auto;
+                height: 56px;
+            }
+            .checkout-btn{
+                background: #D99000;
+                border: 0;
+                color: #00263E;
+                font-size: 18px;
+            }
+            .continue-btn{
+                background: white;
+                border: 3px solid #00263E;
+                color: #00263E;
+                font-size: 18px;
+            }
+        }
+    }
+}

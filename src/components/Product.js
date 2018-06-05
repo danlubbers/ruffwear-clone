@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {addToCart, getIndiv} from '../ducks/reducer';
 import {Link} from 'react-router-dom';
-
+import Plus from 'react-icons/lib/fa/plus';
+import Minus from 'react-icons/lib/fa/minus';
 import Cart from 'react-icons/lib/fa/shopping-cart'
 
 class Product extends React.Component{
@@ -25,8 +26,26 @@ class Product extends React.Component{
         })
     }
     handleQuantity(e){
+        let newQuantity = +e
+        if(!newQuantity){
+            newQuantity = 1
+        }
         this.setState({
-            quantity: e
+            quantity: newQuantity
+        })
+    }
+    quantityUp(){
+        this.setState({
+            quantity: this.state.quantity + 1
+        })
+    }
+    quantityDown(){
+        let newQuantity = this.state.quantity -1
+        if(newQuantity < 1){
+            newQuantity= 1
+        }
+        this.setState({
+            quantity: newQuantity
         })
     }
     handleSize(e){
@@ -41,7 +60,9 @@ class Product extends React.Component{
         }
         else{alert("Please select a size")}
     }
-    render(){        
+    render(){     
+        console.log(this.state.quantity);
+           
         let {category, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
 
         let sizeOptions= sizes.map(size => { //this creates the options for the select size dropdown
@@ -57,7 +78,7 @@ class Product extends React.Component{
             <div className="product-container" >
                 <div className="product-content" >
                    <img className='product-image' src={imgs[this.state.colorIndex]} alt={title}/> 
-                   <h3 className='product-description'>{description}</h3>
+                   <p className='product-description'>{description}</p>
                 </div>
                 <aside className="control-panel" >
                     <div className='product-title-subtitle'>
@@ -83,7 +104,11 @@ class Product extends React.Component{
                         </select>
                     </div>
                     <label>QUANTITY:</label>
-                        <input type="number" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
+                        <div className="quantity-form">
+                            <button onClick={() => this.quantityDown()} id="down-btn"><Minus size={20}/></button>
+                            <input type="text" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
+                            <button  onClick={() => this.quantityUp()} id="up-btn"><Plus size={20}/></button>
+                        </div>
                         <button className='basketBtn' onClick={() => this.addToBasket()}><Cart size={20}/> ADD TO BASKET</button>
                     </div>
                 </aside>
