@@ -48,7 +48,7 @@ class Cart extends React.Component{
                    <h1>ORDER SUMMARY</h1>
                    <p>SUBTOTAL</p>
                    <p>${subtotal.toFixed(2)}</p>
-                   <button>CHECK OUT</button>
+
                    <Link to='/'>
                         <button>CONTINUE SHOPPING</button>
                    </Link>

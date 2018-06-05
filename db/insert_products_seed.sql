@@ -559,3 +559,234 @@ ARRAY[array[]],
 ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1527875549/RuffDoggies/R-SS14RSTB-06L-WaterBladder_640x.jpg'],
 'http://res.cloudinary.com/drd6isa3m/image/upload/v1527875549/RuffDoggies/R-SS14RSTB-06L-WaterBladder_372x279.jpg');
 
+
+
+
+// •••••••••••••••• Apparel •••••••••••••••• //
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'SWAMP COOLER™',
+'cooling vest',
+'The Ruffwear Swamp Cooler provides protection from the sun and cooling through evaporation. In warm climates, dogs typically stay cool by seeking shade during the heat of the day and moving around in cooler temperatures. The Swamp Cooler allows dogs to perform in hot climates. To activate the Swamp Cooler, soak in water, wring out and place on your dog. The light-colored fabric reflects solar radiation, while evaporative cooling pulls heat from the dog. The integrated leash portal allows leash attachment when the Swamp Cooler is worn over our Front Range™, Hi & Light™ or Web Master™ Harnesses.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+59.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['GRAPHITE GRAY','#B2B1B6']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528218835/RuffDoggies/05402-SwampCoolar-GraphiteGray-Right_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528218834/RuffDoggies/05402-SwampCoolar-GraphiteGray-Right_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'JET STREAM™ COOLING VEST',
+'cooling vest',
+'The Ruffwear Jet Stream efficiently cools dogs during light and fast, high-intensity adventures through shading and evaporative cooling. In warm climates, dogs typically stay cool by seeking shade in the heat of the day. The light and sleek Jet Stream uses shade-providing spandex over the back, while Ruffwear’s three-layer evaporative cooling chest panel disperses heat from the dog’s core. To activate the Jet Stream, soak in water, wring out, zip on your dog, and go.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+39.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['SALAMANDER ORANGE','#F78B26'],array['BLUE LAGOON','#3FC5E0']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528219498/RuffDoggies/0545-JetStream-SalamanderOrange-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528219501/RuffDoggies/0545-JetStream-BlueLagoon-Right_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528219495/RuffDoggies/0545-JetStream-SalamanderOrange-Right_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'TRACK JACKET™',
+'high visibility reflective jacket',
+'The Ruffwear Track Jacket is a high-visibility, reflective jacket that extends your adventures into low-light conditions. Built with durable, waterproof polyester fabric, the Track Jacket has a lightweight, streamlined design that’s quick and easy to put on using side-release buckles. Reflective accent panels along the sides and in the chest martingale enhance visibility on all sides.
+
+
+XxSmall/XSmall: 13-22 IN (33-56 CM)
+Small/Medium: 22-32 IN (56-81 CM)
+Large/XLarge: 32-42 IN (81-107 CM)',
+39.95,
+ARRAY['XxSmall/XSmall','Small/Medium','Large/XLarge'],
+ARRAY[array['BLAZE ORANGE','#F36A36']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528220012/RuffDoggies/55202-TrackJacket-BlazeOrange-Right-WEB_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528220010/RuffDoggies/55202-TrackJacket-BlazeOrange-Right-WEB_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'SUN SHOWER™ RAIN JACKET',
+'non-insulated full coverage',
+'The Ruffwear Sun Shower™ is a lightweight waterproof rain jacket that keeps dogs comfortable and dry during wet weather adventures. The fold-up storm collar provides added coverage, and a non-insulated design makes the Sun Shower a great option in warmer climates. Side release buckles allow for easy on/off, while reflective trim enhances low-light visibility.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+49.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['MEADOW GREEN','#39A945'],array['BLUE DUSK','#0F7CB5'],array['ALPENGLOW PINK','#AF2B6B']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528220492/RuffDoggies/05302-SunShower-MeadowGreen-Right-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528220492/RuffDoggies/05302-SunShower-BlueDusk-Right-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528220491/RuffDoggies/05302-SunShower-AlpenglowPink-Right-WEB_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528220488/RuffDoggies/05302-SunShower-MeadowGreen-Right-WEB_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'AIRA™ WATERPROOF RAIN JACKET',
+'full coverage, waterproof, breathable',
+'The Ruffwear Aira™ Dog raincoat is a full coverage, waterproof and versatile rain jacket built for the trail. Waterproof, windproof and breathable fabric extends adventures during inclement weather, keeping dogs protected from the elements. Non-insulated design allows for use in warm climates and can be worn over insulating layers for cold climates.
+
+Coverage over the shoulders, hips and hindquarters maximizes protection and minimizes wet, muddy dog cleanup. Leg loops provide a secure fit in windy conditions. Integrated leash portal allows leash attachment when worn over our Front Range™ or Web Master™ harnesses. Autolock buckles on each side secure the jacket during activity and provide easy on/off.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+79.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['RED ROCK','#9C1A31'],array['TWILIGHT GRAY','#444549']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528221102/RuffDoggies/0580-AiraRainJacket-RedRock-CollarDown_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528221102/RuffDoggies/0580-AiraRainJacket-TwilightGray-Right_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528221102/RuffDoggies/0580-AiraRainJacket-RedRock-CollarDown_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'OVERCOAT™ JACKET',
+'abrasion-resistant, fleece-lined jacket',
+'The Ruffwear Overcoat™ is our classic cold-weather utility jacket. This vest-style jacket is built with sturdy, durable materials to keep up with the most active dog. Wind- and water-resistant outer fabric protects against harsh elements, while interior recycled polyester fleece lining keeps body heat in. Side-release buckles on both sides provide easy on/off, and a leash portal allows the Overcoat to be worn over our Front Range™ Harness or Web Master™ Harness.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+64.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['RED CURRANT','#C11F34'],array['BAJA BLUE','#176377'],array['TWILIGHT GRAY','#444549']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528223010/RuffDoggies/05203-Overcoat-RedCurrant-Right-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528223010/RuffDoggies/05203-Overcoat-BajaBlue-Right-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528223010/RuffDoggies/05203-Overcoat-TwilightGray-Right-WEB_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528223010/RuffDoggies/05203-Overcoat-RedCurrant-Right-WEB_372x279.jpg');
+
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'FERNIE™ JACKET',
+'sweater knit fleece',
+'The Ruffwear Fernie is a technical sweater for dogs, designed for everyday adventures from the trail to town. Advanced sweater-knit fabric offers the look of a sweater with a fleece interior, offering the warmth and performance of a fleece jacket. This sweater can be worn alone, or layered underneath other Ruffwear coats for additional warmth. Our “Sleeved” style jacket provides full coverage for maximum warmth. A convenient zipper on the left side of the jacket allows for a high-performance fit.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+59.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['CANYONLANDS ORANGE','#D25D34'],array['HEMLOCK GREEN','#296B2D'],array['LARKSPUR PURPLE','#6B254A']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528229682/RuffDoggies/0590-Fernie-CanyonlandsOrange-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528229682/RuffDoggies/0590-Fernie-HemlockGreen-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528229682/RuffDoggies/0590-Fernie-LarkspurPurple-Right_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528229682/RuffDoggies/0590-Fernie-CanyonlandsOrange-Right_372x279.jpg');
+
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'CLIMATE CHANGER™ JACKET',
+'quick-drying, breathable fleece jacket',
+'The Ruffwear Climate Changer is a versatile and cozy fleece jacket that is ideal for keeping dogs warm on crisp, cool days. Recycled polyester fleece provides quick-drying warmth for everyday adventures. This fleece jacket can be worn alone, or layered underneath other Ruffwear coats for additional warmth. Our “Sleeved” style jacket provides full coverage for maximum warmth. A convenient zipper on the left side of the jacket allows for a high-performance fit.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+49.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['BAJA BLUE','#176377'],array['ALPENGLOW PINK','#AF2B6B'],array['TWILIGHT GRAY','#444549']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528230402/RuffDoggies/05502-ClimateChanger-BajaBlue-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528230402/RuffDoggies/05502-ClimateChanger-AlpenglowPink-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528230402/RuffDoggies/05502-ClimateChanger-AlpenglowPink-Right_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528230402/RuffDoggies/05502-ClimateChanger-BajaBlue-Right_372x279.jpg');
+
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'CLOUD CHASER™ JACKET',
+'breathable, waterproof, insulated jacket',
+'The Ruffwear Cloud Chaser™ extends activities during inclement weather, protecting against rain, snow, wind, and cold. The jacket’s upper panel is built with waterproof, windproof, breathable softshell fabric. The fleece-lined lower panel sheds water, snow, and dirt while holding in warmth. Zippered closure provides a performance fit while stretch technical fabric offers a full range of movement. Reflective trim enhances low-light visibility.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+79.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['BLUE MOON','#005171'],array['SOCKEYE RED','#DD3326']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528230843/RuffDoggies/05103-CloudChaser-BlueMoon-Right-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528230843/RuffDoggies/05103-CloudChaser-SockeyeRed-Right-WEB_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528230843/RuffDoggies/05103-CloudChaser-BlueMoon-Right-WEB_372x279.jpg');
+
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'POWDER HOUND™ JACKET',
+'hybrid insulation',
+'The Ruffwear Powder Hound™ is a hybrid jacket that offers the warmth of synthetic insulation with the range of motion of technical stretch fabric. This weather resistant and packable insulated jacket is ideal for cold-weather activities.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+89.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['BAJA BLUE','#176377'],array['LARKSPUR PURPLE','#6B254A'],array['RED CURRANT','#C11F34']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528231657/RuffDoggies/0570-PowderHound-BajaBlue-Profile_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528231657/RuffDoggies/0570-PowderHound-LarkspurPurple-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528231657/RuffDoggies/0570-PowderHound-RedCurrant-Right_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528231657/RuffDoggies/0570-PowderHound-BajaBlue-Profile_372x279.jpg');
+
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'apparel',
+'QUINZEE™ JACKET',
+'warm, lightweight insulated jacket',
+'The Ruffwear Quinzee™ is a warm, weather-resistant, and packable jacket using synthetic insulation to provide warmth in extreme cold or inclement weather.
+
+The jacket packs down into its integrated stuff sack for storage. Waveloc buckles on each side secure the jacket during activity and provide easy on/off.
+
+
+XXSmall: 13-17 IN (33-43 CM)
+XSmall: 17-22 IN (43-56 CM)
+Small: 22-27 IN (56-69 CM)
+Medium: 27-32 IN (69-81 CM)
+Large: 32-36 IN (81-91 CM)
+XLarge: 36-42 IN (91-107 CM)',
+79.95,
+ARRAY['XXSmall','XSmall','Small','Medium','Large','XLarge'],
+ARRAY[array['MEADOW GREEN','#39A945'],array['LARKSPUR PURPLE','#6B254A'],array['TWILIGHT GRAY','#444549']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528232121/RuffDoggies/05601-Quinzee-MeadowGreen-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528232121/RuffDoggies/05601-Quinzee-LarkspurPurple-Right_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528232121/RuffDoggies/05601-Quinzee-TwilightGray-Right_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528232121/RuffDoggies/05601-Quinzee-MeadowGreen-Right_372x279.jpg');
+
+

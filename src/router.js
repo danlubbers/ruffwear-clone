@@ -1,10 +1,7 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Home from './components/Home';
-import Harnesses from './components/Harnesses';
-import Leashes from './components/Leashes';
 import Cart from './components/Cart';
-import Boots from './components/Boots';
 import Product from './components/Product'
 import Collections from './components/Collections';
 import Contact from  './components/Contact';
@@ -18,3 +15,5 @@ import Contact from  './components/Contact';
             <Route path="/cart" component={Cart}/>         
         </Switch>
     )
+
+    
