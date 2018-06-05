@@ -152,12 +152,12 @@ class Header extends Component {
                                             ><li onMouseOver={e=>this.handleMouseOver(e)} id='harnesses'>Harnesses</li> </Link>
                                             <Link to='/collections/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
                                             <Link to='/collections/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
-                                            <li>Apparel</li>
+                                            <Link to='/collections/apparel' onClick={this.handleClickShop}> <li>Apparel</li> </Link>
                                             <li>Life Jackets</li>
                                             <Link to='/collections/boots' onClick={this.handleClickShop}> <li>Boots</li> </Link>
                                         </div>
                                         <div className='gear-split-right'>
-                                            <li>Packs</li>
+                                          <Link to='/collections/packs' onClick={this.handleClickShop}>  <li>Packs</li> </Link>
                                             <li>Bowls</li>
                                             <li>Safety</li>
                                             <li>Beds</li>
