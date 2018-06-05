@@ -15,3 +15,5 @@ import Contact from  './components/Contact';
             <Route path="/cart" component={Cart}/>         
         </Switch>
     )
+
+    
