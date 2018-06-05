@@ -1,0 +1,31 @@
+.cart_row{
+    height: 132px;
+    // background: red;
+    margin-left: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    img{
+        height: 111px;
+    }
+    .prod_info{
+        // background: yellow;
+        width: 260px;
+        h2{
+            margin:0;
+            color: #00263E;
+            font-size: 20px;
+        }
+    }
+    .qty_input{
+        // background: green;
+        input{
+            width: 80px;
+            height: 57px;
+            text-align: center;
+            border: 3px #00263E solid;
+            font-size: 20px;
+            outline: 0;
+        }
+    }
+}
