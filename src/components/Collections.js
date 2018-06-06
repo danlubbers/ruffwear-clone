@@ -36,6 +36,7 @@ class Collections extends React.Component {
         this.props.getProducts(this.props.match.params.product)
         this.aos = AOS;
         this.aos.init({duration: 1000});
+        window.scroll(0,0)
     }
 
     componentDidUpdate(){
