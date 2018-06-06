@@ -15,7 +15,7 @@
         justify-content: space-around;
         align-content: center;
         height: 60vh;
-        width: 100vw;
+        width: 100%;
         // background-color: red;
         
         .newslettercontainer{
@@ -87,7 +87,7 @@
         justify-content: center;
         align-items: center;
         height: 60vh;
-        width: 100vw;
+        width: 100%;
         margin-top: 20px;
         // background-color: green;
 
@@ -178,7 +178,7 @@
     .footer-bottom-container{
         display: flex;
         height: 10vh;
-        width: 100vw;
+        width: 100%;
 
         li {
             display: inline;
@@ -203,14 +203,14 @@
         justify-content: center;
         align-items: center;
         height: 10vh;
-        width: 50vw;
+        width: 50%;
     }
     .terms{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 10vh;
-        width: 50vw;
+        width: 50%;
 
         span {
             font-family: $font-family;
