@@ -84,12 +84,12 @@ passport.serializeUser((id, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-  console.log('inside deserialize')
+  // console.log('inside deserialize')
   app
     .get("db")
     .find_session_user([id])
     .then(user => {
-      console.log(user[0])
+      // console.log(user[0])
       done(null, user[0]);
     })
     .catch(err => {

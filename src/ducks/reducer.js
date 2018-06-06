@@ -20,6 +20,7 @@ const ADD_TO_CART = "ADD_TO_CART";
 const CHANGE_QUANTITY = "CHANGE_QUANTITY";
 const DELETE_FROM_CART = "DELETE_FROM_CART";
 const SEARCH = "SEARCH";
+const EMPTY_CART = "EMPTY_CART";
 
 export default function reducer (state = initialState, action){
    switch (action.type) {
@@ -35,12 +36,12 @@ export default function reducer (state = initialState, action){
            return Object.assign({}, state, {cart: action.payload});
        case ADD_TO_CART + "_FULFILLED":
            return Object.assign({}, state, {cart: action.payload});
-       case CHANGE_QUANTITY + "_FULFILELD":
+       case CHANGE_QUANTITY + "_FULFILLED":
            return Object.assign({}, state, {cart: action.payload}); 
        case DELETE_FROM_CART + "_FULFILLED":
-       console.log(action.payload);
-       
-           return Object.assign({}, state, {cart: action.payload});               
+           return Object.assign({}, state, {cart: action.payload});     
+        case EMPTY_CART:
+           return Object.assign({}, state, {cart: action.payload});                           
        default:
            return state;
    }
@@ -115,7 +116,9 @@ export function changeQuantity(id, qty){
    let cart = axios.put(`/api/changequantity`, {
        cart_id: id,
        newQuantity: qty
-   }).then(res => res.data)
+   }).then(res => {
+       return res.data
+   })
    return {
        type: CHANGE_QUANTITY,
        payload: cart
@@ -124,10 +127,18 @@ export function changeQuantity(id, qty){
 
 export function deleteFromCart(id){
     let cart = axios.delete(`/api/deleteproduct/${id}`).then(res => {
+        
         return res.data
     })
     return {
         type: DELETE_FROM_CART,
         payload: cart
+    }
+}
+
+export function emptyCart(emptyCart){
+    return{
+        type: EMPTY_CART,
+        payload: emptyCart
     }
 }
