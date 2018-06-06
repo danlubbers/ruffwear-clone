@@ -39,25 +39,38 @@ class Cart extends React.Component{
                    <h1>YOUR BASKET</h1>
                    <h2>{itemNumber} items</h2>
                </div>
-               <div className="lower-section" >
-                    <div className="item-quantity-subtotal" >
-                        <div className="columns" >
-                            <p className="column" id="item">ITEM</p>
-                            <p className="column" id="subtotal">SUBTOTAL</p>
-                            <p className="column" id="qty">QUANTITY</p>
+                    {
+                        this.props.cart[0]
+                        ?
+                        <div className="lower-section">
+                            <div className="item-quantity-subtotal" >
+                                <div className="columns" >
+                                    <p className="column" id="item">ITEM</p>
+                                    <p className="column" id="subtotal">SUBTOTAL</p>
+                                    <p className="column" id="qty">QUANTITY</p>
+                                </div>
+                                {cartRows}
+                            </div>
+                            <div className="order_summary" >
+                                <h1>ORDER SUMMARY</h1>
+                                <label>SUBTOTAL</label>
+                                <p>${subtotal.toFixed(2)}</p>
+                                <button className="checkout-btn" ><Checkout amount={getCart}/></button>
+                                <Link to='/'>
+                                        <button className="continue-btn" >CONTINUE SHOPPING</button>
+                                </Link>
+                            </div>
                         </div>
-                        {cartRows}
-                    </div>
-                    <div className="order_summary" >
-                        <h1>ORDER SUMMARY</h1>
-                        <label>SUBTOTAL</label>
-                        <p>${subtotal.toFixed(2)}</p>
-                        <button className="checkout-btn" ><Checkout amount={getCart}/></button>
-                        <Link to='/'>
-                                <button className="continue-btn" >CONTINUE SHOPPING</button>
-                        </Link>
-                    </div>
-               </div>
+                        :
+                        <h2>
+                            It appears that your cart is currently empty! You can continue browsing
+                            &nbsp;
+                            <Link to='/'>
+                                <u>here</u>.
+                            </Link>
+                        </h2>
+                    }
+
            </div>
        )
    }

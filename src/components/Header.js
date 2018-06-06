@@ -21,7 +21,6 @@ import NewGear from '../assets/navigation-new-gear.jpg'
 import HumanGear from '../assets/navigation-human-gear.jpg'
 import TravelGear from '../assets/navigation-travel-gear.jpg'
 import Specials from '../assets/navigation-specials.jpg'
-
 // Images for Tails dropdown
 import MyDog from '../assets/navigation-mydogismy.jpg'
 import OurStores from '../assets/navigation-our-stories.jpg'
@@ -32,18 +31,13 @@ import OurPack from '../assets/navigation-our-pack.jpg'
 import OurDesign from '../assets/navigation-design-philosophy.jpg'
 import OurPractices from '../assets/navigation-our-practices.jpg'
 import Partners from '../assets/navigation-partners.jpg'
-
 import { Link } from 'react-router-dom';
-
 import axios from 'axios';
 import {getUser} from '../ducks/reducer';
 import {connect} from 'react-redux';
-
-
 class Header extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
             showShop: false,
             showTails: false,
@@ -81,11 +75,9 @@ class Header extends Component {
         this.handleClickTails = this.handleClickTails.bind(this);
         this.handleClickAbout = this.handleClickAbout.bind(this);
     }
-
     handleClickHome() {
         this.setState({showShop: false, showTails: false, showAbout: false})
     }
-
     handleClickShop() {
         this.setState({
             showShop: !this.state.showShop,
@@ -93,7 +85,6 @@ class Header extends Component {
             showAbout: false
         })
     }
-
     handleClickTails() {
         this.setState({
             showTails: !this.state.showTails,
@@ -101,7 +92,6 @@ class Header extends Component {
             showAbout: false
         })
     }
-
     handleClickAbout() {
         this.setState({
             showAbout: !this.state.showAbout,
@@ -113,17 +103,14 @@ class Header extends Component {
     componentDidMount(){
         this.props.getUser()
     }
-
     handleMouseOverShop(event) {
         // console.log(event.target)
         // console.log(event.target.id)
         this.setState({selectedShop: event.target.id});
     }
-
     handleMouseOverAbout(event) {
         this.setState({selectedAbout: event.target.id});
     }
-
     render() {
         let { showShop, showTails, showAbout } = this.state;
         let slideCssShop = showShop ? 'slide-menu slide-menu-position' : 'slide-menu';
@@ -131,10 +118,8 @@ class Header extends Component {
         let slideCssAbout = showAbout ? 'slide-menu slide-menu-position' : 'slide-menu';
         let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}>
         <h1 className="login">LogOut</h1></a> : <a href={process.env.REACT_APP_LOGIN}><h1 className="login">Login</h1></a>
-
         let currentImageShop = this.state.images[this.state.selectedShop];
         let currentImageAbout = this.state.aboutImages[this.state.selectedAbout];
-
         // console.log(slideCssShop)
         // console.log(slideCssTails)
         return (
@@ -160,14 +145,12 @@ class Header extends Component {
                         </div>
                     </div>
                 </nav>
-
                 {/* Shop DropDown Navbar*/}
                 <div className={slideCssShop}>
                     <div className='shop-container'>
                         <div className='container-left'>
                             <img className='current-shop-image' src={currentImageShop} alt='different image displayed on hover' />
                         </div>
-
                         <div className='container-right'>
                             <div className='gear-list'>
                                 <ul>
@@ -193,7 +176,6 @@ class Header extends Component {
                                     </div>
                                 </ul>
                             </div>
-
                             <div className='collections-container'>
                                 <ul>
                                     <h3>COLLECTIONS</h3>
@@ -209,7 +191,6 @@ class Header extends Component {
                         </div>
                     </div>
                 </div>
-
                 {/* Tails DropDown Navbar */}
                 <div className={slideCssTails}>
                     <div className='tails-container'>
@@ -233,7 +214,6 @@ class Header extends Component {
                         </div>
                     </div>
                 </div>
-
                 {/* About DropDown Navbar */}
                 <div className={slideCssAbout}>
                     <div className='about-container'>
@@ -254,14 +234,9 @@ class Header extends Component {
                     </div>
                 </div>
             </header>
-
-
         )
-
     }
-
 }
-
 function mapStateToProps(state) {
     return {
         user: state.user

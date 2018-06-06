@@ -46,16 +46,13 @@
     }
 
 
-
-
-   
-
     .product-container{
-        @include center;
-        margin: 10vh;
-    .product-container-container{
         display: flex;
-        justify-content: center;
+        margin: 10vh;
+        margin-bottom: 10px;
+        .product-container-container{
+        display: flex;
+        justify-content: flex-start;
         width: 75vw;
         flex-wrap: wrap;
     }

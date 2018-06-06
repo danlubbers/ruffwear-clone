@@ -4,12 +4,27 @@ import { getProducts } from '../ducks/reducer';
 import ProductCard from './ProductCard';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import HARNESSES from '../assets/Header-Image-Harnesses.jpg';
 import BOOTS from '../assets/Header-Image-Boots.jpg';
 import LEASHES from '../assets/Header-Image-Leashes.jpg';
 import PACKS from '../assets/Header-Image-Packs.jpg';
 import APPAREL from '../assets/Header-Image-Apparel.jpg';
+import CHARNESSES from '../assets/navigation-harnesses-image.jpg';
+import CBOOTS from '../assets/navigation-boots.jpg';
+import CLEASHES from '../assets/navigation-leashes.jpg';
+import CPACKS from '../assets/navigation-packs.jpg';
+import CAPPAREL from '../assets/navigation-apparel.jpg';
+import CBEDS from '../assets/navigation-beds.jpg';
+import CBOWLS from '../assets/navigation-bowls.jpg';
+import CCOLLARS from '../assets/navigation-collars.jpg';
+import CLIFEJACKETS from '../assets/navigation-life-jackets.jpg';
+import CSAFETY from '../assets/navigation-safety.jpg';
+import CSPECIALS from '../assets/navigation-specials.jpg';
+import CTOYS from '../assets/navigation-toys.jpg';
+import CTRAVEL from '../assets/navigation-travel-gear.jpg';
+import CPARTNERS from '../assets/navigation-partners.jpg';
+
 
 class Collections extends React.Component {
     constructor(props) {
@@ -42,40 +57,16 @@ class Collections extends React.Component {
        
 
         var settings = {
-            dots: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-              // You can unslick at a given breakpoint now by adding:
-              // settings: "unslick"
-              // instead of a settings object
-            ]
-          };
+        dots: false,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2500,
+      autoplaySpeed: 1,
+      cssEase: "linear",
+      pauseOnHover: false
+        }
            
       
 
@@ -124,31 +115,56 @@ class Collections extends React.Component {
                 </div>
                 </div>
 
+        
                           <Slider {...settings}>
                        
         <div>
-          <h3>   <img className='carousel-pic' src={HARNESSES} alt={category} /> </h3>
+          <h3>   <img className='carousel-pic' src={CHARNESSES} alt={category} /> </h3>
         </div>
         <div>
-          <h3>  <img className='carousel-pic' src={BOOTS} alt={category} /> </h3>
+          <h3>  <img className='carousel-pic' src={CBOOTS} alt={category} /> </h3>
         </div>
         <div>
-          <h3>   <img className='carousel-pic' src={LEASHES} alt={category} /> </h3>
+          <h3>   <img className='carousel-pic' src={CLEASHES} alt={category} /> </h3>
         </div>
         <div>
-          <h3>   <img className='carousel-pic' src={PACKS} alt={category} /> </h3>
+          <h3>   <img className='carousel-pic' src={CPACKS} alt={category} /> </h3>
         </div>
         <div>
-          <h3>   <img className='carousel-pic' src={PACKS} alt={category} /> </h3>
+          <h3>   <img className='carousel-pic' src={CAPPAREL} alt={category} /> </h3>
         </div>
         <div>
-          <h3>6</h3>
+          <h3> <img className='carousel-pic' src={CBEDS} alt={category} /> </h3>
+          </div>
+          <div>
+          <h3>   <img className='carousel-pic' src={CBOWLS} alt={category} /> </h3>
         </div>
-
-                    
+        <div>
+          <h3>   <img className='carousel-pic' src={CCOLLARS} alt={category} /> </h3>
+        </div>
+        <div>
+          <h3>   <img className='carousel-pic' src={CLIFEJACKETS} alt={category} /> </h3>
+        </div>
+        <div>
+          <h3>   <img className='carousel-pic' src={CSAFETY} alt={category} /> </h3>
+        </div>
+        <div>
+          <h3>   <img className='carousel-pic' src={CSPECIALS} alt={category} /> </h3>
+        </div>
+        <div>
+          <h3>   <img className='carousel-pic' src={CTOYS} alt={category} /> </h3>
+        </div>
+        <div>
+          <h3>   <img className='carousel-pic' src={CTRAVEL} alt={category} /> </h3>
+        </div>
+        <div>
+          <h3>   <img className='carousel-pic' src={CPARTNERS} alt={category} /> </h3>
+        </div>
+                
 
         </Slider>
 
+        
             </div>
         )
     }
