@@ -40,7 +40,7 @@ class Cart extends React.Component{
                    <h2>{itemNumber} items</h2>
                </div>
                     {
-                        this.props.cart[0]
+                        this.props.cart[0].quantity
                         ?
                         <div className="lower-section">
                             <div className="item-quantity-subtotal" >

@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Slider from 'react-slick';
 import HARNESSES from '../assets/Header-Image-Harnesses.jpg';
-import BOOTS from '../assets/Header-Image-boots.jpg';
+import BOOTS from '../assets/Header-Image-Boots.jpg';
 import LEASHES from '../assets/Header-Image-Leashes.jpg';
 import PACKS from '../assets/Header-Image-Packs.jpg';
 import APPAREL from '../assets/Header-Image-Apparel.jpg';
@@ -15,7 +15,7 @@ class Collections extends React.Component {
     constructor(props) {
         super(props)
     
-    }
+    } 
 
     componentDidMount() {
         this.props.getProducts(this.props.match.params.product)
