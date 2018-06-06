@@ -151,9 +151,9 @@ class Header extends Component {
                                 <li className='aboutBtn' onClick={this.handleClickAbout}>ABOUT</li>
                             </ul>
                             <ul className='nav-list-controls'>
-                                <li className='search-icon'><SearchIcon size={25} /></li>
-                                <Link to='/contact'><li className='paw-icon'><Paw size={25} /></li></Link>
-                                <Link to='/cart'>  <li className='cart-icon'><Cart size={25} /></li> </Link>
+                                <li className='search-icon' onClick={this.handleClickHome}><SearchIcon size={25} /></li>
+                                <Link to='/contact' onClick={this.handleClickHome}><li className='paw-icon'><Paw size={25} /></li></Link>
+                                <Link to='/cart' onClick={this.handleClickHome}>  <li className='cart-icon'><Cart size={25} /></li> </Link>
                                 {/* <Link to='/login'><li className='login'>Login</li></Link> */}
                                 {logInDisplay}
                             </ul>
