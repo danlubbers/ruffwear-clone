@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import StripeCheckout from 'react-stripe-checkout';
-import {getCart} from '../ducks/reducer';
+import {getCart, emptyCart} from '../ducks/reducer';
 import {connect} from 'react-redux';
 
 class Checkout extends Component {
@@ -13,6 +13,7 @@ class Checkout extends Component {
        }, 0)*100);
        console.log(amount)
        axios.post(`/api/payment`, {token, amount: amount}).then(res => {
+           this.props.emptyCart(res.data)
        }).catch(err => console.log(err))
    }
 
@@ -41,4 +42,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {getCart})(Checkout);
+export default connect(mapStateToProps, {getCart, emptyCart})(Checkout);
