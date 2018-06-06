@@ -33,6 +33,7 @@ class Home extends React.Component{
     componentDidMount() {
         this.aos = AOS;
         this.aos.init({duration: 1000});
+        window.scroll(0,0)
     }
 
     componentDidUpdate() {
