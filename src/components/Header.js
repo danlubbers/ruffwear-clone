@@ -175,20 +175,20 @@ class Header extends Component {
                                     <div className='gear-container'>
                                         <div className='gear-split-left'>
                                             <Link to='/collections/harnesses' onClick={this.handleClickShop} 
-                                            ><li onMouseOver={e=>this.handleMouseOver(e)} id='harnesses'>Harnesses</li> </Link>
-                                            <Link to='/collections/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
-                                            <Link to='/collections/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
-                                            <Link to='/collections/apparel' onClick={this.handleClickShop}> <li>Apparel</li> </Link>
-                                            <li>Life Jackets</li>
-                                            <Link to='/collections/boots' onClick={this.handleClickShop}> <li>Boots</li> </Link>
+                                            ><li onMouseOver={e=>this.handleMouseOverShop(e)} id='harnesses'>Harnesses</li> </Link>
+                                            <Link to='/collections/leashes' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='leashes'>Leashes</li> </Link>
+                                            <Link to='/collections/collars' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='collars'>Collars</li> </Link>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='apparel'>Apparel</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='lifeJackets'>Life Jackets</li>
+                                            <Link to='/collections/boots' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='boots'>Boots</li> </Link>
                                         </div>
                                         <div className='gear-split-right'>
-                                          <Link to='/collections/packs' onClick={this.handleClickShop}>  <li>Packs</li> </Link>
-                                            <li>Bowls</li>
-                                            <li>Safety</li>
-                                            <li>Beds</li>
-                                            <li>Toys</li>
-                                            <li>Gift Cards</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='packs'>Packs</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='bowls'>Bowls</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='safety'>Safety</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='beds'>Beds</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='toys'>Toys</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='giftCards'>Gift Cards</li>
                                         </div>
                                     </div>
                                 </ul>
