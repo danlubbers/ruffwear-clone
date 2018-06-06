@@ -175,7 +175,7 @@ class Header extends Component {
                                     <div className='gear-container'>
                                         <div className='gear-split-left'>
                                             <Link to='/collections/harnesses' onClick={this.handleClickShop} 
-                                            ><li onMouseOver={e=>this.handleMouseOver(e)} id='harnesses'>Harnesses</li> </Link>
+                                            ><li onMouseOver={e=>this.handleMouseOverShop(e)} id='harnesses'>Harnesses</li> </Link>
                                             <Link to='/collections/leashes' onClick={this.handleClickShop}><li>Leashes</li> </Link>
                                             <Link to='/collections/collars' onClick={this.handleClickShop}><li>Collars</li> </Link>
                                             <Link to='/collections/apparel' onClick={this.handleClickShop}> <li>Apparel</li> </Link>

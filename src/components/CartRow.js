@@ -22,7 +22,7 @@ class CartRow extends React.Component{
    handleQty(e){
        let newQuantity = +e;
        if(!newQuantity || newQuantity < 1){
-           newQuantity = 1
+           newQuantity = 0
        }
        this.setState({
            qty: newQuantity
@@ -32,7 +32,6 @@ class CartRow extends React.Component{
    render(){
        let {cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex} = this.props
        // console.log(cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex);
-       console.log(this.state.qty);
       
        return(
            <div className="cart_row" >
