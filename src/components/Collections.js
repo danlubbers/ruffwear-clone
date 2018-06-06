@@ -4,7 +4,7 @@ import { getProducts } from '../ducks/reducer';
 import ProductCard from './ProductCard';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import HARNESSES from '../assets/Header-Image-Harnesses.jpg';
 import BOOTS from '../assets/Header-Image-Boots.jpg';
 import LEASHES from '../assets/Header-Image-Leashes.jpg';
