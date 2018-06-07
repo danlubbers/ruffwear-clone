@@ -1,4 +1,4 @@
-const fns = require('./../utilities/functions');
+const fns = require('../utilities/dan-functions');
 
 // test('validateClickHome should always be false', () => {
 //     let result = fns.validateClickHome(false);
