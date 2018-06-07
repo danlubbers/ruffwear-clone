@@ -31,10 +31,20 @@ class CartRow extends React.Component{
        })
        this.props.changeQuantity(this.props.cart_id, +e)
    }
+
+   capitalizeColor(color){
+        return color.replace(/\w\S*/g, 
+        function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      })
+   }
+
    render(){
        let {cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex} = this.props
        // console.log(cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex);
       console.log(this.props, "whats cart props?")
+      
+
        return(
            <div className="cart_row" >
               <Link to={`/Product/${this.props.product_id}`}> <img src={imgs[colorIndex]} alt=""/> </Link>
@@ -42,19 +52,20 @@ class CartRow extends React.Component{
                    <h2>
                        {title}
                    </h2>
-                   <p>
-                       Color: {colors[colorIndex][0]}
-                   </p>
+                   <span className='category'> Color: </span> 
+                   <span className='specification'> {this.capitalizeColor(colors[colorIndex][0])} </span>
+                   
                    {
                        size
                        ?
-                       <p>
-                           Size: {size}
-                       </p>
+                       <div className='size-container'>
+                       <span className = 'category'>   Size: </span>
+                         <span className = 'specification'> {size} </span>
+                        </div>
                        :
                        null
                    }
-                   <p style={{cursor: "pointer"}} onClick={() => this.removeFromCart()} >
+                   <p className='remove' onClick={() => this.removeFromCart()} >
                        REMOVE
                    </p>
                </div>
@@ -62,7 +73,7 @@ class CartRow extends React.Component{
                    <input className="qty_input" type="text" value={this.state.qty} onChange={(e) => this.handleQty(e.target.value)}/>
                </div>
                <div>
-               <span>
+               <span className='price'>
                    ${(price * this.state.qty).toFixed(2)}
                </span>
                </div>
