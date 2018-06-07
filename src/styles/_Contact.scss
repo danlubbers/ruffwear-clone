@@ -7,6 +7,19 @@
   margin-top: 70px;
   // background-color: red;
 
+  .xBtn-container {
+    width: 60vw;
+    display: flex;
+    justify-content: flex-end;
+    // background-color: red;
+
+    .xBtn{
+        font-size: 2em;
+        border: none;
+        cursor: pointer;
+    }
+  }
+
   .header {
     display: flex;
     flex-direction: row;
@@ -14,6 +27,8 @@
     justify-content: center;
     align-items: flex-end;
     align-content: center;
+    font-family: $font-family;
+    color: $font-color;
   }
 
   .contact-form {
@@ -46,22 +61,10 @@
     outline: none;
   }
   .email {
-    margin: 5px;
-    width: 75%;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    font-family: "Roboto", sans-serif;
-    border-radius: 10px;
-    outline: none;
+    @extend .name;
   }
   .subject {
-    margin: 5px;
-    width: 75%;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    font-family: "Roboto", sans-serif;
-    border-radius: 10px;
-    outline: none;
+    @extend .name;
   }
   .message {
     height: 25vh;
@@ -84,11 +87,12 @@
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-color: #f09f00;
+    transition: .3s ease-in-out;  
   }
   .submitBtn {
     margin: 7px;
     font-family: $font-family;
     font-size: 18px;
-    outline: none;    
+    outline: none;  
   }
 }

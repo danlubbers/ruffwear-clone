@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import CloseIcon from 'react-icons/lib/fa/times-circle';
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 class Contact extends Component {
@@ -64,6 +66,9 @@ class Contact extends Component {
     console.log("state--->", this.state);
     return (
       <div className="contact-container">
+        <div className='xBtn-container'>
+            <Link to='/'><button className='xBtn'><CloseIcon/></button></Link>
+        </div>
         <h1 className="header">Contact Form</h1>
           <span className="contact-form">
             <input
