@@ -15,9 +15,21 @@ class Search extends Component {
     }
 
     searchForProducts(e) {
-        // console.log(res.data)
+        console.log(e)
         this.setState({search: e})
-        axios.get(`/api/search/?find=${e}`).then(res=>this.setState({products: res.data}))
+        if(!e){
+            this.setState({
+                products: []
+            })
+        }
+        else{
+            axios.get(`/api/search/?find=${e}`).then(res=>{
+                if(!this.state.search){
+                    return null
+                }
+                this.setState({products: res.data})
+            })
+        }
     }
 
     render() {

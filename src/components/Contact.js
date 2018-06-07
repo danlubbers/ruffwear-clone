@@ -20,13 +20,16 @@ class Contact extends Component {
 
   handleSend() {
     var { name, email, subject, message, sent } = this.state;
-    axios
-      .post(
-        `/api/sendEmail/?name=${name}&email=${email}&subject=${subject}&message=${message}`
-      )
-      .then(res => {
-        console.log(res.data);
-      });
+    if (validateEmail(email)){
+
+      axios
+        .post(
+          `/api/sendEmail/?name=${name}&email=${email}&subject=${subject}&message=${message}`
+        )
+        .then(res => {
+          console.log(res.data);
+        });
+    }
   }
 
   resetState = () => {
@@ -98,3 +101,7 @@ class Contact extends Component {
 }
 
 export default Contact;
+
+export function validateEmail(email){
+
+}
