@@ -673,3 +673,102 @@ ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528232121/RuffDoggies/
 'http://res.cloudinary.com/drd6isa3m/image/upload/v1528232121/RuffDoggies/05601-Quinzee-MeadowGreen-Right_372x279.jpg');
 
 
+
+
+// •••••••••••••••• Collars •••••••••••••••• //
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'collars',
+'KNOT-A-COLLAR™',
+'reflective, low-profile, adjustable',
+'The Ruffwear Knot-a-Collar™ is a low-profile, climbing-inspired everyday collar. Clean and elegant, the Knot-a-Collar settles comfortably in short or long fur and reduces matting. Reflective rope keeps dogs visible in low-light conditions. Pairs with our matching Knot-a-Leash™.',
+19.95,
+ARRAY['14"-20"','20"-26"'],
+ARRAY[array['RED CURRANT','#C11F34'],array['BLUE ATOLL','#0DB0D1'],array['PUMPKIN ORANGE','#E96D2F']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528406705/25602-Knot-a-Collar-RedCurrant-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528406704/25602-Knot-a-Collar-BlueAToll-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528406704/25602-Knot-a-Collar-PumpkinOrange-WEB_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528406704/25602-Knot-a-Collar-RedCurrant-WEB_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'collars',
+'CRAG™ COLLAR',
+'reflective webbing',
+'The Ruffwear Crag Collar combines our user-friendly, side-release buckle with our reflective Tubelok™ webbing. Packed full of Ruffwear`s essential collar features: a separate ID tag attachment point with tag silencer, strong and comfortable webbing, and aluminum V-ring.',
+19.95,
+ARRAY['11"-14"','14"-20"','20"-26"'],
+ARRAY[array['PURPLE DUSK','#87315E'],array['KOKANEE RED','#BF2034'],array['MEADOW GREEN','#39A945']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528408450/25801-CragCollar-PurpleDusk_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528408450/25801-CragCollar-KokaneeRed_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528408450/25801-CragCollar-MeadowGreen_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528408450/25801-CragCollar-PurpleDusk_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'collars',
+'HOOPIE™ COLLAR',
+'soft, durable webbing',
+'The Ruffwear Hoopie™ Collar is our everyday dog collar with an easy-to-use side-release buckle. Outdoor-inspired patterns connect you with your favorite wild spaces. Packed full of Ruffwear`s essential collar features: separate ID tag attachment point with tag silencer, strong and comfortable webbing, and aluminum V-ring.',
+19.95,
+ARRAY['11"-14"','14"-20"','20"-26"'],
+ARRAY[array['BLUE MOUNTAINS','#006F9B'],array['PURPLE DUSK','#87315E'],array['RED CURRANT','#C11F34']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528409104/25203-HoopieCollar-BlueMountain-WEB_47d88de9-292d-485f-91b6-6c55693b3a3f_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528409104/25203-HoopieCollar-PurpleDusk-WEB_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528409105/25203-HoopieCollar-RedCurrant-WEB_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528409102/25203-HoopieCollar-BlueMountain-WEB_47d88de9-292d-485f-91b6-6c55693b3a3f_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'collars',
+'TOP ROPE™ COLLAR',
+'strong, reflective, ballasted',
+'The Ruffwear Hoopie™ Collar is our everyday dog collar with an easy-to-use side-release buckle. Outdoor-inspired patterns connect you with your favorite wild spaces. Packed full of Ruffwear`s essential collar features: separate ID tag attachment point with tag silencer, strong and comfortable webbing, and aluminum V-ring.',
+29.95,
+ARRAY['Small','Medium','Large'],
+ARRAY[array['KOKANEE RED','#BF2034'],array['PURPLE DUSK','#87315E'],array['MEADOW GREEN','#39A945']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528409679/25502-TopRopeCollar-KokaneeRed_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528409679/25502-TopRopeCollar-PurpleDusk_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528409679/25502-TopRopeCollar-MeadowGreen_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528409679/25502-TopRopeCollar-KokaneeRed_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'collars',
+'CHAIN REACTION™ COLLAR',
+'limited cinch, audible correction',
+'The Ruffwear Chain Reaction Collar is a martingale-style collar that combines Ruffwear-designed TubeLok™ webbing and a short section of stainless steel chain. This collar provides limited correction with an audible cue, making it a great training tool. In addition to the chain attachment point, this collar also features a V-ring attachment option for use as a standard collar. 
+
+Packed full of Ruffwear’s essential collar features: separate ID tag attachment point with tag silencer, strong and comfortable webbing, and aluminum V-ring. Integrated reflectivity keeps dogs visible in low-light conditions. ',
+24.95,
+ARRAY['Small','Medium','Large'],
+ARRAY[array['PURPLE DUSK','#87315E'],array['MEADOW GREEN','#39A945'],array['KOKANEE RED','#BF2034']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528410241/25701-ChainReactionCollar-PurpleDusk_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528410241/25701-ChainReactionCollar-MeadowGreen_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528410244/25701-ChainReactionCollar-KokaneeRed_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528410241/25701-ChainReactionCollar-PurpleDusk_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'collars',
+'HEADWATER™ COLLAR',
+'waterproof, stink-proof, reflective',
+'The Ruffwear Chain Reaction Collar is a martingale-style collar that combines Ruffwear-designed TubeLok™ webbing and a short section of stainless steel chain. This collar provides limited correction with an audible cue, making it a great training tool. In addition to the chain attachment point, this collar also features a V-ring attachment option for use as a standard collar. 
+
+Packed full of Ruffwear’s essential collar features: separate ID tag attachment point with tag silencer, strong and comfortable webbing, and aluminum V-ring. Integrated reflectivity keeps dogs visible in low-light conditions. ',
+29.95,
+ARRAY['11"-14"','14"-17"','17"-20"','20"-23"','23"-26"'],
+ARRAY[array['BLUE SPRING','#0B829F'],array['RED CURRANT','#C11F34'],array['FERN GREEN','#B5CE3C']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528410724/25402-HeadwaterCollar-BlueSpring_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528410724/25402-HeadwaterCollar-RedCurrant_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528410724/25402-HeadwaterCollar-FernGreen_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528410724/25402-HeadwaterCollar-BlueSpring_372x279.jpg');
+
+
+INSERT INTO products(category, title, subtitle, description , price , sizes , colors, imgs, thumbnail)
+VALUES( 'collars',
+'TIMBERLINE™ COLLAR',
+'durable, water-resistant leather',
+'The Ruffwear Timberline Collar is our take on the classic leather collar.
+
+Our supple full-grain cowhide leather is water-resistant, durable, naturally odor-resistant, and ages gracefully. Proudly partnering with Pittards, a company that has been ethically and sustainably supplying athletic performance leather in the UK since 1826.
+
+The all-metal Crux™ Buckle is our take on the classic equine Conway buckle, offering durability and security in an efficient design.
+
+Packed full of Ruffwear`s essential collar features: separate ID tag attachment point with tag silencer, strong and comfortable leather, and aluminum D-ring.
+
+Try our matching Timberline™ Leash for the complete set up.',
+39.95,
+ARRAY['11"-14"','14"-17"','17"-20"','20"-23"','23"-26"'],
+ARRAY[array['WILD PLUM PURPLE','#6E3C57'],array['CANYONLANDS ORANGE','#D25D34'],array['MELT WATER TEAL','#008685']],
+ARRAY['http://res.cloudinary.com/drd6isa3m/image/upload/v1528411209/2590-TimberlineCollar-WildPlumPurple-Large_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528411209/2590-TimberlineCollar-CanyonlandsOrange-Large_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1528411209/2590-TimberlineCollar-MeltWaterTeal-Large_640x.jpg'],
+'http://res.cloudinary.com/drd6isa3m/image/upload/v1528411209/2590-TimberlineCollar-WildPlumPurple-Large_372x279.jpg');
+
