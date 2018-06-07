@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {changeQuantity, deleteFromCart} from '../ducks/reducer'
+import {changeQuantity, deleteFromCart} from '../ducks/reducer';
+import { Link } from 'react-router-dom';
 
 
 class CartRow extends React.Component{
@@ -16,6 +17,7 @@ class CartRow extends React.Component{
            qty: this.props.qty
        })
    }
+   
    removeFromCart(){
        this.props.deleteFromCart(this.props.cart_id)
    }
@@ -32,10 +34,10 @@ class CartRow extends React.Component{
    render(){
        let {cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex} = this.props
        // console.log(cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex);
-      
+      console.log(this.props, "whats cart props?")
        return(
            <div className="cart_row" >
-               <img src={imgs[colorIndex]} alt=""/>
+              <Link to={`/Product/${this.props.product_id}`}> <img src={imgs[colorIndex]} alt=""/> </Link>
                <div className="prod_info" >
                    <h2>
                        {title}

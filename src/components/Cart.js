@@ -36,6 +36,7 @@ class Cart extends React.Component{
        return(
            <div className="cart-container">
                <div className="basket-header" >
+                   <div className="background" ></div>
                    <h1>YOUR BASKET</h1>
                    <h2>{itemNumber} items</h2>
                </div>
@@ -83,3 +84,4 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps, {getCart, changeQuantity, deleteFromCart})(Cart)
+

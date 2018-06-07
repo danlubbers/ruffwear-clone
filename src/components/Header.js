@@ -160,13 +160,13 @@ class Header extends Component {
                                             <Link to='/collections/harnesses' onClick={this.handleClickShop} 
                                             ><li onMouseOver={e=>this.handleMouseOverShop(e)} id='harnesses'>Harnesses</li> </Link>
                                             <Link to='/collections/leashes' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='leashes'>Leashes</li> </Link>
-                                            <Link to='/collections/collars' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='collars'>Collars</li> </Link>
-                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='apparel'>Apparel</li>
-                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='lifeJackets'>Life Jackets</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='collars'>Collars</li> 
+                                            <Link to='/collections/apparel' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='apparel'>Apparel</li> </Link>
+                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='lifeJackets'>Life Jackets</li>
                                             <Link to='/collections/boots' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='boots'>Boots</li> </Link>
                                         </div>
                                         <div className='gear-split-right'>
-                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='packs'>Packs</li>
+                                        <Link to='/collections/packs' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='packs'>Packs</li> </Link>
                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='bowls'>Bowls</li>
                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='safety'>Safety</li>
                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='beds'>Beds</li>
