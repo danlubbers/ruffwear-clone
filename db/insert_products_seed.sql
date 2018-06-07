@@ -203,7 +203,7 @@ These high-performance boots feature a rugged and resilient Ruffwear-designed Vi
 Just as you would with your gear, check closure system and adjust fit as needed 15 minutes into your activity and throughout the adventure.',
 37.50,
 ARRAY['1.50"', '1.75"', '2.00"', '2.25"', '2.50"', '2.75"', '3.00"', '3.25"' ],
-ARRAY[array['BLUE SPRING', '#098DA9'],array['RED CURAANT', '#41B24E'],array['OBSIDIAN BLACK', '#070707']],
+ARRAY[array['BLUE SPRING', '#098DA9'],array['RED CURAANT', '#C11F34'],array['OBSIDIAN BLACK', '#070707']],
 ARRAY['http://res.cloudinary.com/danlubbers/image/upload/v1527702067/ruffdoggies/boots/hero-colors/15202-GripTrex-BlueSpring-Pair_54290b95-18f3-45ce-9be7-afd1d62b0465_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1527883796/RuffDoggies/15202-GripTrex-RedCurrant-Pair_e83c8626-5d0a-4ac5-86bc-4147b4aaa66a_640x.jpg','http://res.cloudinary.com/drd6isa3m/image/upload/v1527883787/RuffDoggies/15202-GripTrex-ObsidianBlack-Pair_a55c5328-82c3-41b3-a1a0-6b2a879c1554_640x_1.jpg'],
 'http://res.cloudinary.com/danlubbers/image/upload/v1527626972/ruffdoggies/boots/15202-GripTrex-BlueSpring-Pair_54290b95-18f3-45ce-9be7-afd1d62b0465_372x279.jpg');
 

@@ -33,21 +33,27 @@
         height: 680px;
         padding: 20px;
         // background-color: salmon;
-
-        .product-title-subtitle {
+        .top-section{
             margin-top: 75px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            // background-color: yellow;
-
-            h1, p, h2 {
-                margin: 0 auto;
-                padding-top: 10px;
-                // background-color: red;
+            justify-content: space-around;   
+            .arrow{
+                cursor: pointer;
+                font-size: 70px;
+            }
+            .product-title-subtitle {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // background-color: yellow;
+    
+                h1, p, h2 {
+                    margin: 0 auto;
+                    padding-top: 10px;
+                    // background-color: red;
+                }
             }
         }
-
         .color-container {
             margin: 15px 0px;
             display: flex;
