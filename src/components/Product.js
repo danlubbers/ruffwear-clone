@@ -4,7 +4,11 @@ import {addToCart, getIndiv} from '../ducks/reducer';
 import {Link} from 'react-router-dom';
 import Plus from 'react-icons/lib/fa/plus';
 import Minus from 'react-icons/lib/fa/minus';
-import Cart from 'react-icons/lib/fa/shopping-cart'
+import Cart from 'react-icons/lib/fa/shopping-cart';
+import ArrowLeft from 'react-icons/lib/fa/angle-left';
+import ArrowRight from 'react-icons/lib/fa/angle-right';
+
+
 
 class Product extends React.Component{
     constructor(){
@@ -14,16 +18,37 @@ class Product extends React.Component{
             colorIndex: 0,
             quantity: 1,
             size: '',
+            borderStyle:[{border: '2px solid #D0D3D4', borderRadius: "50%"}, {}, {}]
         }
     }
     componentDidMount(){
         this.props.getIndiv(this.props.match.params.id)
         window.scroll(0,0)
     }
+    componentDidUpdate(prevProps){
+        if(prevProps.match.params.id !== this.props.match.params.id){
+            this.props.getIndiv(this.props.match.params.id)
+        } 
+    }
     changeColorIndex(i){
-        this.setState({
-            colorIndex: i
-        })
+        if(i === 0){
+            this.setState({
+                colorIndex: i,
+                borderStyle:[{border: '2px solid #D0D3D4', borderRadius: "50%"}, {}, {}]
+            })
+        }
+        if(i === 1){
+            this.setState({
+                colorIndex: i,
+                borderStyle:[{}, {border: '2px solid #D0D3D4', borderRadius: "50%"}, {}]
+            })
+        }
+        if(i === 2){
+            this.setState({
+                colorIndex: i,
+                borderStyle:[{}, {}, {border: '2px solid #D0D3D4', borderRadius: "50%"}]
+            })
+        }
     }
     handleQuantity(e){
         let newQuantity = +e
@@ -53,17 +78,31 @@ class Product extends React.Component{
             size: e
         })
     }
-    addToBasket(){        
-        if(this.state.size){
+    // leftArrowClick(){
+    //     let id = +this.props.match.params.id - 1;
+    //     this.props.history.push(`/Product/${id}`)
+    // }
+    addToBasket(){      
+        console.log(this.props.indiv.sizes);
+          
+        if(!this.props.user){
+            alert("Please login to add items to you basket")
+
+        }
+        else if(this.props.user && this.props.indiv.sizes[0] && !this.state.size){
+            alert("Please select a size")
+        }
+        else if (this.props.user && this.props.indiv.sizes[0] && this.state.size){
             this.props.addToCart(this.props.indiv.product_id, +this.state.quantity, this.state.size, this.state.colorIndex)
             this.props.history.push('/cart')
         }
-        else{alert("Please select a size")}
+        else if (this.props.user && !this.props.indiv.sizes[0]){
+            this.props.addToCart(this.props.indiv.product_id, +this.state.quantity, this.state.size, this.state.colorIndex)
+            this.props.history.push('/cart')
+        }
     }
     render(){     
-        console.log(this.state.quantity);
-           
-        let {category, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
+        let {product_id, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
 
         let sizeOptions= sizes.map(size => { //this creates the options for the select size dropdown
             return <option value={size}>{size}</option>
@@ -71,7 +110,10 @@ class Product extends React.Component{
 
         let colorCircles = colors.map((color, i) => {
             //I used inline styling just to visualize the concept at firt. anyone can change this
-            return (<div style={{background: color[1], height: "20px", width: "20px", borderRadius: "50%", marginRight: '10px'}} onClick={() => this.changeColorIndex(i)}>
+            return (
+            <div style={this.state.borderStyle[i]}>
+                <div style={{background: color[1], height: "25px", width: "25px", borderRadius: "50%", margin: '5px'}} onClick={() => this.changeColorIndex(i)}>
+                </div>
             </div>)
         })
         return(
@@ -81,29 +123,57 @@ class Product extends React.Component{
                    <p className='product-description'>{description}</p>
                 </div>
                 <aside className="control-panel" >
-                    <div className='product-title-subtitle'>
-                        <h1>{title}</h1>
-                        <p>{subtitle}</p>
-                        <h2>${price}</h2>
+                    <div className="top-section" >
+                        {
+                            product_id === 70 || product_id === 89 || product_id === 135 || product_id === 144 || product_id === 156
+                            ?
+                            null
+                            :
+                            <Link to={`/Product/${+this.props.match.params.id - 1}`}>                                                    
+                                <ArrowLeft className="arrow"/>
+                            </Link>
+                        }
+                        <div className='product-title-subtitle'>
+                            <h1>{title}</h1>
+                            <p>{subtitle}</p>
+                            <h2>${price}</h2>
+                        </div>
+                        {
+                            product_id === 102 || product_id === 81 || product_id === 143 || product_id === 154 || product_id === 162
+                            ?
+                            null
+                            :
+                            <Link to={`/Product/${+this.props.match.params.id + 1}`}>                        
+                                <ArrowRight className="arrow"/>
+                            </Link>                        
+                        }
                     </div>
-                   <div className='color-container'>
-                      <label>COLOR:</label>  <div className='color-text'>{colors[this.state.colorIndex][0]}</div> {/*This Displays the firt color's name, until you click a circle*/}
-                   </div>
-                   <div className="color-circles" >
-                    {colorCircles}
-                   </div>
-                   <div className='size-quantity-basket'>
-                     <div className='size-text'>
-                        <label>SIZE:</label>
-                        <h5>Refer to Size Selector</h5>
+                    <div className='color-container'>
+                        <label>COLOR:</label>  <div className='color-text'>{colors[this.state.colorIndex][0]}</div> {/*This Displays the firt color's name, until you click a circle*/}
                     </div>
-                    <div className='custom-select'>
-                        <select onChange={(e) => this.handleSize(e.target.value)}>  {/*this is the select size dropdown*/}
-                            <option value="">SELECT SIZE</option>
-                            {sizeOptions}
-                        </select>
+                    <div className="color-circles" >
+                        {colorCircles}
                     </div>
-                    <label>QUANTITY:</label>
+                    <div className='size-quantity-basket'>
+                        {
+                            sizes[0]
+                            ?
+                            <div>
+                                <div className='size-text'>
+                                    <label>SIZE:</label>
+                                </div>
+                                <div className='custom-select'>
+                                <select onChange={(e) => this.handleSize(e.target.value)}>  {/*this is the select size dropdown*/}
+                                    <option value="">SELECT SIZE</option>
+                                    {sizeOptions}
+                                </select>
+                                </div>
+                            </div>
+                            :
+                            null
+                        }
+
+                        <label>QUANTITY:</label>
                         <div className="quantity-form">
                             <button onClick={() => this.quantityDown()} id="down-btn"><Minus size={20}/></button>
                             <input type="text" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
@@ -119,7 +189,8 @@ class Product extends React.Component{
 
 function mapStateToProps(state){
    return{ 
-       indiv: state.indiv
+       indiv: state.indiv,
+       user: state.user
    }
 }
 

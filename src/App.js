@@ -13,7 +13,7 @@ class App extends Component {
         </div>
 
           {router}
-        <div className='footer'>
+        <div className='footer-1'>
            <Footer/>
         </div>
       </div>

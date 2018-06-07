@@ -56,7 +56,9 @@ class Cart extends React.Component{
                                 <h1>ORDER SUMMARY</h1>
                                 <label>SUBTOTAL</label>
                                 <p>${subtotal.toFixed(2)}</p>
-                                <button className="checkout-btn" ><Checkout amount={getCart}/></button>
+                                <div className="checkout-btn" >
+                                    <Checkout amount={getCart}/>
+                                </div>
                                 <Link to='/'>
                                         <button className="continue-btn" >CONTINUE SHOPPING</button>
                                 </Link>
@@ -84,3 +86,4 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps, {getCart, changeQuantity, deleteFromCart})(Cart)
+

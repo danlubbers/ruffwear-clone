@@ -4,18 +4,29 @@
         margin-left: 50px;
     }
     .basket-header{
+        position: relative;
         box-sizing: border-box;
-        background: #00263E;
+        background-color: #00263E;
         margin-top: 15px;
         margin-left: 50px;
         height: 180px;
         color: white;
         padding: 50px 100px;
+
         h1{
             margin: 0;
         }
         h2{
             margin:0;
+        }
+        .background{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 450px;
+            background-image: url('../assets/topo.png'), url('../assets/topo.png');
+            // background-repeat: no-repeat; 
         }
     }
     .lower-section{
@@ -47,19 +58,29 @@
             }
         }
         .order_summary{
-            // background: purple;
+            position: relative;
+            bottom: 150px;
+            background: white;
             width: 30%;
             color: #00263E;
             text-align: center;
             align-items: center;
+            border: 1px black solid;
+            margin: 10px;
+            margin-right: 20px;
             h1{
+                margin-top: 40px;
                 font-size: 43px;
             }
             label{
                 margin-right: 150px;
+                font-family: $font-family;
+                font-weight: bold;
             }
             p{
+                font-size: 18px;
                 display: inline-block;
+                font-weight: bolder;                
             }
             button{
                 box-sizing: border-box;
@@ -68,12 +89,14 @@
                 margin: 20px auto;
                 height: 56px;
             }
-            .checkout-btn{
-                background: #D99000;
-                border: 0;
-                color: #00263E;
-                font-size: 18px;
-            }
+            // .checkout-btn{
+
+            //     background: #D99000;
+            //     border: 0;
+            //     color: #00263E;
+            //     font-size: 18px;
+            // }
+
             .continue-btn{
                 background: white;
                 border: 3px solid #00263E;

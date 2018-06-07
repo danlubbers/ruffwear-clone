@@ -2,13 +2,13 @@ import axios from "axios";
 
 const initialState = {
    user: null,
-   cart: [{price:0, quantity:0, imgs:[''], colors:[['',''],['',''],['','']], color_img_index: 0}],
+   cart: [],
    products: [],
    searchProducts:[],
    indiv: {
        imgs:['', '', ''],
        colors:[['', ''],['',''],['','']],
-       sizes:['S','','']
+       sizes:['','','']
    }
 }
 

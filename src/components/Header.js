@@ -4,6 +4,7 @@ import RuffLogo from '../assets/ruffdoggies-logo.png';
 import SearchIcon from 'react-icons/lib/fa/search'
 import Paw from 'react-icons/lib/fa/paw'
 import Cart from 'react-icons/lib/fa/shopping-cart'
+// import CloseIcon from 'react-icons/lib/fa/times-circle';
 // Images for Shop dropdown
 import Harness from '../assets/navigation-harnesses-image.jpg'
 import Leashes from '../assets/navigation-leashes.jpg'
@@ -32,7 +33,7 @@ import OurDesign from '../assets/navigation-design-philosophy.jpg'
 import OurPractices from '../assets/navigation-our-practices.jpg'
 import Partners from '../assets/navigation-partners.jpg'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import {getUser} from '../ducks/reducer';
 import {connect} from 'react-redux';
 class Header extends Component {
@@ -149,7 +150,10 @@ class Header extends Component {
                 <div className={slideCssShop}>
                     <div className='shop-container'>
                         <div className='container-left'>
-                            <img className='current-shop-image' src={currentImageShop} alt='different image displayed on hover' />
+                        {/* <div className='xBtn-container'>
+                            <Link to='/'><button className='xBtn'><CloseIcon/></button></Link>
+                        </div> */}
+                            <img className='current-shop-image' src={currentImageShop} alt='dogs in ruff gear' />
                         </div>
                         <div className='container-right'>
                             <div className='gear-list'>
@@ -160,13 +164,13 @@ class Header extends Component {
                                             <Link to='/collections/harnesses' onClick={this.handleClickShop} 
                                             ><li onMouseOver={e=>this.handleMouseOverShop(e)} id='harnesses'>Harnesses</li> </Link>
                                             <Link to='/collections/leashes' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='leashes'>Leashes</li> </Link>
-                                            <Link to='/collections/collars' onClick={this.handleClickShop}><li onMouseOver={e=>this.handleMouseOverShop(e)} id='collars'>Collars</li> </Link>
-                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='apparel'>Apparel</li>
-                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='lifeJackets'>Life Jackets</li>
+                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='collars'>Collars</li> 
+                                            <Link to='/collections/apparel' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='apparel'>Apparel</li> </Link>
+                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='lifeJackets'>Life Jackets</li>
                                             <Link to='/collections/boots' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='boots'>Boots</li> </Link>
                                         </div>
                                         <div className='gear-split-right'>
-                                            <li onMouseOver={e=>this.handleMouseOverShop(e)} id='packs'>Packs</li>
+                                        <Link to='/collections/packs' onClick={this.handleClickShop}> <li onMouseOver={e=>this.handleMouseOverShop(e)} id='packs'>Packs</li> </Link>
                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='bowls'>Bowls</li>
                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='safety'>Safety</li>
                                             <li onMouseOver={e=>this.handleMouseOverShop(e)} id='beds'>Beds</li>
