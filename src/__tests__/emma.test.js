@@ -1,4 +1,4 @@
-const fns = require('./functions')
+const fns = require('../utilities/emmafns')
 
 describe('product qty function', () => {
   test('quantityDown should should return 3 when passed 4', () => {
