@@ -86,3 +86,4 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps, {getCart, changeQuantity, deleteFromCart})(Cart)
+

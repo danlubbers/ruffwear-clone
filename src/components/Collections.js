@@ -63,7 +63,7 @@ class Collections extends React.Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 2500,
+      speed: 3500,
       autoplaySpeed: 1,
       cssEase: "linear",
       pauseOnHover: false
