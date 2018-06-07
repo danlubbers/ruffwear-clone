@@ -15,18 +15,17 @@ class Search extends Component {
     }
 
     searchForProducts(e) {
-
+        // console.log(res.data)
         this.setState({search: e})
         axios.get(`/api/search/?find=${e}`).then(res=>this.setState({products: res.data}))
     }
 
     render() {
-        let productsArray = this.state.products.map(e=>{
-
+        let productsArray = this.state.products.map(element=>{
             return (
                 <div className='products-array-container'>
-                    <Link to={`/Product/${e.product_id}`}><img className='products-image'src={e.thumbnail} /></Link>
-                    <p className='products-title'>{e.title}</p>
+                    <Link to={`/Product/${element.product_id}`}><img className='products-image' src={element.thumbnail} alt='ruff doggie products'/></Link>
+                    <p className='products-title'>{element.title}</p>
                 </div>
             )
         })
