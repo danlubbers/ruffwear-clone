@@ -1,10 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {addToCart, getIndiv} from '../ducks/reducer';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Plus from 'react-icons/lib/fa/plus';
 import Minus from 'react-icons/lib/fa/minus';
-import Cart from 'react-icons/lib/fa/shopping-cart'
+import Cart from 'react-icons/lib/fa/shopping-cart';
+import ArrowLeft from 'react-icons/lib/fa/angle-left';
+import ArrowRight from 'react-icons/lib/fa/angle-right';
+
+
 
 class Product extends React.Component{
     constructor(){
@@ -20,6 +24,11 @@ class Product extends React.Component{
     componentDidMount(){
         this.props.getIndiv(this.props.match.params.id)
         window.scroll(0,0)
+    }
+    componentDidUpdate(prevProps){
+        if(prevProps.match.params.id !== this.props.match.params.id){
+            this.props.getIndiv(this.props.match.params.id)
+        } 
     }
     changeColorIndex(i){
         if(i === 0){
@@ -69,6 +78,10 @@ class Product extends React.Component{
             size: e
         })
     }
+    // leftArrowClick(){
+    //     let id = +this.props.match.params.id - 1;
+    //     this.props.history.push(`/Product/${id}`)
+    // }
     addToBasket(){      
         console.log(this.props.indiv.sizes);
           
@@ -89,9 +102,7 @@ class Product extends React.Component{
         }
     }
     render(){     
-        console.log(this.props.indiv.sizes[0]);
-           
-        let {category, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
+        let {product_id, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
 
         let sizeOptions= sizes.map(size => { //this creates the options for the select size dropdown
             return <option value={size}>{size}</option>
@@ -112,10 +123,30 @@ class Product extends React.Component{
                    <p className='product-description'>{description}</p>
                 </div>
                 <aside className="control-panel" >
-                    <div className='product-title-subtitle'>
-                        <h1>{title}</h1>
-                        <p>{subtitle}</p>
-                        <h2>${price}</h2>
+                    <div className="top-section" >
+                        {
+                            product_id === 70 || product_id === 89 || product_id === 135 || product_id === 144 || product_id === 156
+                            ?
+                            null
+                            :
+                            <Link to={`/Product/${+this.props.match.params.id - 1}`}>                                                    
+                                <ArrowLeft className="arrow"/>
+                            </Link>
+                        }
+                        <div className='product-title-subtitle'>
+                            <h1>{title}</h1>
+                            <p>{subtitle}</p>
+                            <h2>${price}</h2>
+                        </div>
+                        {
+                            product_id === 102 || product_id === 81 || product_id === 143 || product_id === 154 || product_id === 162
+                            ?
+                            null
+                            :
+                            <Link to={`/Product/${+this.props.match.params.id + 1}`}>                        
+                                <ArrowRight className="arrow"/>
+                            </Link>                        
+                        }
                     </div>
                     <div className='color-container'>
                         <label>COLOR:</label>  <div className='color-text'>{colors[this.state.colorIndex][0]}</div> {/*This Displays the firt color's name, until you click a circle*/}
@@ -130,7 +161,6 @@ class Product extends React.Component{
                             <div>
                                 <div className='size-text'>
                                     <label>SIZE:</label>
-                                    <h5>Refer to Size Selector</h5>
                                 </div>
                                 <div className='custom-select'>
                                 <select onChange={(e) => this.handleSize(e.target.value)}>  {/*this is the select size dropdown*/}
