@@ -1,6 +1,6 @@
 .home-container{
     width: 100vw;
-
+    position: relative;
     .outer-parallax {
         width: 100vw;
         
@@ -43,6 +43,7 @@
                 background-color: $yellow;
                 border: none;
                 outline: none;
+                cursor: pointer;
 
             }
             .adventureBtn:hover {
@@ -58,6 +59,7 @@
                 background-color: $font-color;
                 border: none;
                 outline: none;
+                cursor: pointer;
             }
 
             .shopCollectionBtn:hover {

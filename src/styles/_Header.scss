@@ -5,7 +5,7 @@ header {
     // background-color: lightblue;
  
     nav{
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -92,6 +92,19 @@ header {
         align-items: flex-start;
         // background: yellow;
     }
+
+    // .xBtn-container {
+    //     width: 80vw;
+    //     display: flex;
+    //     justify-content: flex-end;
+    //     background-color: red;
+
+    //     .xBtn{
+    //         font-size: 2em;
+    //         border: none;
+    //         cursor: pointer;
+    //     }
+    // }
 
     .container-left {
         width: 30vw;

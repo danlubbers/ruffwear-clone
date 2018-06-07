@@ -10,12 +10,11 @@ import Twitter from 'react-icons/lib/fa/twitter';
 import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
-
+        let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}>
+        <li className="login">LogOut</li></a> : <a href={process.env.REACT_APP_LOGIN}><li className="login">Login</li></a>
+        let itemNumber = this.props.cart.reduce((prev, next) => {
+            return prev + next.quantity},0)
         return (
             <div className='footer'>
                 <div className='background'>
@@ -46,9 +45,9 @@ class Footer extends React.Component {
                                 <div className='right-left'>
                                     <h1> MY ACCOUNT </h1>
                                     <ul>
-                                      <Link to='/cart'>  <li> Cart </li> </Link>
+                                      <Link to='/cart'>  <li> Cart({itemNumber}) </li> </Link>
                                         <li> Account </li>
-                                        <li> Log In / Log Out </li>
+                                        {logInDisplay}
                                     </ul>
                                 </div>
                                 <div className='right-middle'>
@@ -79,21 +78,20 @@ class Footer extends React.Component {
                     </div>
                 </div>
 
-                   <div className='footer-bottom-container'>
-                <div className='social-media'> 
-                <ul>
-             <a href='https://www.instagram.com/ruffwear/'> <li>  <Insta size={30}/> </li> </a>
-             <a href='https://www.facebook.com/ruffwear/'> <li>  <Fb size={30}/> </li> </a>
-             <a href='https://www.youtube.com/ruffwear/'> <li>  <Yt size={30}/> </li> </a>
-             <a href='https://www.pinterest.com/ruffwear/'> <li>  <Pin size={30}/> </li> </a>
-             <a href='https://twitter.com/ruffwear/'>  <li> <Twitter size={30}/> </li> </a>
-                </ul>
-                </div>
-                <div className='terms'>
-                <span> © 2018 Ruffwear </span>
-                <span> Terms of Use and Privacy Policy </span>
-                </div>
-                
+                <div className='footer-bottom-container'>
+                    <div className='social-media'> 
+                        <ul>
+                            <a href='https://www.instagram.com/ruffwear/'> <li>  <Insta size={30}/> </li> </a>
+                            <a href='https://www.facebook.com/ruffwear/'> <li>  <Fb size={30}/> </li> </a>
+                            <a href='https://www.youtube.com/ruffwear/'> <li>  <Yt size={30}/> </li> </a>
+                            <a href='https://www.pinterest.com/ruffwear/'> <li>  <Pin size={30}/> </li> </a>
+                            <a href='https://twitter.com/ruffwear/'>  <li> <Twitter size={30}/> </li> </a>
+                        </ul>
+                    </div>
+                    <div className='terms'>
+                        <span> © 2018 Ruffwear </span>
+                        <span> Terms of Use and Privacy Policy </span>
+                    </div>
                 </div>
              
             </div>
@@ -102,7 +100,10 @@ class Footer extends React.Component {
 }
 
 function mapStateToProps(state) {
-    if (!state) return {}
+    return {
+        user: state.user,
+        cart: state.cart
+    }
 
 }
 

@@ -12,6 +12,7 @@
         height: 180px;
         color: white;
         padding: 50px 100px;
+
         h1{
             margin: 0;
         }
@@ -60,20 +61,19 @@
             position: relative;
             bottom: 150px;
             background: white;
-            height: 65vh;
-            width: 27vw;
+            width: 30%;
             color: #00263E;
             text-align: center;
             align-items: center;
             border: 1px black solid;
-            margin: 40px 20px 0px 0px;
+            margin: 10px;
+            margin-right: 20px;
             h1{
                 margin-top: 40px;
                 font-size: 43px;
             }
             label{
                 margin-right: 150px;
-                font-size: 18px;
                 font-family: $font-family;
                 font-weight: bold;
             }
@@ -89,12 +89,14 @@
                 margin: 20px auto;
                 height: 56px;
             }
-            .checkout-btn{
-                background: #D99000;
-                border: 0;
-                color: #00263E;
-                font-size: 18px;
-            }
+            // .checkout-btn{
+
+            //     background: #D99000;
+            //     border: 0;
+            //     color: #00263E;
+            //     font-size: 18px;
+            // }
+
             .continue-btn{
                 background: white;
                 border: 3px solid #00263E;

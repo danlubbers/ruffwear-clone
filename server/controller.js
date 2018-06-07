@@ -31,6 +31,7 @@ module.exports = {
     let low = `%${req.query.find.toLowerCase()}%`
     
     dbInstance.search([query, cap, low]).then(products => {
+      // console.log(products)
       res.status(200).send(products)})
       .catch(err => {
         console.error(err);
