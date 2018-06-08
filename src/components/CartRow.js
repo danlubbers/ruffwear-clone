@@ -42,7 +42,7 @@ class CartRow extends React.Component{
    render(){
        let {cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex} = this.props
        // console.log(cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex);
-      console.log(this.props, "whats cart props?")
+    //   console.log(this.props, "whats cart props?")
       
 
        return(
@@ -72,8 +72,8 @@ class CartRow extends React.Component{
                <div className="qty_input" >
                    <input className="qty_input" type="text" value={this.state.qty} onChange={(e) => this.handleQty(e.target.value)}/>
                </div>
-               <div>
-               <span className='price'>
+               <div className='price'>
+               <span >
                    ${(price * this.state.qty).toFixed(2)}
                </span>
                </div>
