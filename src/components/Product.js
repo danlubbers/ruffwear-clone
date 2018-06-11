@@ -18,7 +18,8 @@ class Product extends React.Component{
             colorIndex: 0,
             quantity: 1,
             size: '',
-            borderStyle:[{border: '2px solid #D0D3D4', borderRadius: "50%"}, {}, {}]
+            borderStyle:[{border: '2px solid #D0D3D4', borderRadius: "50%"}, {}, {}],
+            selectSize: false,
         }
     }
     componentDidMount(){
@@ -75,7 +76,8 @@ class Product extends React.Component{
     }
     handleSize(e){
         this.setState({
-            size: e
+            size: e,
+            selectSize: false
         })
     }
     // leftArrowClick(){
@@ -83,14 +85,14 @@ class Product extends React.Component{
     //     this.props.history.push(`/Product/${id}`)
     // }
     addToBasket(){      
-        console.log(this.props.indiv.sizes);
-          
         if(!this.props.user){
             alert("Please login to add items to you basket")
 
         }
         else if(this.props.user && this.props.indiv.sizes[0] && !this.state.size){
-            alert("Please select a size")
+            this.setState({
+                selectSize: true,
+            })
         }
         else if (this.props.user && this.props.indiv.sizes[0] && this.state.size){
             this.props.addToCart(this.props.indiv.product_id, +this.state.quantity, this.state.size, this.state.colorIndex)
@@ -116,6 +118,13 @@ class Product extends React.Component{
                 </div>
             </div>)
         })
+        let stylz = {}
+        if(this.state.selectSize){
+            stylz = {border: '3px solid #F75238'}
+        }
+        if(!this.state.selectSize){
+            stylz = {}
+        }
         return(
             <div className="product-container" >
                 <div className="product-content" >
@@ -163,7 +172,7 @@ class Product extends React.Component{
                                     <label>SIZE:</label>
                                 </div>
                                 <div className='custom-select'>
-                                <select onChange={(e) => this.handleSize(e.target.value)}>  {/*this is the select size dropdown*/}
+                                <select onChange={(e) => this.handleSize(e.target.value)} style={stylz} >  {/*this is the select size dropdown*/}
                                     <option value="">SELECT SIZE</option>
                                     {sizeOptions}
                                 </select>
@@ -179,7 +188,16 @@ class Product extends React.Component{
                             <input type="text" value={this.state.quantity} min={1} onChange={(e) => this.handleQuantity(e.target.value)}/>
                             <button  onClick={() => this.quantityUp()} id="up-btn"><Plus size={20}/></button>
                         </div>
-                        <button className='basketBtn' onClick={() => this.addToBasket()}><Cart size={20}/> ADD TO BASKET</button>
+                        <div className="basketBtn-container">
+                            {
+                                this.state.selectSize
+                                ?
+                                <p>Please Select A Size.</p>
+                                :
+                                null
+                            }
+                            <button className='basketBtn' onClick={() => this.addToBasket()}><Cart size={20}/> ADD TO BASKET</button>
+                        </div>
                     </div>
                 </aside>
             </div>
