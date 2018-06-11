@@ -140,7 +140,9 @@ app.put(`/api/changequantity`, controller.updateQuantity);
 
 app.delete(`/api/deleteproduct/:id`, controller.delete);
 
+// ••••••••••••••••TEST ENDPOINTS •••••••••••••••• //
 
+app.post(`/api/addtocarttest`, controller.addCartTest);
 
 // •••••••••••••••• STRIPE •••••••••••••••• //
 
