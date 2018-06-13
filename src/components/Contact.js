@@ -21,7 +21,7 @@ class Contact extends Component {
   }
 
   handleSend() {
-    var { name, email, subject, message, sent } = this.state;
+    var { name, email, subject, message } = this.state;
     if (validateEmail(email)){
 
       axios
