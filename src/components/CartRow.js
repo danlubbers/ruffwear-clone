@@ -40,7 +40,7 @@ class CartRow extends React.Component{
    }
 
    render(){
-       let {cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex} = this.props
+       let { title, colors, imgs, price, size, colorIndex} = this.props
        // console.log(cart_id, product_id, title, colors, imgs, qty, price, size, colorIndex);
     //   console.log(this.props, "whats cart props?")
       

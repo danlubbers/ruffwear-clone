@@ -134,7 +134,7 @@ class Product extends React.Component{
                 <aside className="control-panel" >
                     <div className="top-section" >
                         {
-                            product_id === 70 || product_id === 89 || product_id === 135 || product_id === 144 || product_id === 156
+                            product_id === 70 || product_id === 89 || product_id === 135 || product_id === 144 || product_id === 156 || product_id === 163
                             ?
                             null
                             :
@@ -148,7 +148,7 @@ class Product extends React.Component{
                             <h2>${price}</h2>
                         </div>
                         {
-                            product_id === 102 || product_id === 81 || product_id === 143 || product_id === 154 || product_id === 162
+                            product_id === 102 || product_id === 81 || product_id === 143 || product_id === 154 || product_id === 162 || product_id === 169
                             ?
                             null
                             :
