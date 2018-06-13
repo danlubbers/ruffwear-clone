@@ -8,8 +8,12 @@ import Yt from 'react-icons/lib/fa/youtube-play';
 import Pin from 'react-icons/lib/fa/pinterest-p';
 import Twitter from 'react-icons/lib/fa/twitter';
 import { Link } from 'react-router-dom';
+import {getCart} from '../ducks/reducer';
 
 class Footer extends React.Component {
+    componentDidUpdate(){
+        this.props.getCart()
+    }
     render() {
         let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}>
         <li className="login">LogOut</li></a> : <a href={process.env.REACT_APP_LOGIN}><li className="login">Login</li></a>
@@ -107,4 +111,4 @@ function mapStateToProps(state) {
 
 }
 
-export default connect(mapStateToProps)(Footer)
+export default connect(mapStateToProps, {getCart})(Footer)

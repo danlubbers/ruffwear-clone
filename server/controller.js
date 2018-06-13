@@ -29,8 +29,9 @@ module.exports = {
     let query = `%${req.query.find}%`
     let cap = `%${req.query.find.toUpperCase()}%`
     let low = `%${req.query.find.toLowerCase()}%`
-    
-    dbInstance.search([query, cap, low]).then(products => {
+    let firstCap = `%${req.query.find.charAt(0).toUpperCase() + req.query.find.slice(1).toLowerCase()}%`
+
+    dbInstance.search([query, cap, low, firstCap]).then(products => {
       // console.log(products)
       res.status(200).send(products)})
       .catch(err => {
@@ -71,8 +72,6 @@ module.exports = {
     const {user_id} = req.user
    
     dbInstance.changeQuantity([ newQuantity, cart_id, user_id]).then(cart => {
-      console.log(cart);
-      
         res.status(200).send(cart)})
       .catch(err => {
         console.error(err);
@@ -86,8 +85,6 @@ module.exports = {
     const {user_id} = req.user 
                  
     dbInstance.deleteProduct([req.params.id, user_id]).then(cart => {
-      console.log(cart);
-      
       res.status(200).send(cart);
     });
   },
@@ -102,7 +99,7 @@ module.exports = {
       description: "RuffDoggies"
     });
     // console.log(req.user)
-    dbInstance.emptyCart([req.user.user_id])
+    dbInstance.empty_cart([req.user.user_id])
       .then(noProducts => {
         res.status(200).send(noProducts); // clear out cart here
       })
@@ -110,5 +107,20 @@ module.exports = {
         console.error(err);
         res.status(500).send(err);
       });
-  }
+  },
+
+  ///////////Test Endpoints/////////////
+
+  addCartTest: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const {product_id, qty, size, colorIndex } = req.body
+   
+    dbInstance.addToCart([999, product_id, qty, size, colorIndex])
+      .then(cart => res.status(200).send(cart))
+      .catch(err => {
+        console.error(err);
+        res.status(500).send(err);
+      });
+  },
+
 };

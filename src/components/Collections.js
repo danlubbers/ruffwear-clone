@@ -10,6 +10,7 @@ import BOOTS from '../assets/Header-Image-Boots.jpg';
 import LEASHES from '../assets/Header-Image-Leashes.jpg';
 import PACKS from '../assets/Header-Image-Packs.jpg';
 import APPAREL from '../assets/Header-Image-Apparel.jpg';
+import COLLARS from '../assets/Header-Image-Collars.jpg';
 import CHARNESSES from '../assets/navigation-harnesses-image.jpg';
 import CBOOTS from '../assets/navigation-boots.jpg';
 import CLEASHES from '../assets/navigation-leashes.jpg';
@@ -27,11 +28,6 @@ import CPARTNERS from '../assets/navigation-partners.jpg';
 
 
 class Collections extends React.Component {
-    constructor(props) {
-        super(props)
-    
-    } 
-
     componentDidMount() {
         this.props.getProducts(this.props.match.params.product)
         this.aos = AOS;
@@ -72,18 +68,20 @@ class Collections extends React.Component {
       
 
         var category = match.params.product.toUpperCase()
+        var img
 
-
-        if (category == "HARNESSES") {
-            var img = <img className='header-pic' src={HARNESSES} alt={category} />
-        } else if (category == "BOOTS") {
-            var img = <img className='header-pic' src={BOOTS} alt={category} />
-        } else if (category == "LEASHES") {
-            var img = <img className='header-pic' src={LEASHES} alt={category} />
-        }  else if (category == "PACKS") {
-            var img = <img className='header-pic' src={PACKS} alt={category} />
-        } else if (category == "APPAREL"){
-            var img = <img className='header-pic' src={APPAREL} alt={category} />
+        if (category === "HARNESSES") {
+             img = <img className='header-pic' src={HARNESSES} alt={category} />
+        } else if (category === "BOOTS") {
+             img = <img className='header-pic' src={BOOTS} alt={category} />
+        } else if (category === "LEASHES") {
+             img = <img className='header-pic' src={LEASHES} alt={category} />
+        }  else if (category === "PACKS") {
+             img = <img className='header-pic' src={PACKS} alt={category} />
+        } else if (category === "APPAREL"){
+             img = <img className='header-pic' src={APPAREL} alt={category} />
+        } else if (category === 'COLLARS'){
+             img = <img className='header-pic' src={COLLARS} alt={category} />
         }
 
         let ProductItem = products.map((prod, i) => {

@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "6ffd96f0-2d97-42d2-9741-f9c7515da436",
+		"name": "ruffdoggies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3111/api/search?find=insu",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "59e24b52-64a8-40da-b702-fb50d7a3ddb6",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Query 'insu' should return 6 products\", () => {",
+							"    let res = pm.response.json()",
+							"    ",
+							"    let result = res.length",
+							"    ",
+							"    pm.expect(result).to.eql(6)",
+							"})",
+							"",
+							"//tests writen by Steven Wright"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3111/api/search?find=insu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3111",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "find",
+							"value": "insu"
+						}
+					]
+				},
+				"description": "searching 'insu' should return 6 products, because 6 products in our database have the word insulate or insulated in the title, category or description. The search function should find every occurance of 'insu' no matter the capitalization of the query or the occurance."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3111/api/search?find=bOoTs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e9016cc-16cd-4695-861e-cb6d807178fd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Query 'bOoTs' should return 7 products\", () => {",
+							"    let res= pm.response.json()",
+							"    ",
+							"    let result = res.length",
+							"    ",
+							"    pm.expect(result).to.eql(7)",
+							"})",
+							"",
+							"pm.test(\"Every product should have 'boots' as the category\", () => {",
+							"    let res = pm.response.json()",
+							"    ",
+							"    let result1 = res.filter(prod => prod.category === 'boots')",
+							"    let result2 = res.filter(prod => prod.category !== 'boots')",
+							"    ",
+							"    pm.expect(result1.length).to.eql(7)",
+							"    pm.expect(result2.length).to.eql(0)",
+							"})",
+							"",
+							"//tests written by Steven Wright"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3111/api/search?find=bOoTs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3111",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "find",
+							"value": "bOoTs"
+						}
+					]
+				},
+				"description": "'bOoTs' should return every product with a category of 'boots', because the search function querys the data base using the actual string typed in, an all caps version(BOOTS), an all lowercase version(boots), and capitalizing the first letter(Boots)."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3111/api/addtocarttest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64d95b40-6462-4cb8-a46c-d7490b81f1d6",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"last product in array should have product_id of 72\", () => {",
+							"    let res = pm.response.json()",
+							"    ",
+							"    let result = res[res.length -1].product_id",
+							"    ",
+							"    pm.expect(result).to.eql(72)",
+							"})",
+							"",
+							"pm.test(\"should always return 2 products\", () => {",
+							"    let res = pm.response.json()",
+							"    ",
+							"    let result = res.length",
+							"    ",
+							"    pm.expect(result).to.eql(2)",
+							"})",
+							"",
+							"//Tests written by Steven Wright"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_id\": \"72\",\n\t\"qty\": \"3\",\n\t\"size\": \"XXSmall\",\n\t\"colorIndex\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3111/api/addtocarttest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3111",
+					"path": [
+						"api",
+						"addtocarttest"
+					]
+				},
+				"description": "The length should always be 2 because adding more of the same product to the cart shouldn't create another row in the table, but instead update the quantity of the product that already exist in the table."
+			},
+			"response": []
+		}
+	]
+}
