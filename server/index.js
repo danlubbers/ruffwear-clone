@@ -182,7 +182,7 @@ app.post("/api/sendEmail", (req, res) => {
 massive(CONNECTION_STRING).then(db => {
   app.set("db", db);
   app.listen(SERVER_PORT, () => {
-    console.log(`istening on PORT: ${SERVER_PORT}`);
+    console.log(`listening on PORT: ${SERVER_PORT}`);
   });
 });
 

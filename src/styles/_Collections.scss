@@ -4,7 +4,7 @@
         @include center2;
         background-color: white;
         height: 90vh;
-        width:  100vw;
+        width:  100%;
         z-index: -1;
         
         .header-pic{
@@ -48,12 +48,12 @@
 
     .product-container{
         display: flex;
-        margin: 10vh;
         margin-bottom: 10px;
         .product-container-container{
         display: flex;
-        justify-content: flex-start;
-        width: 75vw;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
         flex-wrap: wrap;
     }
 }
