@@ -29,6 +29,13 @@ class Product extends React.Component{
     componentDidUpdate(prevProps){
         if(prevProps.match.params.id !== this.props.match.params.id){
             this.props.getIndiv(this.props.match.params.id)
+            this.setState({
+                colorIndex: 0,
+                quantity: 1,
+                size: '',
+                borderStyle:[{border: '2px solid #D0D3D4', borderRadius: "50%"}, {}, {}],
+                selectSize: false,
+            })
         } 
     }
     changeColorIndex(i){
@@ -106,14 +113,14 @@ class Product extends React.Component{
     render(){     
         let {product_id, title, subtitle, description, price, sizes, colors, imgs} = this.props.indiv
 
-        let sizeOptions= sizes.map(size => { //this creates the options for the select size dropdown
-            return <option value={size}>{size}</option>
+        let sizeOptions= sizes.map((size, i) => { //this creates the options for the select size dropdown
+            return <option value={size} key={i}>{size}</option>
         })
 
         let colorCircles = colors.map((color, i) => {
             //I used inline styling just to visualize the concept at firt. anyone can change this
             return (
-            <div style={this.state.borderStyle[i]}>
+            <div style={this.state.borderStyle[i]} key={i}>
                 <div style={{background: color[1], height: "25px", width: "25px", borderRadius: "50%", margin: '5px'}} onClick={() => this.changeColorIndex(i)}>
                 </div>
             </div>)
@@ -172,7 +179,7 @@ class Product extends React.Component{
                                     <label>SIZE:</label>
                                 </div>
                                 <div className='custom-select'>
-                                <select onChange={(e) => this.handleSize(e.target.value)} style={stylz} >  {/*this is the select size dropdown*/}
+                                <select onChange={(e) => this.handleSize(e.target.value)} style={stylz} value={this.state.size}>  {/*this is the select size dropdown*/}
                                     <option value="">SELECT SIZE</option>
                                     {sizeOptions}
                                 </select>
