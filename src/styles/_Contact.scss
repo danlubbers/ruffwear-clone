@@ -5,14 +5,12 @@
   justify-content: center;
   align-items: center;
   margin-top: 70px;
-  // background-color: red;
-
+ 
   .xBtn-container {
     width: 60vw;
     display: flex;
     justify-content: flex-end;
-    // background-color: red;
-
+ 
     .xBtn{
         font-size: 2em;
         border: none;
@@ -20,7 +18,7 @@
         background: transparent;
     }
   }
-
+ 
   .header {
     display: flex;
     flex-direction: row;
@@ -31,7 +29,7 @@
     font-family: $font-family;
     color: $font-color;
   }
-
+ 
   .contact-form {
     display: flex;
     flex-direction: column;
@@ -47,18 +45,18 @@
     margin-left: initial;
     margin-bottom: 100px;
     margin-top: 20px;
-    border-radius: 20px;
     border: solid;
     color: #f09f00;
-  }
-
+    padding: 30px;
+ }
+ 
   .name {
     margin: 5px;
     width: 75%;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.5);
-    font-family: "Roboto", sans-serif;
-    border-radius: 10px;
+    font-size: 14px;    
+    font-family: $font-family;
     outline: none;
   }
   .email {
@@ -68,18 +66,16 @@
     @extend .name;
   }
   .message {
-    height: 25vh;
+    height: 20vh;
     width: 75%;
     margin: 5px;
     font-size: 18px;
     background-color: rgba(255, 255, 255, 0.5);
     font-family: $font-family;
-    border-radius: 10px;
     outline: none;
   }
   .send {
     padding: 10px 30px;
-    border-radius: 15px;
     margin-top: 40px;
     background-color:rgba(255, 255, 255, 0.5);
     outline: none;    
@@ -96,4 +92,4 @@
     font-size: 18px;
     outline: none;  
   }
-}
+ }
