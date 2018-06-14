@@ -49,7 +49,6 @@ class Collections extends React.Component {
 
 
     render() {
-        console.log(this.props, "what the heck is in props?")
         const { products, match } = this.props
        
 

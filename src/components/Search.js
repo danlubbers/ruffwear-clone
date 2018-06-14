@@ -9,31 +9,37 @@ class Search extends Component {
 
         this.state = {
             search: '',
-            products: []
+            products: [],
+            timeout: null
         }
 
     }
 
     searchForProducts(e) {
-        console.log(e)
         this.setState({search: e})
-        if(!e){
-            this.setState({
-                products: []
-            })
-        }
-        else{
-            axios.get(`/api/search/?find=${e}`).then(res=>{
-                if(!this.state.search){
-                    return null
+        clearTimeout(this.state.timeout)
+        this.setState({
+            timeout: setTimeout(() => {
+                if(!e){
+                    this.setState({
+                        products: []
+                    })
                 }
-                this.setState({products: res.data})
-            })
-        }
+                else{
+                    axios.get(`/api/search/?find=${e}`).then(res=>{
+                        if(!this.state.search){
+                            return null
+                        }
+                        this.setState({products: res.data})
+                    })
+                }
+            }, 500)
+        })        
+
     }
 
     render() {
-        let productsArray = this.state.products.map(element=>{
+        let productsArray = this.state.products.map((element,i)=>{
             return (
                 <div className='products-array-container'>
                     <Link to={`/Product/${element.product_id}`}><img className='products-image' src={element.thumbnail} alt='ruff doggie products'/></Link>
